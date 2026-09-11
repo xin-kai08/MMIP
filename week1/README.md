@@ -5,6 +5,7 @@
 ### 轉換後
 ![灰階圖片](./result/quiz1_1_gray.jpg)
 
+
 # quiz 1 進階
 ## 用numpy與雙層for loop實作灰階轉換，建立def grayscale_mean(image)函式
 先將image的height與width讀取，建立全零的二維矩陣gray_image，大小為(height, width)，再將image每piexl中的RGB值取出，先轉為整數避免相加時溢位，計算三者的算術平均數，將結果填入gray_image的對應位置
@@ -22,3 +23,9 @@
 ![灰階圖片](./result/quiz1_1_gray.jpg)
 ### numpy + for loop轉換
 ![灰階圖片](./result/quiz1_2_gray.jpg)
+
+
+# quiz 2 基礎
+用OpenCV對灰階圖做histogram equalization，並分別統計處理前後各灰階值的影像數量，再使用Matplotlib將equalized前後灰階圖、histogram統計圖排成2*2比較圖
+### 比較圖
+![](./result/quiz2_1.jpg)
