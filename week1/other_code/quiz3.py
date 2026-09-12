@@ -71,3 +71,63 @@ def correct_perspective(image, source_points):
     corrected = cv2.warpPerspective(image, matrix, (output_width, output_height))
     
     return corrected
+
+def find_corners(image):
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    blur = cv2.GaussianBlur(gray, (9, 9), 0)
+    threshold_value, binary = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    
+    contours, hierarchy = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    
+    if len(contours) == 0:
+        print("沒有找到輪廓")
+        return binary, None
+        
+    largest_contour = max(contours, key=cv2.contourArea)
+    
+    perimeter = cv2.arcLength(largest_contour, True)
+    epsilon = 0.02 * perimeter
+    approx = cv2.approxPolyDP(largest_contour, epsilon, True)
+    
+    if len(approx) != 4:
+        print(f"找到{len(approx)}個頂點，無法校正")
+        return binary, None
+
+    if not cv2.isContourConvex(approx):
+        print("不是凸四邊形，無法校正")
+        return binary, None
+
+    return binary, approx
+
+def order_points(approx):
+    points = approx.reshape(4, 2).astype(np.float32)
+    center = points.mean(axis=0)
+    offsets = points - center
+    
+    angles = np.arctan2(offsets[:, 1], offsets[:, 0])
+    angle_indices = np.argsort(angles)
+    circle_points = points[angle_indices]
+    
+    coordinate_sum = circle_points[:, 0] + circle_points[:, 1]
+    start_index = np.argmin(coordinate_sum)
+    
+    ordered_points = np.roll(circle_points, -int(start_index), axis=0)
+    
+    return ordered_points
+
+def warp_image(image, ordered_points):
+    top_left, top_right, bottom_right, bottom_left = ordered_points
+    top_width = np.linalg.norm(top_right - top_left)
+    bottom_width = np.linalg.norm(bottom_right - bottom_left)
+    left_height = np.linalg.norm(top_left - bottom_left)
+    right_height = np.linalg.norm(top_right - bottom_right)
+    
+    output_width = int(round(max(top_width, bottom_width)))
+    output_height = int(round(max(left_height, right_height)))
+    
+    destination_points = np.float32([[0, 0], [output_width - 1, 0], [output_width - 1, output_height - 1], [0, output_height - 1]])
+    
+    matrix = cv2.getPerspectiveTransform(ordered_points, destination_points)
+    corrected = cv2.warpPerspective(image, matrix, (output_width, output_height))
+    
+    return corrected
