@@ -38,23 +38,23 @@
 ## 在main.ipynb輸入圖片名稱，在quiz3.py中建立select_corners(image)、correct_perspective(image)函式
 使用斜拍小卡(7:9)作為輸入，用OpenCV讀取圖片
 
-利用select_corners，先將圖片等比例縮小後顯示在點選視窗上，手動點選左上、右上、右下、左下角，確認後將預覽圖點選座標轉換回原圖座標
+利用select_corners()，先將圖片等比例縮小後顯示在點選視窗上，手動點選左上、右上、右下、左下角，確認後將預覽圖點選座標轉換回原圖座標
 
-最後用correct_perspective將四個角對應輸出至長方形的四個角，利用cv2.getPerspectiveTransform()計算透視轉換矩陣，再透過cv2.warpPerspective()對原圖進行校正，結果存入result資料夾
+最後用correct_perspective()將四個角對應輸出至長方形的四個角，利用cv2.getPerspectiveTransform()計算透視轉換矩陣，再透過cv2.warpPerspective()對原圖進行校正，結果存入result資料夾
 ### 比較圖
 ![彩色圖片](./result/quiz3_1.jpg)
 
 
 # quiz 3 進階
 ## 在main.ipynb輸入圖片名稱，在quiz3.py中建立find_corners(image)、order_points(approx)、warp_image(image, ordered_points)函式
-使用find_corners將圖轉為灰階，使用9*9的高斯模糊減少雜訊，再透過Otsu自動選擇門檻進行二值化，將較亮的紙張與較暗的背景分開<br>
+使用find_corners()將圖轉為灰階，使用9*9的高斯模糊減少雜訊，再透過Otsu自動選擇門檻進行二值化，將較亮的紙張與較暗的背景分開<br>
 (原先使用Canny偵測邊緣，但部分圖片的紙張外圍未形成完整包圍，反而選到文字或QR Code)<br>
 接著找出最外圍輪廓，選擇面積最大的輪廓，並以輪廓周長的2%作為容許誤差，使用cv2.approxPolyDP()將其近似成多邊形，確認結果為四個頂點且形成凸四邊形後，才繼續處理
 
-利用order_points找出四個頂點的中心位置，計算各點與中心相對位置，使用np.arctan2()計算方向角度，再使用np.argsort()依角度排列，形成順時針順序，再選擇x+y最小的做為起點，使用np.roll()循環調整排列<br>
+利用order_points()找出四個頂點的中心位置，計算各點與中心相對位置，使用np.arctan2()計算方向角度，再使用np.argsort()依角度排列，形成順時針順序，再選擇x+y最小的做為起點，使用np.roll()循環調整排列<br>
 (原本使用x+y與x-y的最大最小值判斷四角，但旋轉物體會造成重複點選)
 
-最後用warp_image計算四邊長，取上下兩邊較長者作為輸出寬度，左右兩邊較長者作為輸出高度，建立輸出的四角座標，再用cv2.getPerspectiveTransform()計算轉換矩陣，以及cv2.warpPerspective()產生校正圖，結果存入result資料夾
+最後用warp_image()計算四邊長，取上下兩邊較長者作為輸出寬度，左右兩邊較長者作為輸出高度，建立輸出的四角座標，再用cv2.getPerspectiveTransform()計算轉換矩陣，以及cv2.warpPerspective()產生校正圖，結果存入result資料夾
 ### 比較圖
 ![](./result/quiz3_2.jpg)
 
@@ -63,4 +63,19 @@
 
 閱讀方向不正確：角點排序根據各點相對中心的角度，能避免重複選點，但沒有利用文字內容判斷物體的正上方，若物體向右轉向太多，x+y最小值有可能出現在物體左下角，因此圖片可能被校正成橫向
 
-依賴物體與背景亮度差異：Otsu二值化適合白色紙張搭配深色背景，若背景與紙張亮度接近就可能無法將紙張完整分離
+依賴物體與背景亮度差異：Otsu二值化適合白色紙張搭配深色背景，若背景與紙張亮度接近就可能無法將紙張完整分離，透明物體也會造成判定失效
+
+
+# quiz 4 基礎
+## 在main.ipynb輸入圖片名稱，在quiz4.py中建立preprocess_image(image)、find_alignment(gray1, gray2)、stitch_image(image1, image2, matrix)函式
+利用preprocess_image()將影像轉為灰階，供後續使用
+
+在find_alignment()中，利用SIFT偵測灰階影像特徵、計算描述子，以及BFMatcher，以L2距離比較描述子，每個特徵找出兩個最接近的候選，當最佳候選的距離小於次佳候選的0.75倍時，保留該配對。取出配對點的座標後，使用RANSAC估計image 1到image 2的透視轉換矩陣，篩除不符合此轉換的配對，重投影誤差門檻設為5 pixel。
+
+利用stitch_image()計算image 1轉換後的四個角點，與image 2的角點一起決定輸出畫布範圍，再使用cv2.warpPerspective()，將image 1轉換到image 2的視角，再將image 2貼到畫布的對應位置，重疊區域直接由image 2覆蓋
+### 比較圖
+![](./result/quiz4_1.jpg)
+
+
+# quiz 4 進階
+
