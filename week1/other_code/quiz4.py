@@ -93,3 +93,11 @@ def stitch_image(image1, image2, matrix):
     stitched[shift_y:shift_y + height2, shift_x:shift_x + width2] = image2
     
     return stitched
+
+def preprocess_image_v2(image):
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    deniosed = cv2.GaussianBlur(gray, (3, 3), 0)
+    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    enhanced = clahe.apply(deniosed)
+    
+    return enhanced

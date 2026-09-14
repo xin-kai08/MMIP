@@ -74,8 +74,19 @@
 
 利用stitch_image()計算image 1轉換後的四個角點，與image 2的角點一起決定輸出畫布範圍，再使用cv2.warpPerspective()，將image 1轉換到image 2的視角，再將image 2貼到畫布的對應位置，重疊區域直接由image 2覆蓋
 ### 比較圖
-![](./result/quiz4_1.jpg)
+![](./result/quiz4_1/quiz4_1.jpg)
 
 
 # quiz 4 進階
+## 在preprocess_image(image)中只使用灰階，在preprocess_image_v2(image)中使用灰階 + GaussianBlur + CLAHE
+CLAHE設定為clipLimit=2.0、tileGridSize=(8, 8)，GaussianBlur使用(3, 3)大小，兩種版本皆沿用相同的SIFT、特徵配對、RANSAC與拼接流程
 
+兩種版本效果相近：特徵豐富時，拼接完成度差不多；特徵稀少時，雖然完成度不一樣，但效果皆差強人意
+
+特徵豐富時，角度誤差大也能完成：重疊區域具有足夠且可正確匹配的特徵時，不同拍攝角度下仍能完成拼接
+
+牆角等交界可能出現背景變形：雖然物體可以完成拼接，但背景卻出現不自然的變形
+
+亮度差異大時，可以完成拼接，但明暗接縫明顯：目前直接以第二張影像覆蓋重疊區域，未進行亮度校正或融合，因此會出現明顯的明暗交界
+### 比較圖
+![](./result/quiz4_2/quiz4_1.jpg)
