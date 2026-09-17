@@ -3,3 +3,4 @@ scikit-learn
 matplotlib
 numpy
 ipykernel
+torch==2.6.0

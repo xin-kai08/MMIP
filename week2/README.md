@@ -28,3 +28,25 @@ Random Forest表現最好為threshold=0.35時。
 
 
 # quiz 2 基礎
+使用pandas讀取資料，檢查欄位名稱、資料型態、缺失值及各類別分布，依照欄位意義決定前處理方式。<br>
+(default.payment.next.month作為預測目標，SEX使用二元編碼，EDUCATION、MARRIAGE與六個還款狀態欄位使用one-hot encoding，其他使用StandardScaler標準化)<br>
+
+使用data_segment()將資料切分成train：70%、validation：20%、test：10%，使用stratify維持目標類別比例，並設定random_state=42。<br>
+
+使用feature_preprocess()完成編碼與標準化。<br>
+
+利用create_dataloader()輸出的DataLoader分批取出資料，輸入MLP模型，結構為：<br>
+90 -> 64 -> 32 -> 1<br>
+模型包含兩個隱藏層，分別有64、32個神經元，並使用ReLU，加上輸出層，共三個linear層。訓練時搭配BCEWithLogitsLoss，計算分類指標時，使用Sigmoid轉成違約機率，再以threshold＝0.5判斷類別。<br>
+
+使用train_model()訓練模型，設定為：<br>
+optimizer：Adam<br>
+learning rate：0.001<br>
+epochs:50<br>
+
+使用evaluate_model()評估第50個epoch結束時的模型，記錄輸出指標，再以save_result_plots()產生loss、f1 score、test confusion matrix與五項指標，共三張圖，存入result資料夾。
+
+### 結果圖
+![](./result/quiz2_1/quiz2_1_loss.png)
+![](./result/quiz2_1/quiz2_1_f1.png)
+![](./result/quiz2_1/quiz2_1_test_cm.png)
