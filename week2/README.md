@@ -70,7 +70,7 @@ learning rate改為0.0001。<br>
 加入正則化，weight_decay設定為0.0001。<br>
 模型皆使用threshold=0.5，在相同test dataset上做比較。<br>
 
-version 2在test dataset上的結果皆比version 1進步，從混淆矩陣觀察，FP減少31筆，FN則減少6筆，並減輕overfitting的程度，但不代表分類問題已完全解決。
+version 2在test dataset上的結果皆比version 1進步，從混淆矩陣觀察，FP減少3筆，FN則減少21筆，並減輕overfitting的程度，但不代表分類問題已完全解決。
 
 ### 比較圖  (左：version 1 | 右：version 2)
 <p>
@@ -87,4 +87,38 @@ version 2在test dataset上的結果皆比version 1進步，從混淆矩陣觀�
 </p>
 
 # quiz 3 基礎
+沿用quiz 2進階題訓練好的MLP v2在test dataset上進行評估。模型輸出的logits經過sigmoid轉成違約機率，再透過save_roc_curve()輸出ROC與AUC。<br>
 
+## ROC：<br>
+橫軸 FPR：未違約客戶被誤判為違約的比例<br>
+縱軸 TPR：成功找出違約客戶的比例，也就是recall<br>
+
+## AUC：<br>
+ROC曲線下的面積，用來衡量模型區分正負類的整體排序能力，越接近1越好。<br>
+
+### 結果圖
+![](./result/quiz3_1/test_roc_curve.png)
+
+
+# quiz 3 進階
+## 第二個模型使用XGBoost，沿用quiz 2相同的training dataset
+各項參數為：<br>
+estimators=300<br>
+max_depth=3<br>
+learning_rate=0.0001 (與MLP v2相同)<br>
+subsample=0.8<br>
+colsample_bytree=0.8<br>
+reg_lambda=1.0<br>
+objective="binary:logistic"<br>
+eval_metric="logloss"<br>
+tree_method="hist"<br>
+random_state=42<br>
+
+在train_xgboost()中使用.fit()訓練，再利用save_roc_xgboost()取得類別1(違約)的預測機率，並和MLP v2共同使用test_loader預測所有batch的真實標籤與預測機率後，統一計算ROC與AUC，將兩條曲線繪製於同一張圖。
+
+### 比較圖
+![](./result/quiz3_2/roc_curve_comparison.png)
+
+## 差異比較
+兩個模型的AUC均高於0.5，皆具有一定的違約與未違約區分能力。<br>
+MLP v2的AUC比XGBoost高，且ROC都在XGBoost之上，表示在相同FPR下，MLP v2通常能取得較高的TPR，因此在本次實作中，MLP v2的整體排序能力較佳。
