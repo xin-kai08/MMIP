@@ -7,6 +7,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score, confusion_matrix, ConfusionMatrixDisplay
 from pathlib import Path
+from copy import deepcopy
 
 def data_segment(data):
     target = "default.payment.next.month"
@@ -69,7 +70,7 @@ class MLP(nn.Module):
         x = self.mlp(x)
         return x
     
-def train_model(model, train_loader, val_loader, device, epochs=50, learning_rate=0.001, threshold=0.5):
+def train_model(model, train_loader, val_loader, device, epochs, learning_rate, threshold):
     criterion = torch.nn.BCEWithLogitsLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
     
@@ -139,7 +140,7 @@ def train_model(model, train_loader, val_loader, device, epochs=50, learning_rat
         
     return model, history
 
-def evaluate_model(model, test_loader, device, threshold=0.5):
+def evaluate_model(model, test_loader, device, threshold):
     model.eval()
     criterion = torch.nn.BCEWithLogitsLoss()
     
@@ -176,7 +177,7 @@ def evaluate_model(model, test_loader, device, threshold=0.5):
     
     return scores, cm
 
-def save_result_plots(history, test_scores, test_cm, save_dir="result", prefix="quiz2_1", threshold=0.5):
+def save_result_plots(history, test_scores, test_cm, save_dir, prefix, threshold):
     save_dir=Path(save_dir)
     save_dir.mkdir(parents=True, exist_ok=True)
     
@@ -232,3 +233,123 @@ def save_result_plots(history, test_scores, test_cm, save_dir="result", prefix="
     fig.savefig(save_dir / f"{prefix}_test_cm.png", dpi=300, bbox_inches="tight")
     plt.show()
     plt.close(fig)
+    
+class MLP_v2(nn.Module):
+    def __init__(self, input_dim, dropout=0.0):
+        super().__init__()
+        self.mlp = nn.Sequential(
+            nn.Linear(input_dim, 128),
+            nn.ReLU(),
+            nn.Dropout(p=dropout),
+            nn.Linear(128, 64),
+            nn.ReLU(),
+            nn.Dropout(p=dropout),
+            nn.Linear(64, 32),
+            nn.ReLU(),
+            nn.Dropout(p=dropout),
+            nn.Linear(32, 1)
+        )
+    def forward(self, x):
+        x = self.mlp(x)
+        return x
+    
+def train_model_v2(model, train_loader, val_loader, device, epochs, learning_rate,
+                   threshold, patience=5, min_delta=0.0001, weight_decay=0.0001):
+    criterion = torch.nn.BCEWithLogitsLoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate, weight_decay=weight_decay)
+    
+    history = {"train_loss": [], "train_f1": [], "val_loss": [], "val_f1": []}
+    
+    best_val_loss = float("inf")
+    best_weight = None
+    best_epoch = 0
+    
+    stopping_reference = float("inf")
+    wait = 0
+    
+    for epoch in range(epochs):
+        model.train()
+        train_loss_sum = 0
+        train_count = 0
+        train_targets = []
+        train_predictions = []
+        
+        for X_batch, y_batch in train_loader:
+            X_batch = X_batch.to(device)
+            y_batch = y_batch.to(device)
+            
+            optimizer.zero_grad()
+            output = model(X_batch)
+            loss = criterion(output, y_batch)
+            loss.backward()
+            optimizer.step()
+            
+            train_loss_sum += loss.item() * X_batch.size(0)
+            train_count += X_batch.size(0)
+            
+            prob = torch.sigmoid(output.detach())
+            prediction = (prob >= threshold).int()
+            
+            train_targets.extend(y_batch.detach().cpu().view(-1).tolist())
+            train_predictions.extend(prediction.cpu().view(-1).tolist())
+        
+        train_loss = train_loss_sum / train_count
+        train_f1 = f1_score(train_targets, train_predictions, zero_division=0)
+        
+        model.eval()
+        val_loss_sum = 0
+        val_count = 0
+        val_targets = []
+        val_predictions = []
+        
+        with torch.no_grad():
+            for X_batch, y_batch in val_loader:
+                X_batch = X_batch.to(device)
+                y_batch = y_batch.to(device)
+                
+                output = model(X_batch)
+                loss = criterion(output, y_batch)
+                
+                val_loss_sum += loss.item() * X_batch.size(0)
+                val_count += X_batch.size(0)
+                
+                prob = torch.sigmoid(output.detach())
+                prediction = (prob >= threshold).int()
+                
+                val_targets.extend(y_batch.detach().cpu().view(-1).tolist())
+                val_predictions.extend(prediction.cpu().view(-1).tolist())
+            
+        val_loss = val_loss_sum / val_count
+        val_f1 = f1_score(val_targets, val_predictions, zero_division=0)
+            
+        history["train_loss"].append(train_loss)
+        history["train_f1"].append(train_f1)
+        history["val_loss"].append(val_loss)
+        history["val_f1"].append(val_f1)
+        
+        print(f"epoch {epoch + 1}/{epochs} | train loss: {train_loss:.4f}, F1: {train_f1:.4f} | val loss: {val_loss:.4f}, val f1: {val_f1:.4f}")
+        
+        if val_loss < best_val_loss:
+            best_val_loss = val_loss
+            best_epoch = epoch + 1
+            best_weight = deepcopy(model.state_dict())
+            
+        if val_loss < stopping_reference - min_delta:
+            stopping_reference = val_loss
+            wait = 0
+            
+        else:
+            wait += 1
+            
+        if wait >= patience:
+            print(f"early stopping：連續{patience}輪無足夠改善")
+            break
+        
+    if best_weight is None:
+        raise ValueError("未取得有效模型權重")
+    
+    model.load_state_dict(best_weight)
+    history["best_epoch"] = best_epoch
+    print(f"還原epoch {best_epoch}的模型，val loss = {best_val_loss:.4f}")
+            
+    return model, history

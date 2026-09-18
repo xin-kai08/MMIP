@@ -5,18 +5,22 @@
 
 調整threshold時，沿用同一個訓練完成的模型，不重新訓練。
 
-### 結果圖
-![](./result/quiz1_1/confusion_matrix_0.5.png)
-![](./result/quiz1_1/confusion_matrix_0.25.png)
+### 比較圖  (左：threshold=0.5 | 右：threshold=0.25)
+<p>
+  <img src="./result/quiz1_1/confusion_matrix_0.5.png" width="45%" />
+  <img src="./result/quiz1_1/confusion_matrix_0.25.png" width="45%" />
+</p>
 
 
 # quiz 1 進階
 ## 將模型改為Random Forest
 設定n_estimators=100、random_state=42，沿用相同的training、validation切分及縮放後的特徵，比較不同threshold跟模型的表現差異。
 
-### 結果圖
-![](./result/quiz1_2/confusion_matrix_0.5.png)
-![](./result/quiz1_2/confusion_matrix_0.35.png)
+### 比較圖  (左：threshold=0.5 | 右：threshold=0.35)
+<p>
+  <img src="./result/quiz1_2/confusion_matrix_0.5.png" width="45%" />
+  <img src="./result/quiz1_2/confusion_matrix_0.35.png" width="45%" />
+</p>
 
 ## 差異比較
 ### threshold挑選依據：從0.5出發，以0.1為步距比較f1，改善停止後，額外測試相鄰門檻的中點，最後選擇所有已測試門檻中validation f1最高者
@@ -47,6 +51,40 @@ epochs:50<br>
 使用evaluate_model()評估第50個epoch結束時的模型，記錄輸出指標，再以save_result_plots()產生loss、f1 score、test confusion matrix與五項指標，共三張圖，存入result資料夾。
 
 ### 結果圖
-![](./result/quiz2_1/quiz2_1_loss.png)
-![](./result/quiz2_1/quiz2_1_f1.png)
-![](./result/quiz2_1/quiz2_1_test_cm.png)
+<p>
+  <img src="./result/quiz2_1/quiz2_1_loss.png" width="45%" />
+  <img src="./result/quiz2_1/quiz2_1_f1.png" width="45%" />
+</p>
+<p>
+  <img src="./result/quiz2_1/quiz2_1_test_cm.png" width="45%" />
+</p>
+
+
+# quiz 2 進階
+## 調整learning rate、模型結構、hidden layer，加入early stopping、dropout、正則化
+沿用基礎題的資料切分與前處理，調整包含以下：<br>
+learning rate改為0.0001。<br>
+模型結構：90 -> 128 -> 64 -> 32 -> 1 共四層linear層。<br>
+加入early stopping，監控validation loss，並還原最佳epoch的模型權重。<br>
+加入dropout，設定為0.2。<br>
+加入正則化，weight_decay設定為0.0001。<br>
+模型皆使用threshold=0.5，在相同test dataset上做比較。<br>
+
+version 2在test dataset上的結果皆比version 1進步，從混淆矩陣觀察，FP減少31筆，FN則減少6筆，並減輕overfitting的程度，但不代表分類問題已完全解決。
+
+### 比較圖  (左：version 1 | 右：version 2)
+<p>
+  <img src="./result/quiz2_1/quiz2_1_loss.png" width="45%" />
+  <img src="./result/quiz2_2/quiz2_2_loss.png" width="45%" />
+</p>
+<p>
+  <img src="./result/quiz2_1/quiz2_1_f1.png" width="45%" />
+  <img src="./result/quiz2_2/quiz2_2_f1.png" width="45%" />
+</p>
+<p>
+  <img src="./result/quiz2_1/quiz2_1_test_cm.png" width="45%" />
+  <img src="./result/quiz2_2/quiz2_2_test_cm.png" width="45%" />
+</p>
+
+# quiz 3 基礎
+
