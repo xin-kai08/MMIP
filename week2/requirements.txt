@@ -4,3 +4,4 @@ matplotlib
 numpy
 ipykernel
 torch==2.6.0
+xgboost
