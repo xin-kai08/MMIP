@@ -37,3 +37,32 @@ epochs由15降至5，learning rate由0.0005調整至0.5。
 
 
 # QUIZ 3 基礎
+## 與quiz 2進階題的模型(v2)比較，加入data augmentation，在train data transform的部分加入隨機翻轉與旋轉，validation、test data transform則不做加強
+
+### 結果圖
+## PlainCNN
+![](./result/quiz2_plain_cnn_v3_roc.png)
+## ResNet-18
+![](./result/quiz2_resnet_v3_roc.png)
+
+ResNet-18的表現一樣比PlainCNN優異。<br>
+
+與v2模型比較時，PlainCNN與ResNet-18的test loss和F1-score表現都比較差，可能原因是加入隨機翻轉與旋轉後，訓練圖片的變化增加，模型需要更多時間適應，而本次只訓練5個epoch，搭配較大的learning rate(0.05)，可能尚未充分收斂，ResNet-18使用預訓練的影像特徵，可能因此仍維持較好的分類表現。
+
+
+# QUIZ 3 進階
+## kernel視覺化
+載入訓練後的Plain CNN權重，選取第一層卷積的Filter 0與Filter 1，分別畫出R、G、B通道的3×3權重，紅色代表正權重，藍色代表負權重。<br>
+
+Filter 0的R通道呈現上下偏正、中間偏負的分布，推測可能對水平方向的條紋或邊緣變化有反應；Filter 1的B通道大多為負值，而R、G通道部分位置有較強的正值，推測可能與局部顏色差異有關。
+
+### 結果圖
+![](./result/quiz3_plain_cnn_kernels.png)
+
+## Grad-CAM
+將支持模型預測的區域畫成熱力圖，並疊回原圖，暖色表示相對較強的正向貢獻，冷色表示較弱。<br>
+
+這張測試圖片的真實類別與預測結果皆為Bean，熱區出現在部分豆莢及其周圍，但沒有完整覆蓋手中所有豆莢，圖片上方也有明顯反應，顯示模型可能利用多個局部區域進行判斷，不能只因預測正確，就認定模型完全依靠主要物體辨識。
+
+### 結果圖
+![](./result/quiz3_plain_cnn_gradcam_0.png)
