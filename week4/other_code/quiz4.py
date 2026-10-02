@@ -11,6 +11,7 @@ from torch.utils.data import Dataset
 from torchvision import transforms
 from torch.nn.utils.rnn import pad_sequence
 from torch import nn
+from nltk.translate.bleu_score import corpus_bleu
 
 def prepare_splits(caption_path, random_state=42):
     captions = pd.read_csv(caption_path)
@@ -239,3 +240,98 @@ def plot_history(history, result_path):
     fig.savefig(result_path / "training_curves.png", dpi=150)
     plt.show()
     plt.close(fig)
+    
+def generate_caption(model, image, vocab, device, max_length=30):
+    model.eval()
+
+    id_to_word = {
+        token_id: word
+        for word, token_id in vocab.items()
+    }
+
+    generated_ids = []
+
+    with torch.no_grad():
+        image = image.unsqueeze(0).to(device)
+
+        features = model.encoder(image)
+
+        hidden = model.feature_to_hidden(features).unsqueeze(0)
+        cell = model.feature_to_cell(features).unsqueeze(0)
+
+        current_token = torch.tensor([[vocab["<BOS>"]]], dtype=torch.long, device=device)
+
+        for _ in range(max_length):
+            embedding = model.embedding(current_token)
+
+            output, (hidden, cell) = model.lstm(embedding, (hidden, cell))
+
+            logits = model.output_layer(output[:, -1, :])
+
+            logits[:, vocab["<PAD>"]] = float("-inf")
+            logits[:, vocab["<BOS>"]] = float("-inf")
+
+            next_id = logits.argmax(dim=-1).item()
+
+            if next_id == vocab["<EOS>"]:
+                break
+
+            generated_ids.append(next_id)
+
+            current_token = torch.tensor([[next_id]], dtype=torch.long, device=device)
+
+    words = [id_to_word[token_id] for token_id in generated_ids]
+
+    return " ".join(words)
+
+def evaluate_bleu(model, df, image_dir, vocab, transform, device):
+    image_dir = Path(image_dir)
+
+    all_references = []
+    all_predictions = []
+    results = []
+
+    groups = df.groupby("image", sort=False)
+
+    for index, (image_name, group) in enumerate(groups):
+        image_path = image_dir / image_name
+
+        with Image.open(image_path) as img:
+            image = transform(img.convert("RGB"))
+
+        prediction = generate_caption(model, image, vocab, device)
+
+        reference_captions = group["caption"].tolist()
+
+        reference_tokens = [
+            tokenize(caption)
+            for caption in reference_captions
+        ]
+
+        prediction_tokens = prediction.split()
+
+        all_references.append(reference_tokens)
+        all_predictions.append(prediction_tokens)
+
+        results.append({
+            "image": image_name,
+            "prediction": prediction,
+            "references": reference_captions
+        })
+
+        if (index + 1) % 100 == 0:
+            print(f"已完成 {index + 1}/{len(groups)} 張圖片")
+
+    weights = {
+        "BLEU-1": (1.0,),
+        "BLEU-2": (0.5, 0.5),
+        "BLEU-3": (1 / 3, 1 / 3, 1 / 3),
+        "BLEU-4": (0.25, 0.25, 0.25, 0.25)
+    }
+
+    scores = {}
+
+    for name, weight in weights.items():
+        scores[name] = corpus_bleu(all_references, all_predictions, weights=weight)
+
+    return scores, results
