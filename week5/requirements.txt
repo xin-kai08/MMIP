@@ -1,0 +1,11 @@
+torch==2.5.1
+torchvision==0.20.1
+transformers==4.44.2
+timm
+pandas
+matplotlib
+Pillow
+scikit-learn
+tqdm
+nltk
+bert-score
