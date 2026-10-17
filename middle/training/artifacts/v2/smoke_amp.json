@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "reason": "Non-finite gradient; no silent AMP continuation",
+  "oom": false,
+  "gpu_training_verified": false
+}

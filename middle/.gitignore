@@ -2,3 +2,8 @@
 __pycache__/
 dataset_generate/dataset_workflow/.workflow.lock
 dataset_generate/
+
+# Large or machine-local training outputs; fixed manifests remain versionable.
+training/backups/
+training/runs/
+training/artifacts/**/smoke/

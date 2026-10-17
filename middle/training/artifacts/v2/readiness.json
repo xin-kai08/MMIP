@@ -1,0 +1,70 @@
+{
+  "version": "v2",
+  "seed": 42,
+  "ratios": [
+    0.7,
+    0.2,
+    0.1
+  ],
+  "existing_split_reused": true,
+  "partition_source": "training\\artifacts\\v1\\partition.json",
+  "source_rows": 2548,
+  "manifest_rows": 1181,
+  "original_review": {
+    "approved": 1208,
+    "excluded": 584,
+    "pending": 708
+  },
+  "generated_review": {
+    "approved": 22,
+    "pending": 26
+  },
+  "all_split_counts": {
+    "train": 1786,
+    "val": 508,
+    "test": 254
+  },
+  "manifest_split_counts": {
+    "train": 826,
+    "val": 239,
+    "test": 116
+  },
+  "stage_counts": {
+    "stage1": 408,
+    "stage2": 418
+  },
+  "issue_counts": {
+    "unknown_reason_requires_explicit_confirmation": 688,
+    "excluded": 584,
+    "canonical_original_duplicate": 49,
+    "pending": 734,
+    "mixed_or_unannotated_requires_resolution": 37
+  },
+  "missing_classes": [
+    "waste:stage1:general",
+    "waste:stage1:food_waste",
+    "waste:val:general",
+    "waste:val:food_waste",
+    "residual:val:not_assessable"
+  ],
+  "blockers": [
+    "Unreviewed images: {'original': 708, 'generated': 26}",
+    "Missing training/validation classes: waste:stage1:general, waste:stage1:food_waste, waste:val:general, waste:val:food_waste, residual:val:not_assessable"
+  ],
+  "risks": [
+    "Unresolved near-duplicate candidates: 820; not automatically grouped",
+    "Unknown residual reasons without explicit qualification: 688; masked from residual loss"
+  ],
+  "real_test_support": {
+    "waste": {
+      "other_recycling": 91,
+      "glass": 23
+    },
+    "residual": {
+      "liquid": 16,
+      "none": 12,
+      "food": 18
+    }
+  },
+  "ready": false
+}

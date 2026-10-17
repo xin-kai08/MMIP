@@ -1,0 +1,141 @@
+{
+  "labels_unchanged": true,
+  "images_unchanged": 2548,
+  "groups_cross_split_or_stage": 0,
+  "partition_v1_v2_identical": true,
+  "formal_training_started": false,
+  "production_checkpoints_created": false,
+  "actual_test_set_evaluated": false,
+  "data_tests_and_model_tests": 9,
+  "curation_regression_tests": 9,
+  "fp32_gpu_smoke": {
+    "status": "passed",
+    "device": "cuda",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "cuda_build": "12.1",
+    "batch_size": 8,
+    "input_size": 224,
+    "amp": false,
+    "pretrained": false,
+    "oom": false,
+    "full_training_started": false,
+    "stages": [
+      {
+        "stage": "stage1",
+        "steps": 3,
+        "losses": [
+          1.5581488609313965,
+          1.471826434135437,
+          1.4585256576538086
+        ],
+        "changed_parameters": 213,
+        "frozen_head_unchanged": true,
+        "checkpoint_reload_reproducible": true
+      },
+      {
+        "stage": "stage2",
+        "steps": 3,
+        "losses": [
+          1.4506051540374756,
+          1.3972331285476685,
+          1.3472334146499634
+        ],
+        "changed_parameters": 213,
+        "frozen_head_unchanged": true,
+        "checkpoint_reload_reproducible": true
+      }
+    ],
+    "gpu": "NVIDIA GeForce GTX 1650",
+    "capability": [
+      7,
+      5
+    ],
+    "seconds": 2.931504000000132,
+    "peak_memory_mb": 898.79931640625,
+    "config_sha256": "68e8b00ba9873ba99d884750be4a475413c99b66b7d0c8bb5ff30d9d2d61189c",
+    "manifest_sha256": "1212b06c21429f9dd97c8d9ed932e34e138dcd33e01ef59b452a0acf4628360f"
+  },
+  "amp_gpu_smoke": {
+    "status": "failed",
+    "reason": "Non-finite gradient; no silent AMP continuation",
+    "oom": false,
+    "gpu_training_verified": false
+  },
+  "readiness": {
+    "version": "v2",
+    "seed": 42,
+    "ratios": [
+      0.7,
+      0.2,
+      0.1
+    ],
+    "existing_split_reused": true,
+    "partition_source": "training\\artifacts\\v1\\partition.json",
+    "source_rows": 2548,
+    "manifest_rows": 1181,
+    "original_review": {
+      "approved": 1208,
+      "excluded": 584,
+      "pending": 708
+    },
+    "generated_review": {
+      "approved": 22,
+      "pending": 26
+    },
+    "all_split_counts": {
+      "train": 1786,
+      "val": 508,
+      "test": 254
+    },
+    "manifest_split_counts": {
+      "train": 826,
+      "val": 239,
+      "test": 116
+    },
+    "stage_counts": {
+      "stage1": 408,
+      "stage2": 418
+    },
+    "issue_counts": {
+      "unknown_reason_requires_explicit_confirmation": 688,
+      "excluded": 584,
+      "canonical_original_duplicate": 49,
+      "pending": 734,
+      "mixed_or_unannotated_requires_resolution": 37
+    },
+    "missing_classes": [
+      "waste:stage1:general",
+      "waste:stage1:food_waste",
+      "waste:val:general",
+      "waste:val:food_waste",
+      "residual:val:not_assessable"
+    ],
+    "blockers": [
+      "Unreviewed images: {'original': 708, 'generated': 26}",
+      "Missing training/validation classes: waste:stage1:general, waste:stage1:food_waste, waste:val:general, waste:val:food_waste, residual:val:not_assessable"
+    ],
+    "risks": [
+      "Unresolved near-duplicate candidates: 820; not automatically grouped",
+      "Unknown residual reasons without explicit qualification: 688; masked from residual loss"
+    ],
+    "real_test_support": {
+      "waste": {
+        "other_recycling": 91,
+        "glass": 23
+      },
+      "residual": {
+        "liquid": 16,
+        "none": 12,
+        "food": 18
+      }
+    },
+    "ready": false
+  },
+  "python_api_importable": true,
+  "confirmed_duplicate_groups_checked": true,
+  "training_test_count": 9,
+  "training_tests_skipped": 0,
+  "curation_test_count": 9,
+  "dependency_freeze": "training/environment_freeze.txt"
+}

@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "device": "cuda",
+  "torch": "2.5.1+cu121",
+  "torchvision": "0.20.1+cu121",
+  "cuda_build": "12.1",
+  "batch_size": 8,
+  "input_size": 224,
+  "amp": false,
+  "pretrained": false,
+  "oom": false,
+  "full_training_started": false,
+  "stages": [
+    {
+      "stage": "stage1",
+      "steps": 3,
+      "losses": [
+        1.5581488609313965,
+        1.471826434135437,
+        1.4585256576538086
+      ],
+      "changed_parameters": 213,
+      "frozen_head_unchanged": true,
+      "checkpoint_reload_reproducible": true
+    },
+    {
+      "stage": "stage2",
+      "steps": 3,
+      "losses": [
+        1.4506051540374756,
+        1.3972331285476685,
+        1.3472334146499634
+      ],
+      "changed_parameters": 213,
+      "frozen_head_unchanged": true,
+      "checkpoint_reload_reproducible": true
+    }
+  ],
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "capability": [
+    7,
+    5
+  ],
+  "seconds": 2.931504000000132,
+  "peak_memory_mb": 898.79931640625,
+  "config_sha256": "68e8b00ba9873ba99d884750be4a475413c99b66b7d0c8bb5ff30d9d2d61189c",
+  "manifest_sha256": "1212b06c21429f9dd97c8d9ed932e34e138dcd33e01ef59b452a0acf4628360f"
+}

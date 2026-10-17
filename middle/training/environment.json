@@ -1,0 +1,9 @@
+{
+  "missing_dependencies": [],
+  "cuda_verified": false,
+  "driver_gpu_inventory": "NVIDIA GeForce GTX 1650, 4096 MiB, 551.76",
+  "torch": "2.5.1+cu121",
+  "torchvision": "0.20.1+cu121",
+  "cuda_available": true,
+  "cuda_build": "12.1"
+}
