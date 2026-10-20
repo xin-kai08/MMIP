@@ -1,5 +1,7 @@
 # 固定資料分配與兩階段訓練
 
+**現況更新（2026-10-20）**：experiment_v3 已於 2026-10-18 完成兩階段與正式 test；stage1 23 epoch、stage2 28 epoch，best／last 及結果都在 runs/experiment_v3。下文的 v2「資料未驗收」是初次建立流程時的說明，現在應查看 artifacts/v3 與 completed 產物；不要重跑已完成的 run 或 test。網站已串接 stage2_best.pt，見 [網站說明](../website/README.md)。歷史 RUN_REPORT.md 保留 2026-10-17 當時的結果，不回填改寫。
+
 此資料夾提供資料資格檢查、固定 manifest、EfficientNet-B0 雙頭模型、兩階段訓練、接續、評估與多圖推論。**目前資料未完成驗收，正式訓練尚未啟動。** 實際資料與環境結果見 [本次執行紀錄](RUN_REPORT.md)。不搬動圖片、不修改 dataset/labels.csv、不重新審圖或生成。
 
 ## 環境與目錄

@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8001",
+  "test_id": "uitest2464877239",
+  "real_checkpoint": true,
+  "screenshots": [
+    "01-entry.png",
+    "02-upload.png",
+    "03-before-prediction.png",
+    "04-results.png",
+    "05-statistics.png",
+    "06-mixed-results.png",
+    "07-mobile-history.png"
+  ],
+  "console_errors": [],
+  "tested": [
+    "ID creation",
+    "multi-upload",
+    "pre-GT before prediction",
+    "real two-head prediction",
+    "feedback separation",
+    "refresh persistence",
+    "history",
+    "statistics sources",
+    "CSV download",
+    "mixed success/failure",
+    "single/batch deletion",
+    "mobile layout"
+  ]
+}

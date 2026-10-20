@@ -7,3 +7,14 @@ dataset_generate/
 training/backups/
 training/runs/
 training/artifacts/**/smoke/
+
+# Website runtime data and portable build tools stay local on F:.
+uploads/
+website/data/
+website/.tools/
+website/.cache/
+website/frontend/node_modules/
+website/frontend/dist/
+website/tmp*/
+website/*.log
+website/verification/screenshots/

@@ -1,0 +1,14 @@
+{
+  "host": "127.0.0.1",
+  "port": 8000,
+  "dev_port": 5173,
+  "api_prefix": "/api",
+  "model_path": "training/runs/experiment_v3/stage2_best.pt",
+  "device": "cuda",
+  "database": "website/data/app.sqlite3",
+  "uploads": "uploads/images",
+  "max_files": 20,
+  "max_file_bytes": 8388608,
+  "max_pixels": 16000000,
+  "formats": ["JPEG", "PNG", "WEBP"]
+}

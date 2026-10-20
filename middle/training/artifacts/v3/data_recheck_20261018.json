@@ -1,0 +1,37 @@
+{
+  "checked_date": "2026-10-18",
+  "ready": true,
+  "labels_sha256": "256ccb96ea886fdfe60f8b93d55de0c1cb7dfde9f66cb5d330facad668eeca02",
+  "images_checked": 2548,
+  "decode_errors": 0,
+  "inventory_hash_mismatches": 0,
+  "manifest_label_mismatches": 0,
+  "group_split_stage_checks_passed": true,
+  "partition_reused": true,
+  "approved": 1920,
+  "excluded": 628,
+  "pending": 0,
+  "generated_approved": 48,
+  "manifest_rows": 1854,
+  "stage1_rows": 636,
+  "stage2_rows": 661,
+  "val_rows": 377,
+  "test_rows": 180,
+  "unknown_eligibility_pending": 688,
+  "unresolved_near_candidates": 820,
+  "checkpoints": {
+    "stage1": {
+      "checkpoint_matches_v3": true,
+      "epoch": 18,
+      "completed": true
+    },
+    "stage2": {
+      "checkpoint_matches_v3": true,
+      "epoch": 23,
+      "completed": true
+    }
+  },
+  "labels_modified": false,
+  "images_modified": false,
+  "training_started_by_this_check": false
+}

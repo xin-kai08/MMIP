@@ -1,0 +1,1 @@
+"""Local waste recognition website."""

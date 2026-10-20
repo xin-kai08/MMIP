@@ -1,0 +1,22 @@
+{
+  "version": "v3",
+  "seed": 42,
+  "labels_sha256": "256ccb96ea886fdfe60f8b93d55de0c1cb7dfde9f66cb5d330facad668eeca02",
+  "eligibility_sha256": "cad473a20e1a3ec1b7d77f77ab0b80e7f4fda8bb3cc17fc74bbce68a4989d3c7",
+  "manifest_sha256": "39ba1b44ccf46c083d8f4e99efc7c3ee6bc5fcdecb55bc8d838f4e89dedfede8",
+  "partition_sha256": "bcf273f0ee8275d42cfef4788eed4b01ca53e849c47ecb09b8df18a1049cb3c6",
+  "created_at": "2026-10-18T12:28:27.836370+00:00",
+  "backup": "F:\\project\\MMIP\\middle\\training\\backups\\20261018T122819232269",
+  "waste_classes": [
+    "general",
+    "glass",
+    "food_waste",
+    "other_recycling"
+  ],
+  "residual_classes": [
+    "none",
+    "food",
+    "liquid",
+    "not_assessable"
+  ]
+}
