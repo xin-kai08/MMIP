@@ -4,6 +4,8 @@
 
 ## 日常啟動：不用重新下載
 
+下載／測試快取的安全清理請見 [磁碟整理說明](../maintenance/README.md)。清除確認閒置的 npm/uv 快取不會刪除已安裝套件；`.venv`、`.tools`、`node_modules`、`dist`、SQLite、上傳圖片均保留。未來重裝或升級套件時才可能需要重新下載。
+
 從專案根目錄執行：
 
 ```powershell
