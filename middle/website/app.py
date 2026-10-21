@@ -11,6 +11,7 @@ import re
 import sqlite3
 import tempfile
 import warnings
+from typing import Literal
 from PIL import Image
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.responses import FileResponse, JSONResponse, Response
@@ -196,14 +197,22 @@ def create_app(settings=None,predictor_factory=None):
     def get_batch(batch_id:str,user_id:str):return detail(batch_id,validate_user(user_id))
 
     @app.post(prefix+'/images/{image_id}/annotations',status_code=201)
-    def annotate(image_id:str,user_id:str,body:Annotation):
+    def annotate(image_id:str,user_id:str,body:Annotation,response:Response,
+                 source:Literal['post_feedback']='post_feedback'):
         user=validate_user(user_id)
+        # BEGIN IMMEDIATE serializes the read/compare/append operation across all
+        # SQLite connections. Compare only the latest snapshot, so A -> B -> A
+        # remains a revision. Pre-prediction GT is never a writable API source.
         with service.store.connect(True) as c:
             row=owned_image(c,image_id,user)
             if row['status']!='completed':raise HTTPException(409,'只有完成辨識的圖片可提交結果後回饋')
-            previous=c.execute("SELECT id FROM annotations WHERE image_id=? AND source='post_feedback' ORDER BY id DESC LIMIT 1",(image_id,)).fetchone()
-            annotation_insert(c,image_id,body,'post_feedback',user,previous[0] if previous else None)
-            return dict(c.execute('SELECT * FROM annotations WHERE id=last_insert_rowid()').fetchone())
+            previous=c.execute('SELECT * FROM annotations WHERE image_id=? AND source=? ORDER BY id DESC LIMIT 1',(image_id,source)).fetchone()
+            content=(body.waste,body.residual,int(body.waste_confirmed),int(body.residual_confirmed))
+            if previous and content==tuple(previous[k] for k in ('waste_label','residual_label','waste_confirmed','residual_confirmed')):
+                response.status_code=200
+                return dict(previous,changed=False)
+            annotation_insert(c,image_id,body,source,user,previous['id'] if previous else None)
+            return dict(c.execute('SELECT * FROM annotations WHERE id=last_insert_rowid()').fetchone(),changed=True)
 
     @app.post(prefix+'/images/{image_id}/retry')
     def retry(image_id:str,user_id:str):

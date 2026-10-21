@@ -2,6 +2,7 @@ import React,{useEffect,useRef,useState} from 'react'
 import {createRoot} from 'react-dom/client'
 import {API,request,json,query,fileUrl,waste,residual,statuses,time,emptyAnswer} from './api'
 import type {Answer,Annotation,Batch,Health,ImageRow} from './api'
+import {fixedResidual,compatibleAnswer,changeWaste,changeResidual} from './annotation'
 import './style.css'
 
 type User={id:string,nickname:string}
@@ -9,25 +10,49 @@ const remember=(value:string)=>{try{localStorage.setItem('waste_id',value)}catch
 const previous=()=>{try{return localStorage.getItem('waste_id')||''}catch{return ''}}
 const go=(route:string)=>{window.location.hash=route}
 function Logo(){return <span className="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M26 5C11 3 4 11 7 20c3 10 21 8 19-15Z"/><path d="m8 26 15-15M14 20v-7m0 7h7"/></svg></span>}
-function SelectAnswer({answer,onChange,confirm=false}:{answer:Answer,onChange:(a:Answer)=>void,confirm?:boolean}){
- return <div className="answer-grid">{(['waste','residual'] as const).map(task=><div key={task}><label>{task==='waste'?'垃圾類別':'殘留狀態'}<select value={answer[task]||''} onChange={e=>onChange({...answer,[task]:e.target.value||null,[task+'_confirmed']:!!e.target.value})}><option value="">尚未確認</option>{Object.entries(task==='waste'?waste:residual).map(([key,label])=><option key={key} value={key}>{label}</option>)}</select></label>{confirm&&<label className="check"><input type="checkbox" disabled={!answer[task]} checked={answer[task+'_confirmed' as keyof Answer] as boolean} onChange={e=>onChange({...answer,[task+'_confirmed']:e.target.checked})}/>已確認此答案</label>}</div>)}</div>
+function SelectAnswer({answer,onChange}:{answer:Answer,onChange:(a:Answer)=>void}){
+ const fixed=fixedResidual(answer.waste),compatible=compatibleAnswer(answer)
+ return <><div className="answer-grid"><div><label>垃圾類別<select aria-label="垃圾類別" value={answer.waste||''} onChange={e=>onChange(changeWaste(answer,e.target.value||null))}><option value="">尚未選擇</option>{Object.entries(waste).map(([key,label])=><option key={key} value={key}>{label}</option>)}</select></label><label className="check"><input type="checkbox" disabled={!answer.waste} checked={answer.waste_confirmed} onChange={e=>onChange({...answer,waste_confirmed:e.target.checked})}/>已確認此答案</label></div>
+ <div><label>殘留狀態{fixed?<span className="fixed-residual" role="status">不適用</span>:<select aria-label="殘留狀態" disabled={!answer.waste} value={answer.waste?answer.residual||'':''} onChange={e=>onChange(changeResidual(answer,e.target.value||null))}><option value="">{answer.waste?'尚未選擇':'請先選垃圾類別'}</option>{Object.entries(residual).map(([key,label])=><option key={key} value={key}>{label}</option>)}</select>}</label>{!answer.waste&&<p className="small muted">請先選垃圾類別，再填寫殘留。</p>}
+ <label className="check"><input type="checkbox" disabled={!answer.waste||!compatible||(!fixed&&!answer.residual)} checked={!!answer.waste&&compatible&&answer.residual_confirmed} onChange={e=>onChange({...answer,residual:fixed?'not_assessable':answer.residual,residual_confirmed:e.target.checked})}/>已確認此答案</label>{fixed&&<p className="small muted">本專題此類固定不適用；帶入答案不代表已確認。</p>}</div></div>
+ {!compatible&&<div className="notice amber legacy-warning">歷史殘留答案「{residual[answer.residual!]||answer.residual}」與目前規則不相容，原紀錄保留且不會自動修改。<button onClick={()=>onChange({...answer,residual:'not_assessable',residual_confirmed:false})}>套用不適用並重新確認</button></div>}
+ {!answer.waste&&answer.residual&&<p className="notice amber legacy-warning">歷史殘留答案：{residual[answer.residual]}。請先選垃圾類別再重新確認；尚未儲存不會更動紀錄。</p>}</>
 }
 function savedAnswer(a?:Annotation):Answer{return a?{waste:a.waste_label,residual:a.residual_label,waste_confirmed:!!a.waste_confirmed,residual_confirmed:!!a.residual_confirmed}:emptyAnswer()}
-function ImageResult({image,user,onRefresh,onError}:{image:ImageRow,user:string,onRefresh:()=>void,onError:(s:string)=>void}){
+function sameAnswer(a:Answer,b:Answer){return a.waste===b.waste&&a.residual===b.residual&&a.waste_confirmed===b.waste_confirmed&&a.residual_confirmed===b.residual_confirmed}
+function AnswerSummary({annotation}:{annotation?:Annotation}){
+ return <><div className="answer-summary">{(['waste','residual'] as const).map(task=><div key={task}><strong>{task==='waste'?'垃圾類別':'殘留狀態'}</strong><p>{annotation?.[`${task}_label`]?(task==='waste'?waste:residual)[annotation[`${task}_label`]!]:'未提供／未確認'}</p><span className="small muted">確認狀態：{annotation?.[`${task}_confirmed`]?'已確認':'未提供／未確認'}</span></div>)}</div>{annotation&&!compatibleAnswer(savedAnswer(annotation))&&<p className="notice amber legacy-warning">歷史標註與目前連動規則不相容；原始答案唯讀保留，如需修正請另存回饋並重新確認。</p>}</>
+}
+function ImageResult({image,mode,user,onRefresh,onError}:{image:ImageRow,mode:string,user:string,onRefresh:()=>void,onError:(s:string)=>void}){
  const latest=image.annotations.filter(a=>a.source==='post_feedback').at(-1)
  const pre=image.annotations.find(a=>a.source==='pre_ground_truth')
- const [answer,setAnswer]=useState<Answer>(()=>savedAnswer(latest));const [busy,setBusy]=useState(false)
- useEffect(()=>setAnswer(savedAnswer(latest)),[latest?.id])
- const save=async()=>{setBusy(true);try{await request(`/images/${image.id}/annotations?${query(user)}`,{method:'POST',...json(answer)});onRefresh()}catch(e){onError(String(e))}finally{setBusy(false)}}
+ const [answer,setAnswer]=useState<Answer>(()=>savedAnswer(latest));const [stored,setStored]=useState<Annotation|undefined>(latest);const [busy,setBusy]=useState(false)
+ const [feedbackOpen,setFeedbackOpen]=useState(false);const saving=useRef(false);const storedRef=useRef(latest)
+ useEffect(()=>{
+  const previous=storedRef.current
+  // A refresh arriving after a successful POST must not reset a newer draft.
+  // Ignore already received/stale versions; retain edits on a newer remote version.
+  if(!latest||(previous&&latest.id<=previous.id))return
+  storedRef.current=latest;setStored(latest)
+  setAnswer(draft=>sameAnswer(draft,savedAnswer(previous))?savedAnswer(latest):draft)
+ },[latest?.id])
+ const dirty=!stored||!sameAnswer(answer,savedAnswer(stored))
+ const save=async()=>{
+  if(saving.current||!dirty||!compatibleAnswer(answer))return
+  saving.current=true;setBusy(true)
+  try{const result=await request<Annotation&{changed:boolean}>(`/images/${image.id}/annotations?${query(user)}`,{method:'POST',...json(answer)});if(!storedRef.current||result.id>=storedRef.current.id){storedRef.current=result;setStored(result);setAnswer(savedAnswer(result))}onRefresh()}
+  catch(e){onError(String(e))}finally{saving.current=false;setBusy(false)}
+ }
  const remove=async()=>{if(!window.confirm(`確定刪除「${image.original_name}」及其圖片、預測與所有人工標註？`))return;setBusy(true);try{await request(`/images/${image.id}?${query(user)}&confirm=true`,{method:'DELETE'});onRefresh()}catch(e){onError(String(e));setBusy(false)}}
  const retry=async()=>{setBusy(true);try{await request(`/images/${image.id}/retry?${query(user)}`,{method:'POST'});onRefresh()}catch(e){onError(String(e))}finally{setBusy(false)}}
  const p=image.prediction;const active=['queued','processing'].includes(image.status)
  return <article className="result-card"><div className="image-column">{image.has_image?<a href={fileUrl(image.id,user)} target="_blank" rel="noreferrer"><img src={fileUrl(image.id,user)} alt={image.original_name}/></a>:<div className="broken">無有效圖片</div>}<span className={`tag ${image.status}`}>{statuses[image.status]}</span><p className="filename">{image.original_name}</p><button className="text danger" disabled={active||busy} onClick={remove}>刪除圖片</button></div><div className="result-body">
  {image.error&&<div className="notice error">{image.error}{image.has_image&&<button disabled={busy} onClick={retry}>重試辨識</button>}</div>}
  {p?<><div className="predictions">{(['waste','residual'] as const).map(task=>{const confidence=p[`${task}_confidence`];return <div key={task}><span className="eyebrow">{task==='waste'?'垃圾分類':'殘留辨識'}</span><h3>{(task==='waste'?waste:residual)[p[`${task}_label`]]}</h3><div className="score"><strong>{(confidence*100).toFixed(1)}%</strong><span>模型信心</span></div><div className="score-track"><i style={{width:confidence*100+'%'}}/></div>{!!p[`${task}_low`]&&<p className="low">低信心，請人工檢查</p>}</div>})}</div><p className="muted small">信心不是正確率。門檻 {(p.threshold*100).toFixed(0)}%，低信心不會改寫預測類別。</p>
- {pre&&<div className="pre-truth"><strong>預測前 Ground Truth（固定保存）</strong><p>垃圾：{pre.waste_confirmed&&pre.waste_label?waste[pre.waste_label]:'尚未確認'}　／　殘留：{pre.residual_confirmed&&pre.residual_label?residual[pre.residual_label]:'尚未確認'}</p><span className="small muted">{time(pre.created_at)}</span></div>}
- <div className="feedback"><h4>結果顯示後的人工回饋</h4><p className="small muted">請依實際圖片選擇，兩項可分別確認；此回饋不視為獨立 Ground Truth。</p><SelectAnswer answer={answer} onChange={setAnswer} confirm/><div className="row"><button className="primary small-button" disabled={busy} onClick={save}>{busy?'儲存中…':'儲存人工回饋'}</button><span className="small muted">{latest?`最近儲存：${time(latest.created_at)}`:'尚未儲存回饋'}</span></div></div>
- {image.annotations.length>0&&<details><summary>人工標註紀錄（{image.annotations.length}）</summary>{image.annotations.map(a=><p className="small" key={a.id}>{a.source==='pre_ground_truth'?'預測前 GT':'預測後回饋'} · {a.waste_confirmed&&a.waste_label?waste[a.waste_label]:'垃圾未確認'}／{a.residual_confirmed&&a.residual_label?residual[a.residual_label]:'殘留未確認'} · {a.annotator_id} · {time(a.created_at)}</p>)}</details>}
+ {mode==='evaluation'&&<div className="pre-truth"><strong>預測前答案（已鎖定）</strong><AnswerSummary annotation={pre}/><p className="small muted">辨識前提交的 Ground Truth 固定保存，不可修改；不需要再次標註。{pre&&` · ${time(pre.created_at)}`}</p></div>}
+ {mode==='evaluation'&&<div className="feedback-entry">{stored&&<div className="feedback-summary"><h4>最新預測後回饋</h4><AnswerSummary annotation={stored}/></div>}<button aria-expanded={feedbackOpen} aria-controls={`feedback-${image.id}`} onClick={()=>setFeedbackOpen(open=>!open)}>{stored?'查看／修改回饋':'新增修正回饋'}</button><p className="small muted">修正回饋為選填。開啟表單不會自動確認或提交答案。</p></div>}
+ {(mode!=='evaluation'||feedbackOpen)&&<div className="feedback" id={`feedback-${image.id}`}><h4>結果顯示後的人工回饋</h4><p className="small muted">這是看過模型結果後的回饋，不是獨立的預測前 GT，也不會覆蓋或補填原始 GT。</p><fieldset disabled={busy}><SelectAnswer answer={answer} onChange={setAnswer}/><div className="row"><button className="primary small-button" disabled={busy||!dirty||!compatibleAnswer(answer)} onClick={save}>{busy?'儲存中…':!dirty?'已儲存':stored?'更新人工回饋':'儲存人工回饋'}</button><span className="small muted">{stored?`最近儲存：${time(stored.created_at)}`:'尚未儲存回饋'}</span></div></fieldset></div>}
+ {image.annotations.length>0&&<details><summary>人工標註紀錄（{image.annotations.length}）</summary>{image.annotations.map(a=><p className="small" key={a.id}>{a.source==='pre_ground_truth'?'預測前 GT':'預測後回饋'} · {a.waste_label?waste[a.waste_label]:'未提供'}（{a.waste_confirmed?'已確認':'未確認'}）／{a.residual_label?residual[a.residual_label]:'未提供'}（{a.residual_confirmed?'已確認':'未確認'}） · {a.annotator_id} · {time(a.created_at)}{!compatibleAnswer(savedAnswer(a))&&<span className="low"> · 歷史不相容；原始紀錄唯讀保留</span>}</p>)}</details>}
  <p className="small muted model-code">{p.model_version} · {p.elapsed_ms.toFixed(0)} ms</p></>:active?<div className="waiting"><span className="pulse"/>{image.status==='queued'?'等待單一模型 worker 處理':'正在辨識這張圖片…'}</div>:null}</div></article>
 }
 function Upload({user,health,onError}:{user:User,health:Health|null,onError:(s:string)=>void}){
@@ -58,7 +83,7 @@ function Results({id,user,onError}:{id:string,user:User,onError:(s:string)=>void
  if(failure)return <div className="panel"><h2>無法取得批次</h2><p>{failure}</p><button onClick={()=>setTick(t=>t+1)}>重新查詢</button><button onClick={()=>go('/history')}>回歷史批次</button></div>
  if(loading||!batch)return <div className="panel">正在讀取實際批次紀錄…</div>
  const remove=async()=>{if(!confirm('確定刪除整批圖片、辨識結果與全部人工標註？'))return;try{await request(`/batches/${id}?${query(user.id)}&confirm=true`,{method:'DELETE'});go('/history')}catch(e){onError(String(e))}}
- return <><header className="page-title"><span className="eyebrow">BATCH RESULTS</span><h1>辨識結果與人工確認</h1><p>{batch.mode==='evaluation'?'實驗評估 · 預測前 Ground Truth 已固定保存':'一般辨識 · 結果後回饋'} · {time(batch.created_at)}</p></header><div className="panel progress-panel"><div className="section-heading"><strong>{statuses[batch.status]}</strong><span>已處理 {batch.finished_count} / {batch.images.length} 張（含失敗）</span></div><progress value={batch.finished_count} max={batch.images.length||1}/><div className="row spread"><code className="small">{batch.id}</code><div><a className="button" href={`${API}/export.csv?${query(user.id)}&batch_id=${id}`}>匯出此批 CSV</a><button disabled={['queued','processing'].includes(batch.status)} className="text danger" onClick={remove}>刪除整批</button></div></div><p className="small muted">進度來自已完成／失敗的實際張數。排隊或處理中的紀錄須等待完成後才能刪除。</p></div>{batch.images.map(i=><ImageResult key={i.id} image={i} user={user.id} onRefresh={()=>setTick(t=>t+1)} onError={onError}/>)}</>
+ return <><header className="page-title"><span className="eyebrow">BATCH RESULTS</span><h1>辨識結果與人工確認</h1><p>{batch.mode==='evaluation'?'實驗評估 · 預測前 Ground Truth 已固定保存':'一般辨識 · 結果後回饋'} · {time(batch.created_at)}</p></header><div className="panel progress-panel"><div className="section-heading"><strong>{statuses[batch.status]}</strong><span>已處理 {batch.finished_count} / {batch.images.length} 張（含失敗）</span></div><progress value={batch.finished_count} max={batch.images.length||1}/><div className="row spread"><code className="small">{batch.id}</code><div><a className="button" href={`${API}/export.csv?${query(user.id)}&batch_id=${id}`}>匯出此批 CSV</a><button disabled={['queued','processing'].includes(batch.status)} className="text danger" onClick={remove}>刪除整批</button></div></div><p className="small muted">進度來自已完成／失敗的實際張數。排隊或處理中的紀錄須等待完成後才能刪除。</p></div>{batch.images.map(i=><ImageResult key={i.id} image={i} mode={batch.mode} user={user.id} onRefresh={()=>setTick(t=>t+1)} onError={onError}/>)}</>
 }
 function History({user,onError}:{user:User,onError:(s:string)=>void}){
  const [page,setPage]=useState(1);const [data,setData]=useState<{items:Array<{id:string,mode:string,status:string,created_at:string,image_count:number,completed_count:number,failed_count:number}>,total:number}|null>(null);const [reload,setReload]=useState(0)

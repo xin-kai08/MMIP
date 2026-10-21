@@ -1,0 +1,516 @@
+{
+  "stage1": {
+    "epoch": 18,
+    "best_metric": 0.9526117914259442,
+    "config": {
+      "seed": 42,
+      "split_ratios": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "model": "efficientnet_b0",
+      "weights": "IMAGENET1K_V1",
+      "waste_classes": [
+        "general",
+        "glass",
+        "food_waste",
+        "other_recycling"
+      ],
+      "residual_classes": [
+        "none",
+        "food",
+        "liquid",
+        "not_assessable"
+      ],
+      "input_size": 224,
+      "dropout": 0.2,
+      "batch_size": 8,
+      "num_workers": 0,
+      "backbone_lr": 1e-05,
+      "head_lr": 0.0001,
+      "weight_decay": 0.0001,
+      "max_epochs": 30,
+      "patience": 5,
+      "min_delta": 0.0,
+      "amp": false,
+      "device": "cuda",
+      "preprocessing": "letterbox_bicubic_224_imagenet_normalize",
+      "horizontal_flip": 0.5,
+      "brightness_contrast": 0.05,
+      "confidence_threshold": 0.6,
+      "eval_plan": [
+        "stage1_best",
+        "stage2_best"
+      ],
+      "allow_weight_download": true
+    },
+    "optimizer_groups": [
+      {
+        "lr": 2.5e-06,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0001,
+        "amsgrad": false,
+        "foreach": null,
+        "maximize": false,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null
+      },
+      {
+        "lr": 2.5e-05,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0001,
+        "amsgrad": false,
+        "foreach": null,
+        "maximize": false,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null
+      }
+    ],
+    "scheduler": {
+      "factor": 0.5,
+      "min_lrs": [
+        1e-07,
+        1e-07
+      ],
+      "patience": 2,
+      "verbose": false,
+      "cooldown": 0,
+      "cooldown_counter": 0,
+      "mode": "max",
+      "threshold": 0.0001,
+      "threshold_mode": "rel",
+      "eps": 1e-08,
+      "last_epoch": 18,
+      "_last_lr": [
+        2.5e-06,
+        2.5e-05
+      ],
+      "mode_worse": "-Infinity",
+      "best": 0.9526117914259442,
+      "num_bad_epochs": 0
+    },
+    "completed": {
+      "stage": "stage1",
+      "best_checkpoint": "training\\runs\\experiment_v3\\stage1_best.pt",
+      "last_checkpoint": "training\\runs\\experiment_v3\\stage1_last.pt",
+      "best_validation_macro_f1": 0.9526117914259442,
+      "completed_epochs": 23,
+      "early_stopped": true,
+      "manifest_sha256": "39ba1b44ccf46c083d8f4e99efc7c3ee6bc5fcdecb55bc8d838f4e89dedfede8",
+      "config_sha256": "ecc2b5237e8296f93125296ed945e35058ec330d41e6742851d10bf5f54560e8"
+    },
+    "first_train_samples": 636,
+    "epoch_seconds_total": 405.1274002000009,
+    "peak_memory_max": 805.70166015625,
+    "best_epoch_stats": {
+      "epoch": 18,
+      "training_loss": 0.18259440491315704,
+      "training_samples": 636,
+      "selection_metric": 0.9526117914259442,
+      "validation_waste_macro_f1": 0.9526117914259442,
+      "validation_residual_macro_f1": 0.1973938553520037,
+      "waste_drop_percentage_points": null,
+      "seconds": 17.32427349999989,
+      "learning_rates": [
+        2.5e-06,
+        2.5e-05
+      ],
+      "learning_rates_next": [
+        2.5e-06,
+        2.5e-05
+      ],
+      "peak_memory_mb": 805.70166015625,
+      "bad_epochs": 0
+    },
+    "final_lr": [
+      1.25e-06,
+      1.25e-05
+    ],
+    "original": {
+      "waste": {
+        "n": 176,
+        "loss": 0.2307913295454372,
+        "accuracy": 0.9488636363636364,
+        "macro_f1": 0.9401917074199205
+      },
+      "residual": {
+        "n": 108,
+        "loss": 1.3760510241543804,
+        "accuracy": 0.3148148148148148,
+        "macro_f1": 0.2820967146548542
+      }
+    },
+    "generated": {
+      "waste": {
+        "n": 4,
+        "loss": 0.20072579948464409,
+        "accuracy": 1.0,
+        "macro_f1": 0.25
+      },
+      "residual": {
+        "n": 4,
+        "loss": 1.2018337845802307,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333
+      }
+    },
+    "all": {
+      "waste": {
+        "n": 180,
+        "loss": 0.23012320665519737,
+        "accuracy": 0.95,
+        "macro_f1": 0.940561666724397
+      },
+      "residual": {
+        "n": 112,
+        "loss": 1.3698289798838752,
+        "accuracy": 0.32142857142857145,
+        "macro_f1": 0.29310675000766
+      }
+    }
+  },
+  "stage2": {
+    "epoch": 23,
+    "best_metric": 0.8887767521724675,
+    "config": {
+      "seed": 42,
+      "split_ratios": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "model": "efficientnet_b0",
+      "weights": "IMAGENET1K_V1",
+      "waste_classes": [
+        "general",
+        "glass",
+        "food_waste",
+        "other_recycling"
+      ],
+      "residual_classes": [
+        "none",
+        "food",
+        "liquid",
+        "not_assessable"
+      ],
+      "input_size": 224,
+      "dropout": 0.2,
+      "batch_size": 8,
+      "num_workers": 0,
+      "backbone_lr": 1e-05,
+      "head_lr": 0.0001,
+      "weight_decay": 0.0001,
+      "max_epochs": 30,
+      "patience": 5,
+      "min_delta": 0.0,
+      "amp": false,
+      "device": "cuda",
+      "preprocessing": "letterbox_bicubic_224_imagenet_normalize",
+      "horizontal_flip": 0.5,
+      "brightness_contrast": 0.05,
+      "confidence_threshold": 0.6,
+      "eval_plan": [
+        "stage1_best",
+        "stage2_best"
+      ],
+      "allow_weight_download": true
+    },
+    "optimizer_groups": [
+      {
+        "lr": 5e-06,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0001,
+        "amsgrad": false,
+        "foreach": null,
+        "maximize": false,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null
+      },
+      {
+        "lr": 5e-05,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0001,
+        "amsgrad": false,
+        "foreach": null,
+        "maximize": false,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null
+      }
+    ],
+    "scheduler": {
+      "factor": 0.5,
+      "min_lrs": [
+        1e-07,
+        1e-07
+      ],
+      "patience": 2,
+      "verbose": false,
+      "cooldown": 0,
+      "cooldown_counter": 0,
+      "mode": "max",
+      "threshold": 0.0001,
+      "threshold_mode": "rel",
+      "eps": 1e-08,
+      "last_epoch": 23,
+      "_last_lr": [
+        5e-06,
+        5e-05
+      ],
+      "mode_worse": "-Infinity",
+      "best": 0.8887767521724675,
+      "num_bad_epochs": 0
+    },
+    "completed": {
+      "stage": "stage2",
+      "best_checkpoint": "training\\runs\\experiment_v3\\stage2_best.pt",
+      "last_checkpoint": "training\\runs\\experiment_v3\\stage2_last.pt",
+      "best_validation_macro_f1": 0.8887767521724675,
+      "completed_epochs": 28,
+      "early_stopped": true,
+      "manifest_sha256": "39ba1b44ccf46c083d8f4e99efc7c3ee6bc5fcdecb55bc8d838f4e89dedfede8",
+      "config_sha256": "ecc2b5237e8296f93125296ed945e35058ec330d41e6742851d10bf5f54560e8"
+    },
+    "first_train_samples": 416,
+    "epoch_seconds_total": 362.35614749999877,
+    "peak_memory_max": 805.70166015625,
+    "best_epoch_stats": {
+      "epoch": 23,
+      "training_loss": 0.17129367326672834,
+      "training_samples": 416,
+      "selection_metric": 0.8887767521724675,
+      "validation_waste_macro_f1": 0.9241711436933076,
+      "validation_residual_macro_f1": 0.8887767521724675,
+      "waste_drop_percentage_points": 2.844064773263666,
+      "seconds": 12.90600749999976,
+      "learning_rates": [
+        5e-06,
+        5e-05
+      ],
+      "learning_rates_next": [
+        5e-06,
+        5e-05
+      ],
+      "peak_memory_mb": 805.70166015625,
+      "bad_epochs": 0
+    },
+    "final_lr": [
+      2.5e-06,
+      2.5e-05
+    ],
+    "original": {
+      "waste": {
+        "n": 176,
+        "loss": 0.25713707829142796,
+        "accuracy": 0.9318181818181818,
+        "macro_f1": 0.9156592435489572
+      },
+      "residual": {
+        "n": 108,
+        "loss": 0.3407316578511233,
+        "accuracy": 0.8703703703703703,
+        "macro_f1": 0.821090909090909
+      }
+    },
+    "generated": {
+      "waste": {
+        "n": 4,
+        "loss": 0.24478595051914454,
+        "accuracy": 1.0,
+        "macro_f1": 0.25
+      },
+      "residual": {
+        "n": 4,
+        "loss": 0.6944840308278799,
+        "accuracy": 0.75,
+        "macro_f1": 0.41666666666666663
+      }
+    },
+    "all": {
+      "waste": {
+        "n": 180,
+        "loss": 0.25686260878537726,
+        "accuracy": 0.9333333333333333,
+        "macro_f1": 0.9160714730233646
+      },
+      "residual": {
+        "n": 112,
+        "loss": 0.3533656711717218,
+        "accuracy": 0.8660714285714286,
+        "macro_f1": 0.8153622083622083
+      }
+    }
+  },
+  "model": {
+    "feature_dim": 1280,
+    "parameters": 4017796,
+    "weights_url": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+    "adamw_signature": "(params: Union[Iterable[torch.Tensor], Iterable[Dict[str, Any]]], lr: Union[float, torch.Tensor] = 0.001, betas: Tuple[float, float] = (0.9, 0.999), eps: float = 1e-08, weight_decay: float = 0.01, amsgrad: bool = False, *, maximize: bool = False, foreach: Optional[bool] = None, capturable: bool = False, differentiable: bool = False, fused: Optional[bool] = None)",
+    "scheduler_signature": "(optimizer: torch.optim.optimizer.Optimizer, mode: Literal['min', 'max'] = 'min', factor=0.1, patience=10, threshold=0.0001, threshold_mode: Literal['rel', 'abs'] = 'rel', cooldown=0, min_lr: Union[List[float], float] = 0, eps=1e-08, verbose='deprecated')"
+  },
+  "manifest_counts": {
+    "stage1_original": 618,
+    "stage2_original": 643,
+    "val_original": 369,
+    "test_original": 176,
+    "stage2_generated": 18,
+    "stage1_generated": 18,
+    "val_generated": 8,
+    "test_generated": 4
+  },
+  "stage_residual_usable": {
+    "stage1": 397,
+    "stage2": 416
+  },
+  "readiness": {
+    "version": "v3",
+    "seed": 42,
+    "ratios": [
+      0.7,
+      0.2,
+      0.1
+    ],
+    "existing_split_reused": true,
+    "partition_source": "training\\artifacts\\v2\\partition.json",
+    "source_rows": 2548,
+    "manifest_rows": 1854,
+    "original_review": {
+      "approved": 1872,
+      "excluded": 628
+    },
+    "generated_review": {
+      "approved": 48
+    },
+    "all_split_counts": {
+      "train": 1786,
+      "val": 508,
+      "test": 254
+    },
+    "manifest_split_counts": {
+      "train": 1297,
+      "val": 377,
+      "test": 180
+    },
+    "stage_counts": {
+      "stage1": 636,
+      "stage2": 661
+    },
+    "issue_counts": {
+      "unknown_reason_requires_explicit_confirmation": 688,
+      "excluded": 628,
+      "canonical_original_duplicate": 66,
+      "mixed_or_unannotated_requires_resolution": 37
+    },
+    "missing_classes": [],
+    "blockers": [],
+    "risks": [
+      "Unresolved near-duplicate candidates: 820; not automatically grouped",
+      "Unknown residual reasons without explicit qualification: 688; masked from residual loss"
+    ],
+    "real_test_support": {
+      "waste": {
+        "other_recycling": 100,
+        "food_waste": 21,
+        "glass": 23,
+        "general": 32
+      },
+      "residual": {
+        "not_assessable": 62,
+        "liquid": 16,
+        "none": 12,
+        "food": 18
+      }
+    },
+    "ready": true
+  },
+  "smoke": {
+    "status": "passed",
+    "device": "cuda",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "cuda_build": "12.1",
+    "batch_size": 8,
+    "input_size": 224,
+    "amp": false,
+    "pretrained": false,
+    "oom": false,
+    "full_training_started": false,
+    "stages": [
+      {
+        "stage": "stage1",
+        "steps": 3,
+        "losses": [
+          1.2782096862792969,
+          1.2616547346115112,
+          1.24187433719635
+        ],
+        "changed_parameters": 213,
+        "frozen_head_unchanged": true,
+        "checkpoint_reload_reproducible": true
+      },
+      {
+        "stage": "stage2",
+        "steps": 3,
+        "losses": [
+          1.564706563949585,
+          1.457123041152954,
+          1.4657074213027954
+        ],
+        "changed_parameters": 213,
+        "frozen_head_unchanged": true,
+        "checkpoint_reload_reproducible": true
+      }
+    ],
+    "gpu": "NVIDIA GeForce GTX 1650",
+    "capability": [
+      7,
+      5
+    ],
+    "seconds": 4.2018199999997705,
+    "peak_memory_mb": 898.79931640625,
+    "config_sha256": "ecc2b5237e8296f93125296ed945e35058ec330d41e6742851d10bf5f54560e8",
+    "manifest_sha256": "39ba1b44ccf46c083d8f4e99efc7c3ee6bc5fcdecb55bc8d838f4e89dedfede8"
+  },
+  "metadata": {
+    "version": "v3",
+    "seed": 42,
+    "labels_sha256": "256ccb96ea886fdfe60f8b93d55de0c1cb7dfde9f66cb5d330facad668eeca02",
+    "eligibility_sha256": "cad473a20e1a3ec1b7d77f77ab0b80e7f4fda8bb3cc17fc74bbce68a4989d3c7",
+    "manifest_sha256": "39ba1b44ccf46c083d8f4e99efc7c3ee6bc5fcdecb55bc8d838f4e89dedfede8",
+    "partition_sha256": "bcf273f0ee8275d42cfef4788eed4b01ca53e849c47ecb09b8df18a1049cb3c6",
+    "created_at": "2026-10-18T12:28:27.836370+00:00",
+    "backup": "F:\\project\\MMIP\\middle\\training\\backups\\20261018T122819232269",
+    "waste_classes": [
+      "general",
+      "glass",
+      "food_waste",
+      "other_recycling"
+    ],
+    "residual_classes": [
+      "none",
+      "food",
+      "liquid",
+      "not_assessable"
+    ]
+  }
+}

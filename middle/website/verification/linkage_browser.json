@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "real_checkpoint": true,
+  "console_errors": [],
+  "screenshots": [
+    "01-pre-GT-fixed-unconfirmed.png",
+    "02-legacy-read-only.png",
+    "03-mobile-manual-options.png"
+  ],
+  "tested": [
+    "pre-GT editor linkage",
+    "general feedback linkage",
+    "post-prediction correction linkage",
+    "no-waste disables residual",
+    "general and food_waste fixed NA",
+    "all four recycling residual options and blank",
+    "category switches clear incompatible/automatic values",
+    "changed values reset confirmation",
+    "automatic NA never auto-confirms",
+    "independent confirmation in pre-GT",
+    "drafts do not mutate DB",
+    "GT and model prediction unchanged",
+    "no-op submission remains idempotent",
+    "reload restores saved answers",
+    "incompatible legacy shown read-only",
+    "explicit legacy correction appends without altering history",
+    "mobile rendering"
+  ],
+  "fixture_note": "Legacy row is injected only by the disposable test server, never by production APIs.",
+  "device": "cpu",
+  "model_version": "stage2_best.pt:sha256:572144ea31c0663c3e952e8f8ebd5fb608cca6772ecb5a9bac298f72b4758805",
+  "timestamp_utc": "2026-10-20T13:44:43.856351+00:00",
+  "isolated_database": true,
+  "status": "completed"
+}

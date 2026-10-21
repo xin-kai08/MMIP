@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "real_checkpoint": true,
+  "console_errors": [],
+  "screenshots": [
+    "01-locked-GT.png",
+    "02-saved-and-versions.png",
+    "03-failure-retains-draft.png",
+    "04-mobile-general-saved.png"
+  ],
+  "test_id": "fbtest2503958566",
+  "evaluation_images": 2,
+  "general_images": 1,
+  "pre_GT_valid_per_task": 1,
+  "feedback_valid_per_task": 3,
+  "first_image_feedback_versions": 5,
+  "ui_double_click_requests": 1,
+  "tested": [
+    "evaluation GT read-only and unprovided states",
+    "feedback collapsed and opt-in",
+    "opening does not confirm or save",
+    "saved button disabled",
+    "late refresh preserves new draft",
+    "unsaved edit then revert",
+    "A-B-A revisions",
+    "confirmation changes",
+    "double-click guard",
+    "API duplicate changed=false with original timestamp",
+    "refresh restores values and collapsed state",
+    "post-feedback never fills missing pre-GT",
+    "general direct feedback",
+    "HTTP failure retains draft and retries",
+    "per-source per-image statistics",
+    "CSV source and history columns",
+    "mobile rendering"
+  ],
+  "device": "cpu",
+  "model_version": "stage2_best.pt:sha256:572144ea31c0663c3e952e8f8ebd5fb608cca6772ecb5a9bac298f72b4758805",
+  "timestamp_utc": "2026-10-20T13:46:10.321923+00:00",
+  "isolated_database": true,
+  "status": "completed"
+}

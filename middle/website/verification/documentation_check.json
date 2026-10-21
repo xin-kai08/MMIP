@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "config_differences": {
+    "allow_weight_download": {
+      "default": false,
+      "experiment_v3": true
+    }
+  },
+  "loss_defaults": {
+    "weight": null,
+    "ignore_index": -100,
+    "reduction": "mean",
+    "label_smoothing": 0.0
+  },
+  "stages": {
+    "stage1": {
+      "frozen_head_eval": true,
+      "active_head_dropout_train": true,
+      "backbone_batchnorm_train": true
+    },
+    "stage2": {
+      "frozen_head_eval": true,
+      "active_head_dropout_train": true,
+      "backbone_batchnorm_train": true
+    }
+  },
+  "metric_tables_match_artifacts": true,
+  "scheduler_optimizer_metadata_match": true,
+  "checkpoint_source_hash_match": true,
+  "protected_files_sha256_checked": 2632,
+  "protected_changes": [],
+  "training_steps_executed": 0
+}

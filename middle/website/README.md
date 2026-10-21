@@ -63,11 +63,37 @@ ID 必填，只接受 ASCII 英文字母／數字 4～20 字元，不能有空�
 
 上傳後直接推論，顯示垃圾與殘留兩項類別、各自信心與獨立低信心提示。之後逐張選擇人工答案、確認並儲存，來源固定為 `post_feedback`。這是結果顯示後的回饋，不當作獨立或盲測 Ground Truth。
 
+第一次顯示「儲存人工回饋」；成功後變成停用的「已儲存」。垃圾／殘留類別或任一確認狀態與已儲存內容不同，才啟用「更新人工回饋」。尚未儲存的修改若改回原值，按鈕恢復「已儲存」，不產生版本。提交中停用表單及按鈕；失敗保留草稿供重試，重新整理則載入伺服器已儲存內容。
+
 ### 實驗評估
 
-每張圖在辨識前填垃圾與殘留 Ground Truth，兩項各自預設「尚未確認」，不預選模型答案。提交前不推論／不顯示預測；標註先寫入 DB，再讓 worker 執行。來源為 `pre_ground_truth`，即使空白也固定保存，後續不能把它改寫成模型答案。送出後的修正另存 post_feedback 修訂紀錄。
+每張圖在辨識前填垃圾與殘留 Ground Truth，初始不選答案、不勾選確認，不預選模型答案。提交前不推論／不顯示預測；標註先寫入 DB，再讓 worker 執行。來源為 `pre_ground_truth`，即使空白也固定保存，後續不能把它改寫成模型答案。送出後的修正另存 post_feedback 修訂紀錄。
+
+結果頁先顯示「預測前答案（已鎖定）」，分別列出兩任務的答案與確認狀態；未填或未確認顯示「未提供／未確認」。這些內容唯讀，**不需要再標一次**。
+
+額外的修正回饋為選填，預設收合。點「新增修正回饋」才展開空白表單，不自動複製、確認或提交預測前答案。已有結果後回饋時會先顯示最新內容，入口改為「查看／修改回饋」，展開後依相同防重複規則更新。重新整理後表單恢復收合，最新回饋及按鈕狀態仍可還原。
+
+這些修正是在**看過模型結果之後**填寫，不是獨立的預測前 GT。即使原 GT 空白，也不會用新回饋補填原 GT；原 GT、模型預測及回饋始終分開保存。
 
 人工尚未確認不是 not_assessable；低信心也不是 not_assessable。food_waste（廚餘垃圾）與 food（食物殘留）是不同任務。
+
+### 人工殘留欄位連動（2026-10-20）
+
+以下只依**人工選擇**連動，適用預測前 GT、一般回饋及評估修正回饋；不依模型答案限制選項，也不改模型輸出或訓練資料。
+
+| 人工垃圾類別 | 殘留欄位 |
+|---|---|
+| 尚未選擇 | 停用，提示先選垃圾類別 |
+| general／food_waste | 固定文字「不適用」，選擇時帶入 not_assessable；不顯示殘留下拉 |
+| glass／other_recycling | 未選＋none／food／liquid／not_assessable 四項，不預選答案 |
+
+第四項「不適用／無法判斷」可用於不透明、內部不可見、紙箱、杯蓋等。這是本專題支援物品範圍的操作規則，不代表所有一般垃圾都不可能有殘留。
+
+所有表單現在都有兩項確認勾選。**選答案與確認分開**：更改垃圾答案會取消垃圾確認；更改殘留答案會取消殘留確認。切到 general／food_waste 時自動帶入 not_assessable，但不自動確認；從固定不適用類別切回 glass／other_recycling 時清空殘留並取消確認，避免把自動答案當成對容器的觀察。玻璃與其他回收之間可保留仍相容的殘留答案；清空垃圾選擇也清空殘留及確認。只修改草稿，不會直接寫 DB。
+
+兩任務可以各別確認、部分填寫或尚未確認。後端同時驗證：general／food_waste 的新殘留答案只允許 null 或 not_assessable，已確認的任務必須有合法答案；前端自動帶入也不代表資料庫會把確認設為 true。若改答案又改回原值，但確認旗標已重設，需也恢復確認旗標，四項內容都相同才視為「未變更」。
+
+既有不相容歷史不批次更正、不刪除、不在載入時轉換。鎖定 GT、最新摘要及歷史仍顯示原值與確認狀態並提示不相容；修正回饋表單提供「套用不適用並重新確認」，點擊只改草稿且取消殘留確認，儲存後才追加一版。原 GT 永遠不被此操作修改。歷史統計維持按已保存的最新來源／確認狀態計算，不追溯批次改寫；另存修正版後才改用該圖的新版本。
 
 ## 模型、信心與設定
 
@@ -126,6 +152,8 @@ SQLite 啟用 foreign_keys、WAL，版本 v1 同時保存 PRAGMA user_version �
 
 統計預設 pre_ground_truth，post_feedback 必須另選，不混合兩種來源。只計 completed 且該任務有有效、confirmed 人工答案的紀錄。不同 checkpoint SHA 分開顯示；兩任務各有有效／未確認數、accuracy、Macro-F1、各類 precision／recall／F1／support 與混淆矩陣。沒有有效標註時回傳 null、顯示「尚無可評估資料」，不是 0%。
 
+每張圖片先取**該來源最新版本**，再獨立判定兩項任務是否有合法且已確認的答案，每圖每任務最多計一次。最新版本若取消確認，該任務不參與統計，不回退到過時的確認，也不從另一來源補值。既有重複歷史保留，不因歷史版本多而增加樣本數。CSV 仍匯出全部歷史，`annotation_source` 區分來源，`annotation_id` 是版本識別，`previous_annotation_id` 串接修改紀錄，並保留各版確認狀態與標註時間。
+
 這是網站上傳資料的實測，與 `training/runs/experiment_v3/final_test/` 完全分開；不重新跑正式 test、不把上傳圖加入 dataset。
 
 ## API
@@ -140,7 +168,7 @@ SQLite 啟用 foreign_keys、WAL，版本 v1 同時保存 PRAGMA user_version �
 | POST `/batches` | multipart：metadata JSON＋多個 files |
 | GET `/batches?user_id=...&page=1&page_size=10` | 分頁歷史 |
 | GET `/batches/{id}?user_id=...` | 實際進度、結果與標註歷史 |
-| POST `/images/{id}/annotations?user_id=...` | 新增結果後回饋，不能更新 pre GT |
+| POST `/images/{id}/annotations?user_id=...` | 回饋有變更才追加一版；不能更新 pre GT |
 | POST `/images/{id}/retry?user_id=...` | 重試可重試的 failed 圖片 |
 | GET `/images/{id}/file?user_id=...` | 取得圖片 |
 | DELETE `/images/{id}?user_id=...&confirm=true` | 確認後刪單圖 |
@@ -150,6 +178,27 @@ SQLite 啟用 foreign_keys、WAL，版本 v1 同時保存 PRAGMA user_version �
 | GET `/openapi.json` | 實際 API schema |
 
 metadata 包含 user_id、mode（general／evaluation）、UUID request_key 與 annotations。每個 annotation 為 waste／residual（合法 enum 或 null）、waste_confirmed／residual_confirmed。evaluation 的 annotations 長度必須等於圖片張數；general 必須為空。所有批次及圖片狀態為 queued／processing／completed／failed，混合成功與失敗的批次會顯示完成與失敗張數，不假造時間進度。
+
+回饋 POST 的 body 同樣使用 waste、residual、waste_confirmed、residual_confirmed。後端在 `BEGIN IMMEDIATE` 交易中讀取該圖片的最新 `post_feedback`，比較這四項內容：
+
+- 首次或內容有變更：HTTP 201，回傳標註欄位及 `changed=true`，新增一版並指向前版。
+- 與最新版本完全相同：HTTP 200，回傳原標註及 `changed=false`；ID、時間、前版鏈結均保持不變，不追加資料。
+- 只比較最新版本，所以已儲存的 A→B→A 會正常產生三版。並發相同請求由 SQLite 寫入交易序列化，後續請求比較已提交版本，不重複新增。
+- 此端點僅接受結果後回饋；`source=pre_ground_truth` 或在 body 偽造來源會回 422。沒有修改預測前 GT 的 API，資料庫既有唯一索引與不可更新 trigger 持續有效。
+
+本次不需 schema 遷移，沒有清除既有重複歷史，也未修改正式資料庫、圖片、模型或原始預測／GT。
+
+## 套用本次標註修正
+
+修改內容與實際測試結果見 [人工標註修正報告](ANNOTATION_FIX_REPORT.md)。
+
+本次已完成 production 前端 build。正在執行的 Python 後端不會自動載入程式變更，請在原啟動終端按 Ctrl+C，然後重新執行：
+
+```powershell
+.\.venv\Scripts\python.exe -m website.run
+```
+
+重新整理 `http://127.0.0.1:8000`。啟動方式不變，不需重裝套件或搬動資料庫。若之後重新取得原始碼或修改前端，先執行 `powershell.exe -NoProfile -ExecutionPolicy Bypass -File website\frontend.ps1 build`，再重啟後端；不要同時啟動第二個使用相同 DB 的 worker。
 
 ## 備份與還原
 
@@ -165,10 +214,12 @@ metadata 包含 user_id、mode（general／evaluation）、UUID request_key 與 
 
 ## 驗證與已知限制
 
-- API 6 項測試含真實 CUDA checkpoint E2E、ID、混合成功／失敗、idempotency、重啟接續、人工答案不覆蓋預測、來源分流、CSV BOM／公式防護與刪除一致性。
+- API 11 項測試含真實 CUDA checkpoint E2E、ID、混合成功／失敗、idempotency、重啟接續、人工答案不覆蓋預測、來源分流、CSV BOM／公式防護與刪除一致性，以及相同回饋／確認旗標／A→B→A／失敗回滾重試／兩波各 12 個並發提交／既有重複歷史不重複計數、新連動規則的兩來源驗證及舊不相容標註唯讀保留。
 - React TypeScript 編譯及 Vite production build 通過，FastAPI 實際提供 dist。
 - 獨立無頭 Chrome 操作通過：ID 建立、多圖、提交前無預測、雙頭結果、人工回饋、重新整理與歷史、分來源統計、CSV 下載、混合結果、刪單圖／整批及手機畫面。沒有操作使用者既有 Chrome 分頁。
 - 瀏覽器測試使用隔離的 8001、`.cache/ui-test/` DB／圖片；正式 8000 保持乾淨。UI 測試使用兩張既有照片作為探針，不做大量資料集評估。相關輸出見 [驗證紀錄](verification/browser.json)。
+- 2026-10-20 標註修正另使用自動建立／關閉的隔離服務（預設 8002）、暫存 SQLite／圖片／獨立 Chrome profile 及真實 stage2 checkpoint（CPU）。驗證評估 GT 鎖定／缺值、預設收合、選填回饋、防連點、儲存與未儲存改回原值、A→B→A、確認狀態、重新整理、HTTP 503 保留草稿並重試、一般模式、來源分流及 CSV。詳見 [標註修正驗證](verification/feedback_browser.json)，桌面與手機截圖已檢查。這些隔離測試不連線正式 8000／既有 8001，也不寫入其使用者紀錄。
+- 同日新增的 [連動驗證](verification/linkage_browser.json) 17 情境及上述防重複回歸 17 情境均通過，前端 build／11 項後端測試通過。含自動不適用未確認不計入統計、三模式切換、草稿不寫 DB、舊不相容回饋提示與修正另存；桌面／手機畫面已檢查。[完整交付報告](LINKAGE_AND_MODEL_DOC_REPORT.md) 也記錄模型文件核對與保護資料雜湊。
 - 既有模型仍有未解近似候選等資料風險；信心未校準，網站不保證當地垃圾處置正確。人工驗證也不是對填答者身分的驗證。
 - 尚未實作登入、公開部署、XAI、門檻調整、資料回訓或模型自動更新，符合第一版範圍。
 
@@ -176,6 +227,11 @@ metadata 包含 user_id、mode（general／evaluation）、UUID request_key 與 
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest website.test_website -v
+# 自動建立隔離服務、使用真實模型、執行 Chrome 測試並正常關閉／清理本次測試資料。
+# 須已安裝 Chrome、可攜 Node、現有前端測試依賴，且已 build；不下載瀏覽器。
+.\.venv\Scripts\python.exe -m website.verify_feedback
+# 驗證三種表單的連動、類別切換、人工確認及舊歷史顯示（全新隔離 DB）。
+.\.venv\Scripts\python.exe -m website.verify_feedback --scenario linkage
 # 無頭瀏覽器測試需先於 8001 啟動獨立測試服務，見 verification/browser.json 記錄
 ```
 

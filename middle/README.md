@@ -2,7 +2,16 @@
 
 本專題規劃從圖片資料蒐集開始，經過資料清洗、標註與殘留圖片生成，再進行模型訓練、測試評估，最後建立可使用模型的網站。
 
-這份 README 記錄各階段實際做過的工作，之後隨專題推進持續補充。程式操作細節另外整理在 [資料處理操作說明](dataset_generate/README.md)。
+這份 README 記錄專題整體進度；各項操作與技術細節可從以下入口查看。
+
+## 重要說明文件
+
+| 說明文件 | 主要內容 |
+|---|---|
+| [資料處理操作說明](dataset_generate/README.md) | 圖片掃描、資料清洗、人工審核、標籤與圖片生成流程 |
+| [模型與訓練說明](training/README.md) | 模型架構、資料切分、兩階段訓練、參數設定、評估與推論 |
+| [網站操作與開發說明](website/README.md) | 網站啟動、前後端開發、人工標註、歷史查詢、統計與 CSV 匯出 |
+| [安全清理操作說明](maintenance/README.md) | 標籤備份封存、ZIP 驗證與還原、快取清理及保留規則 |
 
 磁碟整理與標籤備份封存請見 [安全清理操作說明](maintenance/README.md)：預設 dry-run、保留最近 20 份自動備份與全部特殊命名備份，舊備份逐檔驗證 ZIP 解壓 SHA-256 後才移除。既有儲存前備份機制保持不變。
 
@@ -13,6 +22,10 @@
 資料蒐集 → 資料清洗與標註 → 資料生成 → 模型訓練 → 測試評估 → 網站建置
 
 **目前已完成模型訓練與本機網站第一版**：experiment_v3 的兩階段與正式 test 已完成，網站串接 stage2_best.pt，提供多圖辨識、SQLite 歷史、預測前 Ground Truth／結果後回饋、評估及 CSV。網站上傳資料獨立保存，不修改 dataset、人工標籤、分配、權重或正式測試結果。
+
+2026-10-20 已修正網站人工標註：相同回饋不重複新增歷史，前後端皆檢查變更；評估結果顯示鎖定的預測前答案，額外修正回饋預設收合、選填，統計依來源及最新確認狀態分開計算。操作、驗證及重啟方式見 [網站說明](website/README.md)。
+
+三種人工表單已加入垃圾／殘留連動：先選垃圾類別，一般垃圾／廚餘固定帶入「不適用」但不自動確認，玻璃／其他回收提供四種殘留選項。舊標註唯讀保留、修正另存；這是本專題物品範圍規則，不代表所有一般垃圾皆不可能有殘留。詳見 [本次驗證報告](website/LINKAGE_AND_MODEL_DOC_REPORT.md)。
 
 | 階段 | 目前狀態 | 已有成果 |
 |---|---|---|
@@ -86,43 +99,91 @@
 
 ## 四、固定分配、模型與兩階段訓練
 
-已建立 [training/](training/README.md)。使用 ImageNet `EfficientNet_B0_Weights.IMAGENET1K_V1` 預訓練 EfficientNet-B0 features，共用全域平均池化後分接兩個 Dropout＋Linear(1280,4) 頭，移除原 ImageNet classifier。
+目前使用 **ImageNet 預訓練 EfficientNet-B0 共用骨幹＋兩個四類分類頭**。完整參數、CLI 支援範圍、實驗值與可調項目見 [訓練 README](training/README.md)；以下以本機程式與 experiment_v3 實際產物核對，不把一般模型範例當成專案設定。
 
-| 任務 | 固定類別順序 |
-|---|---|
-| 垃圾 | general、glass、food_waste、other_recycling |
-| 殘留 | none、food、liquid、not_assessable |
+### 模型如何同時回答兩個問題
 
-food_waste 是垃圾類別，food 是殘留。not_assessable 顯示「不適用／無法判斷」；低信心另回傳旗標，不當作訓練標籤。approved＋yes＋none／food／liquid 對應前三類；approved＋no＋空白對應 not_assessable；approved＋unknown＋空白只有在 [資格補充清單](training/residual_eligibility.csv) 有明確原因、確認者及證據時才轉換。不從模糊備註猜測。未確認、mixed 或衝突用 mask 跳過殘留 loss，可只參與垃圾分類。原 CSV 的 no／unknown 不變，excluded／pending 不進訓練，生成提示詞不當作標籤。
+預訓練版本是 TorchVision 的 EfficientNet_B0_Weights.IMAGENET1K_V1，來源為 [PyTorch 官方權重](https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth)。取原模型 features，移除 ImageNet classifier，再加全域平均池化和兩個小型頭；不是串接兩個獨立完整模型。
 
-固定 seed=42，沿用 train／val／test **70%／20%／10%**，再把 train 的完整 group 固定分成 stage1／stage2，盡量各半。分配兼顧物品細類、兩任務類別及 original／generated；來源、生成版本及確認重複圖片不能跨 split 或 stage，val／test 不分配階段。群組完整性優先，不搬圖片、不重抽挑結果。分配與 manifest 存版本及 SHA-256；修改標籤後建立新 manifest，沿用 partition。近似候選只列未解風險，不直接合組。
+~~~mermaid
+flowchart LR
+    A["圖片：224×224"] --> B["EfficientNet-B0 共用 features"]
+    B --> C["全域平均池化 → 1280 維"]
+    C --> D["Dropout 0.2 → Linear 1280→4"]
+    C --> E["Dropout 0.2 → Linear 1280→4"]
+    D --> F["垃圾 logits → softmax → 類別／信心"]
+    E --> G["殘留 logits → softmax → 類別／信心"]
+~~~
 
-硬體起始設定：GTX 1650 4 GB、約 16 GB RAM；224×224、batch size 8（可設 4／16）、num_workers 0（可設 2）、骨幹 LR 1e-5、當階段頭 LR 1e-4。按需讀圖，整圖等比例縮放加白邊，訓練增強溫和，避免裁掉開口或瓶底；val／test 固定處理。AMP 預設關閉，開啟前須通過對應 GPU 與數值驗證。這些是可調起始值，未宣稱最佳。
+| index | 垃圾分類 | 殘留分類 |
+|---:|---|---|
+| 0 | general／一般垃圾 | none／無殘留 |
+| 1 | glass／玻璃 | food／食物殘留 |
+| 2 | food_waste／廚餘 | liquid／液體殘留 |
+| 3 | other_recycling／其他回收 | not_assessable／不適用或無法判斷 |
 
-1. stage1 更新骨幹＋垃圾頭，殘留頭凍結；依真實原圖 val 的垃圾 Macro-F1 選 stage1_best。
-2. stage2 載入已完成模型選擇的 stage1_best，建立新 optimizer／scheduler；只更新骨幹＋殘留頭，垃圾頭凍結，只用殘留 loss。依真實原圖 val 的殘留 Macro-F1 選 stage2_best。
-3. 每階段最多 **30 epoch**，early stopping **patience=5**。每 epoch 記錄 loss、兩頭驗證指標、耗時、LR、顯存及第二階段垃圾 Macro-F1 相對 stage1 的下降百分點。
-4. best／last 使用獨立 stage 前綴，第二階段不覆蓋第一階段。checkpoint 保存完整模型、optimizer、scheduler、AMP scaler、epoch、最佳指標、設定、類別、seed、切分版本及 RNG；last 支援完整 epoch 接續。
+兩頭各輸出 4 個未正規化分數（logits），推論各自 softmax 成四個機率，取最大者作為類別與信心。food_waste 是垃圾標籤，food 是殘留標籤。模型沒有依垃圾預測強制限制另一頭；網站人工表單的類別連動也不改寫模型輸出。信心不是正確率，低信心不轉成 not_assessable。
 
-第二階段骨幹繼續改變，仍可能發生災難性遺忘；凍結垃圾頭或保存 checkpoint 都不能防止遺忘。本次不加入垃圾 loss、蒸餾或回放。
+### 資料如何分配及取得資格
 
-2026-10-18 的 experiment_v3 已完成：stage1 在 23 epoch early stop，最佳為 epoch 18；stage2 在 28 epoch early stop，最佳為 epoch 23。權重及歷史位於 [experiment_v3](training/runs/experiment_v3/)，網站使用 stage2_best.pt，SHA-256 為 `572144ea31c0663c3e952e8f8ebd5fb608cca6772ecb5a9bac298f72b4758805`。本次網站開發只讀模型，不重新訓練。
+固定 seed=42、目標 train／val／test **70%／20%／10%**，沿用既有 group 分配。原圖、生成版本與確認重複同組；train 內再以完整群組，兼顧物品細類、兩任務與 original／generated 分布，盡量對半分成 stage1／stage2。群組完整性優先，不為結果重抽；疑似近似圖不直接當已確認重複。
 
-[訓練操作說明](training/README.md) 保留分階段、接續與重現命令；[2026-10-17 執行紀錄](training/RUN_REPORT.md) 是當時尚未驗收的歷史報告，不改寫為當日已訓練。現況以 v3、completed checkpoint 與 final_test 產物為準。不要為了試網站而重跑已完成的訓練或正式 test。
+v3 合格 manifest 共 1,854 張：stage1 636、stage2 分配 661、val 377、test 180。stage2 真正使用其中 **416 張殘留有效資料**，不是把 661 張全部當成有殘留標籤。val／test 不進任何階段訓練；生成圖必須驗收，且與來源原圖同組同 split。
+
+approved 只是完成審核，仍按任務判定資格。原 CSV 的 no／unknown 保留：approved＋yes＋none／food／liquid 對應殘留 0／1／2，approved＋no＋空白對應 not_assessable；unknown＋空白只有另具 [明確資格確認](training/residual_eligibility.csv) 才可對應 not_assessable。未知原因、mixed 或衝突用 target=-1／mask 跳過殘留，仍可只供垃圾訓練，不把空白猜成 none。
+
+### 兩階段學什麼、如何更新
+
+| 階段 | 實際訓練資料 | 更新／凍結 | 唯一訓練 loss | best 選擇 |
+|---|---|---|---|---|
+| stage1 | 636 張（618 原圖＋18 生成） | 更新骨幹＋垃圾頭；凍結殘留頭 | 垃圾 CrossEntropy | 真實原圖 val 垃圾 Macro-F1 |
+| stage2 | 416 張（398 原圖＋18 生成） | 更新骨幹＋殘留頭；凍結垃圾頭 | 殘留 CrossEntropy | 真實原圖 val 殘留 Macro-F1 |
+
+stage2 載入已完成模型選擇的 stage1_best.pt，核對 config／資料版本，保存來源 hash，再建立全新的 optimizer／scheduler。沒有沿用 stage1 動量，也沒有使用垃圾 loss、蒸餾或回放。
+
+「凍結」包含兩件事：非活動頭 requires_grad=false 且 eval，頭內 Dropout 停用；活動頭與共用骨幹 train，活動頭 Dropout 啟用，骨幹 BatchNorm 繼續更新 running statistics。驗證／推論則整體 eval，Dropout 停用、BatchNorm 使用已存統計。stage2 即使不更新垃圾 Linear，骨幹權重與 BatchNorm 改變仍可能使垃圾能力退步；保存 checkpoint 只能恢復／比較，不能防止遺忘。
+
+### Loss、optimizer 與起始設定
+
+實際 loss 是 functional.cross_entropy：直接接 N×4 logits 與 N 個 long 整數 target，先用 target>=0 過濾無效標籤。**不先 softmax 再傳入 CE**；類別權重未啟用（None）、label smoothing=0、reduction=mean。每階段只用自己的 CE，沒有多任務加權 loss。
+
+AdamW 分兩個 parameter groups：骨幹初始 LR=1e-5、活動頭 LR=1e-4；weight_decay=1e-4、betas=(0.9,0.999)、eps=1e-8、amsgrad=false。較小骨幹 LR 用來減少預訓練特徵擾動，頭使用較大 LR 學新任務；不是已驗證的最佳值。
+
+ReduceLROnPlateau 每 epoch 驗證後，以當階段原圖 val Macro-F1 更新：mode=max、factor=0.5、patience=2、min_lr=1e-7，threshold=1e-4（relative）、cooldown=0、eps=1e-8。LR 會隨停滯下降；best／early stopping 另以嚴格改善 min_delta=0 判定，patience=5，不與 scheduler 的 patience 混用。
+
+| 項目 | config 起始／預設值 | experiment_v3 實際 |
+|---|---|---|
+| 輸入／正規化 | 224×224，ImageNet mean/std | 相同 |
+| 前處理 | EXIF 修正、等比例 BICUBIC 縮放、白色補邊 | 保留整圖；不中心裁切 |
+| 訓練增強 | 水平翻轉 p=.5、亮度／對比 .05 | 相同；無旋轉或隨機裁切 |
+| batch／num_workers | 8／0 | 相同，按需讀圖 |
+| 每階段 max_epochs／early stopping | 30／patience=5 | 23／28 epoch 提早停止 |
+| AMP／裝置 | false／cuda | FP32、GTX 1650 4 GB |
+| 權重下載開關 | allow_weight_download=false | 當時明確授權 true |
+
+val／test／推論前處理固定。v3 FP32 smoke 通過：batch=8、每階段 3 次更新、4.20 秒、peak allocated 898.80 MiB、無 OOM；正式訓練歷史最大 allocated 805.70 MiB。這不是整張顯卡占用，不能保證 batch=16 或其他尺寸都安全。舊 AMP smoke 有非有限梯度，v3 未使用 AMP，不聲稱其穩定或加速。
+
+best 與 last 依 stage 分開存，不互相覆蓋；含模型與 BN buffers、optimizer／scheduler／scaler、epoch、指標、設定、類別、seed、資料指紋、RNG 與歷史。接續只支援同 run／同 stage、相同設定與資料的 last，從完整 epoch 邊界恢復；early stop 或已 final_test 鎖定的 v3 不允許繼續訓練。
+
+不換骨幹也可研究 LR、weight decay、batch、Dropout、資料增強與尺寸，但須新實驗及 smoke。optimizer 種類、scheduler、類別權重／smoothing、部分骨幹凍結目前要修改程式；patience 雖在 config 但 CLI 固定要求 5，不能把它描述為任意可調。完整「項目／目前設定／位置／影響」表見 [訓練參數說明](training/README.md)。推論門檻 0.6 可由 Predictor／predict --threshold 調整提示，**不改權重或 argmax**，網站沒有門檻調整 UI。調參依 val，不依 test。
 
 ## 五、正式測試與網站實測
 
-模型選擇只用 val；兩階段完成後才固定比較兩個 best，正式 test 不用來挑 epoch 或決定重訓。原圖／生成圖分開統計，真實原圖為主要結果：
+experiment_v3 的 stage1 在 epoch 23 停止，best=18、原圖 val 垃圾 Macro-F1 **95.2612%**；stage2 在 epoch 28 停止，best=23、原圖 val 殘留 Macro-F1 **88.8777%**。該 stage2_best 的原圖 val 垃圾 Macro-F1 為 92.4171%，較 stage1 下降 **2.8441 個百分點**。
 
-| checkpoint／任務 | 真實原圖有效張數 | Accuracy | Macro-F1 |
-|---|---:|---:|---:|
-| stage1_best／垃圾 | 176 | 94.89% | 94.02% |
-| stage2_best／垃圾 | 176 | 93.18% | 91.57% |
-| stage2_best／殘留 | 108 | 87.04% | 82.11% |
+模型選擇完成後才對保留 test 做預先規劃的兩個 best 比較；以下讀自既有 final_test，沒有重跑測試或用它挑 epoch。
 
-垃圾 Macro-F1 從 stage1 到 stage2 下降約 **2.45 百分點**，顯示共用骨幹仍有遺忘。原始結果、各類 support、混淆矩陣及逐圖預測見 [正式比較](training/runs/experiment_v3/final_test/comparison.json)；本次沒有重新執行模型測試。stage1 殘留頭未訓練，不把它的輸出視為已學會殘留。
+| checkpoint／任務 | 原圖有效 n | 原圖 accuracy | 原圖 Macro-F1 | generated n | generated accuracy | generated Macro-F1 |
+|---|---:|---:|---:|---:|---:|---:|
+| stage1_best／垃圾 | 176 | 94.89% | 94.02% | 4 | 100% | 25.00% |
+| stage2_best／垃圾 | 176 | 93.18% | 91.57% | 4 | 100% | 25.00% |
+| stage2_best／殘留 | 108 | 87.04% | 82.11% | 4 | 75% | 41.67% |
 
-網站另計上傳資料的實測結果，預設使用辨識前 Ground Truth；辨識後回饋另外分流，模型版本依 checkpoint hash 分開。沒有有效標註時顯示「尚無可評估資料」，信心不是正確率。網站結果不覆寫正式 test，也不能抹除近似候選尚未確認的限制。
+原圖 test 垃圾 Macro-F1 下降約 **2.45 個百分點**，與 val 的下降幅度分開解讀。stage1 殘留頭未訓練，不當作有效殘留成果。generated test 只有 4 張，垃圾只有 other_recycling；Macro-F1 固定四類、零 support 類 F1=0，所以 accuracy=100% 不等於 Macro-F1=100%，也不代表真實照片泛化。
+
+v3 仍有 820 組未解近似候選，688 筆 unknown 資格未確認而保持殘留 mask；另有 mixed／未標註資料。原圖 test 的殘留 none 12、food 18、liquid 16、not_assessable 62，樣本有限且不平衡。完整 loss、各類指標、混淆矩陣及逐圖預測見 [正式比較](training/runs/experiment_v3/final_test/comparison.json)。
+
+網站實測是另外保存的上傳紀錄，預設使用預測前 GT，結果後回饋另列，按 checkpoint hash 分開統計，不覆寫正式 test。accuracy 是正確比例、Macro-F1 平衡看四類，信心是單張模型機率且尚未校準。歷史 [2026-10-17 訓練報告](training/RUN_REPORT.md) 保留當時狀態；曾有的「尚未訓練」敘述已依 completed／checkpoint／final_test 更新現況。
 
 ## 六、本機網站：循物
 

@@ -32,6 +32,8 @@ class Annotation(BaseModel):
 
     @model_validator(mode='after')
     def validate_confirmation(self):
+        if self.waste in ('general','food_waste') and self.residual not in (None,'not_assessable'):
+            raise ValueError('依本專題物品範圍，一般垃圾／廚餘的人工殘留答案僅允許未填或不適用')
         if self.waste_confirmed and self.waste is None:raise ValueError('垃圾答案尚未選擇，不能標為已確認')
         if self.residual_confirmed and self.residual is None:raise ValueError('殘留答案尚未選擇，不能標為已確認')
         return self
