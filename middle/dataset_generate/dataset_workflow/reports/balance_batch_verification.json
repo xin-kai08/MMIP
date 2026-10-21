@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-17T09:26:00.929683+00:00",
+  "requested": 26,
+  "saved": 26,
+  "task_status": {
+    "success": 26,
+    "failed": 8
+  },
+  "new_labels": {
+    "pending": 26
+  },
+  "new_splits": {
+    "train": 19,
+    "val": 5,
+    "test": 2
+  },
+  "source_groups": 26,
+  "pre_batch_images_unchanged": 2522,
+  "pre_batch_labels_unchanged": 2522,
+  "baseline_labels": "F:\\project\\MMIP\\middle\\dataset_generate\\dataset_workflow\\backups\\labels_20261017T085026261064.csv",
+  "total_images": 2548,
+  "tool": "built-in image_gen",
+  "regression_tests_passed": 9
+}

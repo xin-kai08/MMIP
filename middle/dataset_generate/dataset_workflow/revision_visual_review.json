@@ -1,0 +1,110 @@
+[
+  {
+    "image_path": "glass_beverage_bottles/Image_253.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已逐張看圖：底部清楚可見琥珀色淺層液體及液面，上方大部分瓶身空且外形可辨。保留原視角；待人工驗收。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_254.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已逐張看圖：底部清楚可見琥珀色淺層液體及液面，上方大部分瓶身空且外形可辨。保留原視角；待人工驗收。"
+  },
+  {
+    "image_path": "paper_cups/Image_253.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已逐張看圖：內壁液滴與短流痕更明顯，杯身未遮擋；使用者後續要求可見咖啡液面，請優先複核 Image_255、Image_256，本版保留作比較。"
+  },
+  {
+    "image_path": "paper_cups/Image_254.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已逐張看圖：內壁液滴與短流痕更明顯，杯身未遮擋；使用者後續要求可見咖啡液面，請優先複核 Image_255、Image_256，本版保留作比較。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_253.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已逐張看圖：底部清楚可見琥珀色淺層液體及液面，上方大部分瓶身空且外形可辨。保留原視角；待人工驗收。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_254.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已逐張看圖：底部清楚可見琥珀色淺層液體及液面，上方大部分瓶身空且外形可辨。保留原視角；待人工驗收。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_253.png",
+    "residual": "food",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已逐張看圖：米粒、碎屑及醬痕比首輪明顯，盒底大部分可見，未見明顯積液；本體輪廓、材質與視角初看合理。待人工驗收，勿依提示詞直接核准。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_254.png",
+    "residual": "food",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已逐張看圖：米粒、碎屑及醬痕比首輪明顯，盒底大部分可見，未見明顯積液；本體輪廓、材質與視角初看合理。待人工驗收，勿依提示詞直接核准。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_253.png",
+    "residual": "food",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已逐張看圖：米粒、碎屑及醬痕比首輪明顯，盒底大部分可見，未見明顯積液；本體輪廓、材質與視角初看合理。待人工驗收，勿依提示詞直接核准。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_254.png",
+    "residual": "food",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已逐張看圖：米粒、碎屑及醬痕比首輪明顯，盒底大部分可見，未見明顯積液；本體輪廓、材質與視角初看合理。待人工驗收，勿依提示詞直接核准。"
+  },
+  {
+    "image_path": "paper_cups/Image_255.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已逐張看圖：清楚可見深咖啡液面、反光與少量泡沫；液位低於杯口，外側杯身與圖案未被遮擋。液體比例不是實測值；待人工複核。"
+  },
+  {
+    "image_path": "paper_cups/Image_256.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已逐張看圖：清楚可見深咖啡液面、反光與少量泡沫；液位低於杯口，外側杯身與圖案未被遮擋。液體比例不是實測值；待人工複核。"
+  }
+]

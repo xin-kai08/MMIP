@@ -1,0 +1,16 @@
+﻿origin,residual,residual_applicable,review_status,count
+generated,(blank),no,approved,1
+generated,food,yes,approved,31
+generated,liquid,yes,approved,9
+generated,none,yes,approved,7
+original,(blank),no,approved,664
+original,(blank),no,excluded,452
+original,(blank),unknown,approved,688
+original,(blank),unknown,excluded,162
+original,(blank),yes,approved,37
+original,(blank),yes,excluded,1
+original,food,yes,approved,132
+original,liquid,yes,approved,176
+original,liquid,yes,excluded,6
+original,none,yes,approved,175
+original,none,yes,excluded,7

@@ -1,0 +1,6 @@
+﻿folder,total,approved,excluded,pending,approved_none,approved_food,approved_liquid,approved_unknown,approved_no,approved_mixed_blank,generation_eligible,generation_eligible_groups,generation_unused_sources
+glass_beverage_bottles,250,236,14,0,74,0,86,60,0,16,45,40,43
+paper_cups,250,173,77,0,2,1,20,150,0,0,0,0,0
+plastic_water_bottles,250,146,104,0,2,0,70,74,0,0,0,0,0
+plastic_food_containers,250,234,16,0,45,103,0,70,0,16,21,20,18
+styrofoam_food_containers,250,219,31,0,52,28,0,134,0,5,38,38,36

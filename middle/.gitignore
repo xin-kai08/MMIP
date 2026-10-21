@@ -1,7 +1,19 @@
 .venv/
 __pycache__/
-dataset_generate/dataset_workflow/.workflow.lock
-dataset_generate/
+# Dataset tools, docs, review decisions and generation provenance stay versionable.
+# Ignore only machine-local / derived artifacts, not the entire dataset_generate.
+/dataset_generate/tmp*/
+/dataset_generate/dataset_workflow/.workflow.lock
+# Exact automatic timestamp layout: YYYYMMDDTHHMMSSffffff; special names remain visible.
+/dataset_generate/dataset_workflow/backups/labels_????????T????????????.csv
+/dataset_generate/dataset_workflow/backups/archives/
+/dataset_generate/dataset_workflow/contacts/
+/dataset_generate/dataset_workflow/pilot_preview/*.jpg
+/dataset_generate/dataset_workflow/reviews/**/sheets/
+
+# Local download/browser caches and generated test screenshots.
+/.cache/
+/verification/screenshots/
 
 # Large or machine-local training outputs; fixed manifests remain versionable.
 training/backups/

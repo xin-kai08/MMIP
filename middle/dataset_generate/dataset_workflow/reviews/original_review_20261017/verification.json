@@ -1,0 +1,11 @@
+{
+  "finished_at": "2026-10-17T08:23:40.609107+00:00",
+  "reviewed": 1250,
+  "no_pending_in_scope": true,
+  "generated_rows_unchanged": true,
+  "out_of_scope_rows_unchanged": true,
+  "image_hashes_unchanged": true,
+  "existing_excluded_never_restored": true,
+  "existing_notes_preserved_as_prefix": true,
+  "backup": "F:\\project\\MMIP\\middle\\dataset_generate\\dataset_workflow\\backups\\labels_before_original_review_2026-10-17T073615.995464_0000.csv"
+}

@@ -1,0 +1,30 @@
+{
+  "verified_at": "2026-10-15T03:58:09.250797+00:00",
+  "original_unchanged": 2500,
+  "generated_count": 22,
+  "all_generated_checksums_ok": true,
+  "rescan_preserves_labels_bytes": true,
+  "utf8_bom": true,
+  "all_groups_single_split": true,
+  "all_generated_inherit_source_group_split": true,
+  "http_utf8_rows_images_ok": true,
+  "http_rejects_unauthorized_and_invalid_mutations": true,
+  "browser_visual_qa": "not available: no connected browser",
+  "exact_duplicate_pairs": 100,
+  "near_candidate_pairs": 841,
+  "pending": 2522,
+  "preliminary_visual_reviewed": 374,
+  "generation_success": 22,
+  "generation_failed": 0,
+  "generation_needs_rework": 2,
+  "original_splits": {
+    "train": 1750,
+    "val": 500,
+    "test": 250
+  },
+  "generated_splits": {
+    "train": 17,
+    "val": 3,
+    "test": 2
+  }
+}

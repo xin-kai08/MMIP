@@ -1,0 +1,4 @@
+[
+  {"image_path":"plastic_water_bottles/Image_13.png","residual":"","residual_applicable":"yes","review_status":"pending","generation_candidate":"eligible","visual_review_by":"Codex visual preliminary; human review required","notes":"已看單張：單一透明瓶，底部可見；瓶身可見少量液滴但不能確認內外側，殘留留白。適合在可見底部試作清楚琥珀色液體；保留標籤、瓶蓋、木桌與戶外背景。"},
+  {"image_path":"plastic_food_containers/Image_133.png","residual":"none","residual_applicable":"yes","review_status":"pending","generation_candidate":"eligible","visual_review_by":"Codex visual preliminary; human review required","notes":"已看單張：單一透明開口長方餐盒，內底可見，初判空盒，待人工複核。替換首輪有文字條而編輯失真的來源；保留淡色背景與所有輪廓。"}
+]

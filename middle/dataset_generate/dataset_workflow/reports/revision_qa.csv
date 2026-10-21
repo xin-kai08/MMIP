@@ -1,0 +1,13 @@
+﻿task_id,mode,source_path,output_path,observed_residual,qa_status,notes
+t_ad26354058770800726d,visible-v2,glass_beverage_bottles/Image_11.png,glass_beverage_bottles/Image_253.png,liquid,pending_human_review,已逐張看圖：底部清楚可見琥珀色淺層液體及液面，上方大部分瓶身空且外形可辨。保留原視角；待人工驗收。
+t_a76462bc7495bed79d98,visible-v2,glass_beverage_bottles/Image_16.png,glass_beverage_bottles/Image_254.png,liquid,pending_human_review,已逐張看圖：底部清楚可見琥珀色淺層液體及液面，上方大部分瓶身空且外形可辨。保留原視角；待人工驗收。
+t_d8f4138fff42e8cf10b1,visible-v2,paper_cups/Image_145.png,paper_cups/Image_253.png,liquid,pending_human_review,已逐張看圖：內壁液滴與短流痕更明顯，杯身未遮擋；使用者後續要求可見咖啡液面，請優先複核 Image_255、Image_256，本版保留作比較。
+t_865781e96ccab3928a64,visible-v2,paper_cups/Image_192.png,paper_cups/Image_254.png,liquid,pending_human_review,已逐張看圖：內壁液滴與短流痕更明顯，杯身未遮擋；使用者後續要求可見咖啡液面，請優先複核 Image_255、Image_256，本版保留作比較。
+t_38486a00ee5ef010ea03,visible-v2,plastic_water_bottles/Image_50.png,plastic_water_bottles/Image_253.png,liquid,pending_human_review,已逐張看圖：底部清楚可見琥珀色淺層液體及液面，上方大部分瓶身空且外形可辨。保留原視角；待人工驗收。
+t_391ad9c0e97b242c67ef,visible-v2,plastic_water_bottles/Image_13.png,plastic_water_bottles/Image_254.png,liquid,pending_human_review,已逐張看圖：底部清楚可見琥珀色淺層液體及液面，上方大部分瓶身空且外形可辨。保留原視角；待人工驗收。
+t_3aa164c6a4899d903158,visible-v2,plastic_food_containers/Image_30.png,plastic_food_containers/Image_253.png,food,pending_human_review,已逐張看圖：米粒、碎屑及醬痕比首輪明顯，盒底大部分可見，未見明顯積液；本體輪廓、材質與視角初看合理。待人工驗收，勿依提示詞直接核准。
+t_54d99b66d84889ee5354,visible-v2,plastic_food_containers/Image_133.png,plastic_food_containers/Image_254.png,food,pending_human_review,已逐張看圖：米粒、碎屑及醬痕比首輪明顯，盒底大部分可見，未見明顯積液；本體輪廓、材質與視角初看合理。待人工驗收，勿依提示詞直接核准。
+t_b1cd1072fbbef635563f,visible-v2,styrofoam_food_containers/Image_6.png,styrofoam_food_containers/Image_253.png,food,pending_human_review,已逐張看圖：米粒、碎屑及醬痕比首輪明顯，盒底大部分可見，未見明顯積液；本體輪廓、材質與視角初看合理。待人工驗收，勿依提示詞直接核准。
+t_f4394b2d76f0959ee02d,visible-v2,styrofoam_food_containers/Image_37.png,styrofoam_food_containers/Image_254.png,food,pending_human_review,已逐張看圖：米粒、碎屑及醬痕比首輪明顯，盒底大部分可見，未見明顯積液；本體輪廓、材質與視角初看合理。待人工驗收，勿依提示詞直接核准。
+t_763a8311af1a68961b49,coffee-surface-v3,paper_cups/Image_145.png,paper_cups/Image_255.png,liquid,pending_human_review,已逐張看圖：清楚可見深咖啡液面、反光與少量泡沫；液位低於杯口，外側杯身與圖案未被遮擋。液體比例不是實測值；待人工複核。
+t_0348fd22c010ccbcf74b,coffee-surface-v3,paper_cups/Image_200.png,paper_cups/Image_256.png,liquid,pending_human_review,已逐張看圖：清楚可見深咖啡液面、反光與少量泡沫；液位低於杯口，外側杯身與圖案未被遮擋。液體比例不是實測值；待人工複核。

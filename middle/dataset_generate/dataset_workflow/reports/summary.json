@@ -1,0 +1,40 @@
+{
+  "image_count": 2548,
+  "by_folder": {
+    "cardboard_boxes": 250,
+    "food_waste": 250,
+    "glass_beverage_bottles": 254,
+    "paper_cups": 256,
+    "plastic_cup_lids": 250,
+    "plastic_food_containers": 254,
+    "plastic_straws": 250,
+    "plastic_trash_bags": 250,
+    "plastic_water_bottles": 254,
+    "styrofoam_food_containers": 280
+  },
+  "by_origin": {
+    "original": 2500,
+    "generated": 48
+  },
+  "by_split": {
+    "train": 1786,
+    "val": 508,
+    "test": 254
+  },
+  "by_review_status": {
+    "approved": 1920,
+    "excluded": 628
+  },
+  "unique_groups": 2403,
+  "damaged": 0,
+  "unknown_folders": [],
+  "seed": 42,
+  "ratios": {
+    "train": 0.7,
+    "val": 0.2,
+    "test": 0.1
+  },
+  "near_duplicate_method": "dHash64 distance <= 6, aspect log distance < .18; candidates only, not exhaustive",
+  "labels_notice": "Prompt targets are not labels. Only approved visual labels count for balance. Split currently provisional while duplicate review is pending.",
+  "test_warning": "Evaluate original real residual test images separately. Synthetic test accuracy does not establish real photo accuracy."
+}

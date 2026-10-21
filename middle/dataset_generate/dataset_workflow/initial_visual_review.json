@@ -1,0 +1,3143 @@
+[
+  {
+    "image_path": "glass_beverage_bottles/Image_11.png",
+    "residual": "none",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "eligible",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已檢視單張：透明單瓶，底部可見且初看無殘留；待人工確認。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_16.png",
+    "residual": "none",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "eligible",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已檢視單張：透明單瓶，底部可見且初看無殘留；待人工確認。"
+  },
+  {
+    "image_path": "paper_cups/Image_145.png",
+    "residual": "",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "eligible",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已檢視單張：可見後側內壁，杯底不可見，原圖殘留不確定；試作僅能在可見內壁加少量咖啡液滴，不可改視角；待人工複核。"
+  },
+  {
+    "image_path": "paper_cups/Image_192.png",
+    "residual": "",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "eligible",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已檢視單張：可見後側內壁，杯底不可見，原圖殘留不確定；試作僅能在可見內壁加少量咖啡液滴，不可改視角；待人工複核。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_50.png",
+    "residual": "none",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "eligible",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已檢視單張：手握單一透明壓扁空瓶，底部可見，初看無殘留；手部不得改動；待人工確認。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_81.png",
+    "residual": "",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "eligible",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已檢視單張：單一透明開口瓶，底部可見；商品照反光使原圖是否有透明液體仍不確定，不標 none；可試作少量有色液體，待人工複核。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_30.png",
+    "residual": "none",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "eligible",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已檢視單張：透明單一餐盒，內部／底部可見，初看空盒；保留透明蓋及既有背景／文字；待人工確認。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_74.png",
+    "residual": "none",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "eligible",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已檢視單張：透明單一餐盒，內部／底部可見，初看空盒；保留透明蓋及既有背景／文字；待人工確認。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_6.png",
+    "residual": "none",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "eligible",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已檢視單張：開蓋單一白色餐盒，底部清楚，初看無殘留；只加少量食物碎屑且不得有積液；待人工確認。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_37.png",
+    "residual": "none",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "eligible",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已檢視單張：開蓋單一白色餐盒，底部清楚，初看無殘留；只加少量食物碎屑且不得有積液；待人工確認。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_1.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_3.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_5.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_6.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_7.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_8.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_9.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_10.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_12.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_13.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_14.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_17.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_20.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_21.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_22.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_23.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_25.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_29.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_30.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_31.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_33.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_35.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_37.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_38.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_40.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_42.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_44.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_45.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_46.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_47.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／多物品或滿裝商品陳列，不適合此輪單物品少量殘留編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_1.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_4.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_5.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_6.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_7.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_10.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_11.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_12.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_14.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_15.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_16.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_17.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_18.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_19.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_20.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_21.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_22.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_24.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_26.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_27.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_28.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_29.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_31.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_32.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_33.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_34.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_35.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_39.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_40.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_41.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_42.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_43.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_45.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_46.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_48.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／拼貼／有蓋遮擋，不適合本輪編輯；殘留留白。"
+  },
+  {
+    "image_path": "paper_cups/Image_3.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_8.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_13.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_23.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_25.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_36.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_37.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_38.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_47.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_54.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_56.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_71.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_73.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_76.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_84.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_90.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_91.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_102.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_112.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_117.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_118.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_119.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_121.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_128.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_136.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_140.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_142.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_143.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_144.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_146.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_148.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_149.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_150.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_152.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_162.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_164.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_169.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_170.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_171.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_174.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_178.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_184.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_193.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_194.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_204.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_205.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_206.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_208.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_210.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_217.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_223.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_227.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_228.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_233.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_243.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "paper_cups/Image_249.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：圖表／拼貼／教學／大型造型或非清楚單杯照片，候選排除；需人工檢查物品細類。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_1.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_3.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_4.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_6.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_8.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_9.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_11.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_12.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_14.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_16.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_17.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_19.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_20.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_21.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_23.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_24.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_25.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_26.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_27.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_28.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_29.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_30.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_31.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_32.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_34.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_35.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_36.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_37.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_38.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_39.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_40.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_41.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_42.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_43.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_46.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_47.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_48.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_49.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_51.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_52.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_53.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_54.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_56.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_58.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_60.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_61.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_62.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_63.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_64.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_65.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_66.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_67.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_68.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_69.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_70.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_71.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_72.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_73.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_75.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_76.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_77.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_78.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_79.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_82.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_84.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_85.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_86.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_87.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_88.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_89.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_90.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_91.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_92.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_94.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_95.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_96.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多瓶／垃圾堆／海洋場景／宣傳圖／非單一清楚容器，候選排除；不以背景推論殘留。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_1.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_2.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_3.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_4.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_5.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_6.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_7.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_8.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_9.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_10.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_11.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_13.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_14.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_15.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_16.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_17.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_19.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_20.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_21.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_22.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_23.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_24.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_25.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_26.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_27.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_28.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_29.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_31.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_32.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_33.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_34.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_35.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_36.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_37.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_38.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_39.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_40.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_41.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_42.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_43.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_44.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_45.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_46.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_47.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_48.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_49.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_50.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_51.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_52.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_53.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_54.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_56.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_57.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_58.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_59.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_60.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_61.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_62.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_63.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_64.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_65.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_66.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_67.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_68.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_69.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_70.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_71.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_72.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_73.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_76.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_77.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_78.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_79.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_80.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_81.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_82.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_83.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_84.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_85.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_86.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_87.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_88.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_89.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_90.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_91.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_92.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_93.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_94.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_95.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_96.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多盒／滿裝食物／不透明或蓋子遮擋內部，候選排除；不把滿裝商品當成適合加少量殘留的來源。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_1.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_2.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_3.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_4.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_5.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_7.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_8.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_9.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_10.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_11.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_12.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_13.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_14.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_15.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_16.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_18.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_20.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_21.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_22.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_24.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_25.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_26.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_27.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_28.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_29.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_30.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_32.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_33.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_34.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_35.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_36.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_38.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_39.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_40.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_41.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_44.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_45.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_46.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_47.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_48.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "聯絡表檢視：多物品／閉蓋遮擋／滿裝食物或疑似非保麗龍材質，候選排除；物品材質需人工複核。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_15.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "棕色不透明／深色瓶，底部內部不可確認。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_75.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已檢視單張：半透明圓盒且商品浮水印覆蓋，內部不清楚，本輪排除。"
+  },
+  {
+    "image_path": "paper_cups/Image_44.png",
+    "residual": "",
+    "residual_applicable": "unknown",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已檢視單張：杯底不可見，只能看到上方內壁，本輪候選排除。"
+  },
+  {
+    "image_path": "paper_cups/Image_30.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "看圖初判有明顯飲料（多為滿杯，非少量殘留）；待人工複核，本輪不再加液體。"
+  },
+  {
+    "image_path": "paper_cups/Image_61.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "看圖初判有明顯飲料（多為滿杯，非少量殘留）；待人工複核，本輪不再加液體。"
+  },
+  {
+    "image_path": "paper_cups/Image_97.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "看圖初判有明顯飲料（多為滿杯，非少量殘留）；待人工複核，本輪不再加液體。"
+  },
+  {
+    "image_path": "paper_cups/Image_108.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "看圖初判有明顯飲料（多為滿杯，非少量殘留）；待人工複核，本輪不再加液體。"
+  },
+  {
+    "image_path": "paper_cups/Image_157.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "看圖初判有明顯飲料（多為滿杯，非少量殘留）；待人工複核，本輪不再加液體。"
+  },
+  {
+    "image_path": "paper_cups/Image_185.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "看圖初判有明顯飲料（多為滿杯，非少量殘留）；待人工複核，本輪不再加液體。"
+  },
+  {
+    "image_path": "paper_cups/Image_212.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "看圖初判有明顯飲料（多為滿杯，非少量殘留）；待人工複核，本輪不再加液體。"
+  },
+  {
+    "image_path": "paper_cups/Image_231.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "看圖初判有明顯飲料（多為滿杯，非少量殘留）；待人工複核，本輪不再加液體。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_23.png",
+    "residual": "food",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "看圖初判開盒有食物及醬料殘留，未看見明顯積液；需人工複核是否有液體並存。"
+  }
+]

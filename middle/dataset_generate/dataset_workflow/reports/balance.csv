@@ -1,0 +1,6 @@
+﻿folder,target,original_none,original_residual,generated_none,generated_residual,original_pending,provisional_add_residual,final_add_residual,add_none_instead,real_residual_test
+glass_beverage_bottles,liquid,68,82,0,4,0,0,0,18,12
+paper_cups,liquid,2,20,4,2,0,0,0,16,1
+plastic_water_bottles,liquid,2,65,1,3,0,0,0,65,3
+plastic_food_containers,food,43,100,0,3,0,0,0,60,14
+styrofoam_food_containers,food,52,26,2,28,0,0,0,0,4

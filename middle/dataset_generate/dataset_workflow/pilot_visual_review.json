@@ -1,0 +1,92 @@
+[
+  {
+    "image_path": "glass_beverage_bottles/Image_251.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已看圖初判有可見少量液體／液滴；材質、角度、背景與殘留量仍需人工驗收。"
+  },
+  {
+    "image_path": "glass_beverage_bottles/Image_252.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已看圖初判有可見少量液體／液滴；材質、角度、背景與殘留量仍需人工驗收。"
+  },
+  {
+    "image_path": "paper_cups/Image_251.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已看圖初判有可見少量液體／液滴；材質、角度、背景與殘留量仍需人工驗收。"
+  },
+  {
+    "image_path": "paper_cups/Image_252.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已看圖初判有可見少量液體／液滴；材質、角度、背景與殘留量仍需人工驗收。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_251.png",
+    "residual": "liquid",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已看圖初判有可見少量液體／液滴；材質、角度、背景與殘留量仍需人工驗收。"
+  },
+  {
+    "image_path": "plastic_water_bottles/Image_252.png",
+    "residual": "",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已看圖：瓶底液體與反光不易區分，肩部疑似有液面，可能看似滿瓶；原圖亦有透明液體歧義。不確認 residual，待人工判斷或換來源重做。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_251.png",
+    "residual": "food",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已看圖初判底部有少量食物碎屑／米粒／醬痕，未見明顯積液；材質、角度及背景仍需人工驗收。"
+  },
+  {
+    "image_path": "plastic_food_containers/Image_252.png",
+    "residual": "food",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "exclude",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已看圖：可見少量米粒／碎屑且未見積液，但原圖底部黑色文字條與既有文字被移除／改動，違反保留背景細節要求；待修正，不列合格樣本。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_251.png",
+    "residual": "food",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已看圖初判底部有少量食物碎屑／米粒／醬痕，未見明顯積液；材質、角度及背景仍需人工驗收。"
+  },
+  {
+    "image_path": "styrofoam_food_containers/Image_252.png",
+    "residual": "food",
+    "residual_applicable": "yes",
+    "review_status": "pending",
+    "generation_candidate": "",
+    "visual_review_by": "Codex visual preliminary; human review required",
+    "notes": "已看圖初判底部有少量食物碎屑／米粒／醬痕，未見明顯積液；材質、角度及背景仍需人工驗收。"
+  }
+]

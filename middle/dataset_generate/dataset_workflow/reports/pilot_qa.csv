@@ -1,0 +1,11 @@
+﻿task_id,source_path,output_path,target_residual,observed_residual,qa_status,notes
+t_fb6f6cc89a2923005c19,glass_beverage_bottles/Image_11.png,glass_beverage_bottles/Image_251.png,liquid,liquid,pending_human_review,已看圖初判有可見少量液體／液滴；材質、角度、背景與殘留量仍需人工驗收。
+t_038b21cb54e8d1c7f5e8,glass_beverage_bottles/Image_16.png,glass_beverage_bottles/Image_252.png,liquid,liquid,pending_human_review,已看圖初判有可見少量液體／液滴；材質、角度、背景與殘留量仍需人工驗收。
+t_e6c89b1e6f6d2b5f1856,paper_cups/Image_145.png,paper_cups/Image_251.png,liquid,liquid,pending_human_review,已看圖初判有可見少量液體／液滴；材質、角度、背景與殘留量仍需人工驗收。
+t_663a6123cb5ea08deb54,paper_cups/Image_192.png,paper_cups/Image_252.png,liquid,liquid,pending_human_review,已看圖初判有可見少量液體／液滴；材質、角度、背景與殘留量仍需人工驗收。
+t_d8868dc23ee7c7541c70,plastic_water_bottles/Image_50.png,plastic_water_bottles/Image_251.png,liquid,liquid,pending_human_review,已看圖初判有可見少量液體／液滴；材質、角度、背景與殘留量仍需人工驗收。
+t_4ef0c814d43d838f8952,plastic_water_bottles/Image_81.png,plastic_water_bottles/Image_252.png,liquid,,needs_rework,已看圖：瓶底液體與反光不易區分，肩部疑似有液面，可能看似滿瓶；原圖亦有透明液體歧義。不確認 residual，待人工判斷或換來源重做。
+t_d8401eded48d59fb3a36,plastic_food_containers/Image_30.png,plastic_food_containers/Image_251.png,food,food,pending_human_review,已看圖初判底部有少量食物碎屑／米粒／醬痕，未見明顯積液；材質、角度及背景仍需人工驗收。
+t_e501a07f99a67ce762da,plastic_food_containers/Image_74.png,plastic_food_containers/Image_252.png,food,food,needs_rework,已看圖：可見少量米粒／碎屑且未見積液，但原圖底部黑色文字條與既有文字被移除／改動，違反保留背景細節要求；待修正，不列合格樣本。
+t_cf22c6e78e0bbae4c8cc,styrofoam_food_containers/Image_6.png,styrofoam_food_containers/Image_251.png,food,food,pending_human_review,已看圖初判底部有少量食物碎屑／米粒／醬痕，未見明顯積液；材質、角度及背景仍需人工驗收。
+t_fdbe4a4886da837a92c7,styrofoam_food_containers/Image_37.png,styrofoam_food_containers/Image_252.png,food,food,pending_human_review,已看圖初判底部有少量食物碎屑／米粒／醬痕，未見明顯積液；材質、角度及背景仍需人工驗收。
