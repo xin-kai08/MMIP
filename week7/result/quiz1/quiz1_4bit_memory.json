@@ -1,0 +1,10 @@
+{
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "precision": "4-bit NF4 weights; FP16 compute",
+  "prompt_setting": "baseline",
+  "measurement": "PyTorch allocated memory",
+  "sampling_interval_seconds": 0.05,
+  "sample_count": 1790,
+  "average_allocated_mib": 2118.3073400401536,
+  "peak_allocated_mib": 2172.5302734375
+}
