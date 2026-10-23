@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "category": "物件辨識",
+    "image": "images/quiz2/1.jpg",
+    "question": "圖片中的動物是什麼？"
+  },
+  {
+    "id": 2,
+    "category": "數量計算",
+    "image": "images/quiz2/1.jpg",
+    "question": "圖片中共有幾隻鹿？"
+  },
+  {
+    "id": 3,
+    "category": "數量計算",
+    "image": "images/quiz2/1.jpg",
+    "question": "圖片中有幾隻鹿呈站立姿勢？"
+  },
+  {
+    "id": 4,
+    "category": "數量計算",
+    "image": "images/quiz2/2.jpg",
+    "question": "展示台上共有幾個立體角色模型？"
+  },
+  {
+    "id": 5,
+    "category": "外觀辨識",
+    "image": "images/quiz2/2.jpg",
+    "question": "最左邊角色模型的主要配色是什麼？"
+  },
+  {
+    "id": 6,
+    "category": "外觀辨識",
+    "image": "images/quiz2/2.jpg",
+    "question": "正中央的黃色角色模型是否有可見的尾巴？"
+  },
+  {
+    "id": 7,
+    "category": "物件辨識",
+    "image": "images/quiz2/3.jpg",
+    "question": "托盤上的食物是什麼？"
+  },
+  {
+    "id": 8,
+    "category": "空間關係",
+    "image": "images/quiz2/3.jpg",
+    "question": "以畫面方向為準，包裝中的吸管放在托盤的哪一側？"
+  },
+  {
+    "id": 9,
+    "category": "數量計算",
+    "image": "images/quiz2/3.jpg",
+    "question": "圖片中有幾杯飲料？"
+  },
+  {
+    "id": 10,
+    "category": "數量計算",
+    "image": "images/quiz2/4.jpg",
+    "question": "圖片上方共有幾面錦旗？"
+  },
+  {
+    "id": 11,
+    "category": "數量計算",
+    "image": "images/quiz2/4.jpg",
+    "question": "圖片下方共有幾顆球？包含被塑膠袋部分遮住的球。"
+  },
+  {
+    "id": 12,
+    "category": "文字辨識",
+    "image": "images/quiz2/4.jpg",
+    "question": "紅色錦旗上的名次文字是什麼？"
+  },
+  {
+    "id": 13,
+    "category": "文字辨識",
+    "image": "images/quiz2/5.jpg",
+    "question": "站牌上的中文站名是什麼？"
+  },
+  {
+    "id": 14,
+    "category": "文字辨識",
+    "image": "images/quiz2/5.jpg",
+    "question": "根據站牌，本站距離水里站幾公里？"
+  },
+  {
+    "id": 15,
+    "category": "數量計算",
+    "image": "images/quiz2/6.jpg",
+    "question": "畫面中央穿著黑色畢業袍、參與合照的人共有幾位？"
+  },
+  {
+    "id": 16,
+    "category": "空間關係",
+    "image": "images/quiz2/6.jpg",
+    "question": "蹲著的兩位合照人物位於人群的前方還是後方？"
+  },
+  {
+    "id": 17,
+    "category": "空間關係",
+    "image": "images/quiz2/6.jpg",
+    "question": "以畫面方向為準，手持紫色玩偶的人位於合照人群的哪個位置？"
+  },
+  {
+    "id": 18,
+    "category": "物件辨識",
+    "image": "images/quiz2/2.jpg",
+    "question": "正中央的黃色角色是什麼？"
+  },
+  {
+    "id": 19,
+    "category": "外觀辨識",
+    "image": "images/quiz2/6.jpg",
+    "question": "合照人物的畢業袍主要是什麼顏色？"
+  },
+  {
+    "id": 20,
+    "category": "圖片描述",
+    "image": "images/quiz2/1.jpg",
+    "question": "請描述三隻鹿的姿態與所在位置。"
+  }
+]

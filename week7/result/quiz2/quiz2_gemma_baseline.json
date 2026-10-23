@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "category": "物件辨識",
+    "image": "question/quiz2_image/1.jpg",
+    "question": "圖片中的動物是什麼？",
+    "response": "圖片中的動物是鹿。 牠們看起來像是白尾鹿。"
+  },
+  {
+    "id": 2,
+    "category": "數量計算",
+    "image": "question/quiz2_image/1.jpg",
+    "question": "圖片中共有幾隻鹿？",
+    "response": "圖片中共有四隻鹿。"
+  },
+  {
+    "id": 3,
+    "category": "數量計算",
+    "image": "question/quiz2_image/1.jpg",
+    "question": "圖片中有幾隻鹿呈站立姿勢？",
+    "response": "圖片中有兩隻鹿呈站立姿勢。"
+  },
+  {
+    "id": 4,
+    "category": "數量計算",
+    "image": "question/quiz2_image/2.jpg",
+    "question": "展示台上共有幾個立體角色模型？",
+    "response": "根據圖片，展示台上共有七個立體角色模型。"
+  },
+  {
+    "id": 5,
+    "category": "外觀辨識",
+    "image": "question/quiz2_image/2.jpg",
+    "question": "最左邊角色模型的主要配色是什麼？",
+    "response": "最左邊的角色模型的主要配色是綠色和白色。"
+  },
+  {
+    "id": 6,
+    "category": "外觀辨識",
+    "image": "question/quiz2_image/2.jpg",
+    "question": "正中央的黃色角色模型是否有可見的尾巴？",
+    "response": "是的，正中央的黃色角色模型（皮卡丘）有可見的尾巴。"
+  },
+  {
+    "id": 7,
+    "category": "物件辨識",
+    "image": "question/quiz2_image/3.jpg",
+    "question": "托盤上的食物是什麼？",
+    "response": "托盤上的食物是炸薯條和一份紙巾。"
+  },
+  {
+    "id": 8,
+    "category": "空間關係",
+    "image": "question/quiz2_image/3.jpg",
+    "question": "以畫面方向為準，包裝中的吸管放在托盤的哪一側？",
+    "response": "根據畫面方向，包裝中的吸管放在托盤的右側。"
+  },
+  {
+    "id": 9,
+    "category": "數量計算",
+    "image": "question/quiz2_image/3.jpg",
+    "question": "圖片中有幾杯飲料？",
+    "response": "圖片中有兩杯飲料。"
+  },
+  {
+    "id": 10,
+    "category": "數量計算",
+    "image": "question/quiz2_image/4.jpg",
+    "question": "圖片上方共有幾面錦旗？",
+    "response": "圖片上方共有七面錦旗。"
+  },
+  {
+    "id": 11,
+    "category": "數量計算",
+    "image": "question/quiz2_image/4.jpg",
+    "question": "圖片下方共有幾顆球？包含被塑膠袋部分遮住的球。",
+    "response": "圖片下方共有三顆球。"
+  },
+  {
+    "id": 12,
+    "category": "文字辨識",
+    "image": "question/quiz2_image/4.jpg",
+    "question": "紅色錦旗上的名次文字是什麼？",
+    "response": "紅色錦旗上的名次文字是：**冠軍**。"
+  },
+  {
+    "id": 13,
+    "category": "文字辨識",
+    "image": "question/quiz2_image/5.jpg",
+    "question": "站牌上的中文站名是什麼？",
+    "response": "站牌上的中文站名是「車城」。"
+  },
+  {
+    "id": 14,
+    "category": "文字辨識",
+    "image": "question/quiz2_image/5.jpg",
+    "question": "根據站牌，本站距離水里站幾公里？",
+    "response": "根據站牌，本站（車埕）距離水里站 2.3 公里。"
+  },
+  {
+    "id": 15,
+    "category": "數量計算",
+    "image": "question/quiz2_image/6.jpg",
+    "question": "畫面中央穿著黑色畢業袍、參與合照的人共有幾位？",
+    "response": "畫面中央穿著黑色畢業袍、參與合照的人共有八位。"
+  },
+  {
+    "id": 16,
+    "category": "空間關係",
+    "image": "question/quiz2_image/6.jpg",
+    "question": "蹲著的兩位合照人物位於人群的前方還是後方？",
+    "response": "蹲著的兩位合照人物位於人群的前方。"
+  },
+  {
+    "id": 17,
+    "category": "空間關係",
+    "image": "question/quiz2_image/6.jpg",
+    "question": "以畫面方向為準，手持紫色玩偶的人位於合照人群的哪個位置？",
+    "response": "手持紫色玩偶的人位於合照人群的右側，靠近畫面右邊的位置。"
+  },
+  {
+    "id": 18,
+    "category": "物件辨識",
+    "image": "question/quiz2_image/2.jpg",
+    "question": "正中央的黃色角色是什麼？",
+    "response": "正中央的黃色角色是皮卡丘。"
+  },
+  {
+    "id": 19,
+    "category": "外觀辨識",
+    "image": "question/quiz2_image/6.jpg",
+    "question": "合照人物的畢業袍主要是什麼顏色？",
+    "response": "合照人物的畢業袍主要是黑色。"
+  },
+  {
+    "id": 20,
+    "category": "圖片描述",
+    "image": "question/quiz2_image/1.jpg",
+    "question": "請描述三隻鹿的姿態與所在位置。",
+    "response": "好的，根據圖片描述，三隻鹿的姿態與所在位置如下：\n\n*   **第一隻鹿：** 牠們站在地面上，背對我們，頭部微微抬起，似乎在觀察周圍的環境。牠的姿態挺拔，看起來比較警惕。\n*   **第二、三隻鹿：** 牠們則在一個淺溝槽裡，牠們的姿態比較悠閒，其中一隻正在吃東西，另一隻則似乎在觀察其他鹿。牠們的身體都比較低矮，像是躲在陰影中。\n\n總體來說，這三隻鹿都位於一個淺溝槽裡，溝槽的邊緣與地面相連，看起來像是為牠們設置的餵食區。"
+  }
+]
