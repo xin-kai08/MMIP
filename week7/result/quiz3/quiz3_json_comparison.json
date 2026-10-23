@@ -1,0 +1,260 @@
+{
+  "baseline": {
+    "question_count": 20,
+    "format_pass_count": 3,
+    "format_pass_rate_percent": 15.0,
+    "content_schema_pass_count": 3,
+    "content_schema_pass_rate_percent": 15.0,
+    "details": [
+      {
+        "id": 1,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 2,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 3,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 4,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 5,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 6,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 7,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 8,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 9,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 10,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 11,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 12,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 13,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 14,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 15,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 16,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 17,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 18,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 19,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "id": 20,
+        "format_pass": false,
+        "content_schema_pass": false,
+        "reason": "JSON格式不通過：Expecting value: line 1 column 1 (char 0)"
+      }
+    ]
+  },
+  "dpo": {
+    "question_count": 20,
+    "format_pass_count": 20,
+    "format_pass_rate_percent": 100.0,
+    "content_schema_pass_count": 16,
+    "content_schema_pass_rate_percent": 80.0,
+    "details": [
+      {
+        "id": 1,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 2,
+        "format_pass": true,
+        "content_schema_pass": false,
+        "reason": "JSON可解析，但內容、欄位或型別不符"
+      },
+      {
+        "id": 3,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 4,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 5,
+        "format_pass": true,
+        "content_schema_pass": false,
+        "reason": "JSON可解析，但內容、欄位或型別不符"
+      },
+      {
+        "id": 6,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 7,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 8,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 9,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 10,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 11,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 12,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 13,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 14,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 15,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 16,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 17,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 18,
+        "format_pass": true,
+        "content_schema_pass": true,
+        "reason": "內容與結構正確"
+      },
+      {
+        "id": 19,
+        "format_pass": true,
+        "content_schema_pass": false,
+        "reason": "JSON可解析，但內容、欄位或型別不符"
+      },
+      {
+        "id": 20,
+        "format_pass": true,
+        "content_schema_pass": false,
+        "reason": "JSON可解析，但內容、欄位或型別不符"
+      }
+    ]
+  }
+}

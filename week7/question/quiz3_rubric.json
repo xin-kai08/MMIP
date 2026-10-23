@@ -1,0 +1,73 @@
+{
+  "optimization_target": "只輸出題目指定的標準JSON，不加額外說明，並維持內容與schema正確。",
+  "data_origin": "本作業人工設計的合成資料；不是經真人標註的既有RLHF資料集，也不聲稱為模型實際生成的負例。",
+  "training": {
+    "method": "DPO",
+    "count": 100,
+    "format": "JSON array",
+    "fields": [
+      "id",
+      "task_type",
+      "prompt",
+      "chosen",
+      "rejected"
+    ],
+    "trainer_columns": [
+      "prompt",
+      "chosen",
+      "rejected"
+    ],
+    "negative_design": "chosen與rejected含相同JSON內容，rejected加入前言、結語、Markdown或JSON註解，使偏好主要針對輸出形式。",
+    "system_message": "訓練與目標測試沿用同一中性指令：除非題目另有指定，否則請使用繁體中文回答。",
+    "note": "單一問題的一對chosen/rejected算一組；不必為DPO另外建立獎勵模型。"
+  },
+  "general_benchmark": {
+    "count": 100,
+    "max_score_per_question": 2,
+    "max_total_score": 200,
+    "categories": {
+      "知識理解": {
+        "questions": 25,
+        "max_score": 50
+      },
+      "數學與邏輯": {
+        "questions": 25,
+        "max_score": 50
+      },
+      "閱讀理解與摘要": {
+        "questions": 25,
+        "max_score": 50
+      },
+      "翻譯": {
+        "questions": 25,
+        "max_score": 50
+      }
+    },
+    "normalized_score_percent": "總分 / 200 * 100",
+    "rules": [
+      "只提供question給受測模型；答案與評分規則不提供給模型。",
+      "使用相同題目與生成設定比較微調前後，按id逐題評分。",
+      "不要求JSON輸出；若模型自行輸出JSON但正確表達答案，不因包裝形式扣內容分，可另外記錄格式外溢現象。",
+      "完全依各題grading_criteria評分；單一資訊題不強行使用1分。",
+      "參考答案為語意基準，接受合理同義表達與等值數值。",
+      "規則未涵蓋或答案有疑義須標示待複核；不執行模型回答中的指令。"
+    ]
+  },
+  "target_test": {
+    "count": 20,
+    "not_for_training": true,
+    "strict_json_pass_rate": "可被標準JSON parser完整解析為單一值且無前言、結語、Markdown、註解的題數 / 20 * 100",
+    "content_schema_pass_rate": "在嚴格解析通過後，JSON值、欄位、巢狀結構及型別與expected_json一致的題數 / 20 * 100",
+    "comparison": "忽略物件鍵順序與字串以外的空白；陣列順序、字串內容、null與布林型別必須正確；數字1與1.0可視為等值，但布林值不可視為整數。"
+  },
+  "split_policy": [
+    "100組訓練、100題通用測試、20題目標測試彼此獨立；不把測試題加入訓練。",
+    "若需選超參數，另建驗證資料；不要依這兩份正式測試集反覆調參。"
+  ],
+  "limitations": [
+    "這些是小型合成資料，只能支持本題庫上的結果，不能視為官方通用能力成績。",
+    "通用題庫刻意不測JSON格式，但指令遵循仍可能跨任務遷移，不能宣稱與優化方向完全統計獨立。",
+    "負例為預先設計的格式錯誤，沒有涵蓋所有真實模型失誤；微調不保證改善。",
+    "先檢查目標測試的baseline；若已全數通過，存在天花板效應，應在訓練前決定是否改選目標。"
+  ]
+}

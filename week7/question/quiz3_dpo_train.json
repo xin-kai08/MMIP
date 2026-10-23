@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "task_type": "人物資料抽取",
+    "prompt": "資料：姓名林子晴，居住城市臺北。只輸出一個JSON物件，欄位為name與city，兩者皆為字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"林子晴\",\"city\":\"臺北\"}",
+    "rejected": "以下是整理結果：\n{\"name\":\"林子晴\",\"city\":\"臺北\"}"
+  },
+  {
+    "id": 2,
+    "task_type": "人物資料抽取",
+    "prompt": "資料：姓名陳柏宇，居住城市臺中。只輸出一個JSON物件，欄位為name與city，兩者皆為字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"陳柏宇\",\"city\":\"臺中\"}",
+    "rejected": "```json\n{\"name\":\"陳柏宇\",\"city\":\"臺中\"}\n```"
+  },
+  {
+    "id": 3,
+    "task_type": "人物資料抽取",
+    "prompt": "資料：姓名黃雅婷，居住城市高雄。只輸出一個JSON物件，欄位為name與city，兩者皆為字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"黃雅婷\",\"city\":\"高雄\"}",
+    "rejected": "{\"name\":\"黃雅婷\",\"city\":\"高雄\"}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 4,
+    "task_type": "人物資料抽取",
+    "prompt": "資料：姓名吳承恩，居住城市臺南。只輸出一個JSON物件，欄位為name與city，兩者皆為字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"吳承恩\",\"city\":\"臺南\"}",
+    "rejected": "整理結果如下。\n```json\n{\"name\":\"吳承恩\",\"city\":\"臺南\"}\n```"
+  },
+  {
+    "id": 5,
+    "task_type": "人物資料抽取",
+    "prompt": "資料：姓名張詠芯，居住城市新竹。只輸出一個JSON物件，欄位為name與city，兩者皆為字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"張詠芯\",\"city\":\"新竹\"}",
+    "rejected": "{\"name\":\"張詠芯\",\"city\":\"新竹\"}\n/* 已完成 */"
+  },
+  {
+    "id": 6,
+    "task_type": "人物資料抽取",
+    "prompt": "資料：姓名李冠廷，居住城市嘉義。只輸出一個JSON物件，欄位為name與city，兩者皆為字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"李冠廷\",\"city\":\"嘉義\"}",
+    "rejected": "以下是整理結果：\n{\"name\":\"李冠廷\",\"city\":\"嘉義\"}"
+  },
+  {
+    "id": 7,
+    "task_type": "人物資料抽取",
+    "prompt": "資料：姓名王品妤，居住城市基隆。只輸出一個JSON物件，欄位為name與city，兩者皆為字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"王品妤\",\"city\":\"基隆\"}",
+    "rejected": "```json\n{\"name\":\"王品妤\",\"city\":\"基隆\"}\n```"
+  },
+  {
+    "id": 8,
+    "task_type": "人物資料抽取",
+    "prompt": "資料：姓名劉哲安，居住城市宜蘭。只輸出一個JSON物件，欄位為name與city，兩者皆為字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"劉哲安\",\"city\":\"宜蘭\"}",
+    "rejected": "{\"name\":\"劉哲安\",\"city\":\"宜蘭\"}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 9,
+    "task_type": "人物資料抽取",
+    "prompt": "資料：姓名蔡宜庭，居住城市花蓮。只輸出一個JSON物件，欄位為name與city，兩者皆為字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"蔡宜庭\",\"city\":\"花蓮\"}",
+    "rejected": "整理結果如下。\n```json\n{\"name\":\"蔡宜庭\",\"city\":\"花蓮\"}\n```"
+  },
+  {
+    "id": 10,
+    "task_type": "人物資料抽取",
+    "prompt": "資料：姓名許家豪，居住城市彰化。只輸出一個JSON物件，欄位為name與city，兩者皆為字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"許家豪\",\"city\":\"彰化\"}",
+    "rejected": "{\"name\":\"許家豪\",\"city\":\"彰化\"}\n/* 已完成 */"
+  },
+  {
+    "id": 11,
+    "task_type": "數值與布林型別",
+    "prompt": "商品：筆記本；庫存：0件。只輸出JSON物件，包含product（字串）、stock（整數）、available（布林值，庫存大於0為true，否則false）。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"product\":\"筆記本\",\"stock\":0,\"available\":false}",
+    "rejected": "```json\n{\"product\":\"筆記本\",\"stock\":0,\"available\":false}\n```"
+  },
+  {
+    "id": 12,
+    "task_type": "數值與布林型別",
+    "prompt": "商品：原子筆；庫存：3件。只輸出JSON物件，包含product（字串）、stock（整數）、available（布林值，庫存大於0為true，否則false）。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"product\":\"原子筆\",\"stock\":3,\"available\":true}",
+    "rejected": "{\"product\":\"原子筆\",\"stock\":3,\"available\":true}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 13,
+    "task_type": "數值與布林型別",
+    "prompt": "商品：資料夾；庫存：6件。只輸出JSON物件，包含product（字串）、stock（整數）、available（布林值，庫存大於0為true，否則false）。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"product\":\"資料夾\",\"stock\":6,\"available\":true}",
+    "rejected": "整理結果如下。\n```json\n{\"product\":\"資料夾\",\"stock\":6,\"available\":true}\n```"
+  },
+  {
+    "id": 14,
+    "task_type": "數值與布林型別",
+    "prompt": "商品：橡皮擦；庫存：9件。只輸出JSON物件，包含product（字串）、stock（整數）、available（布林值，庫存大於0為true，否則false）。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"product\":\"橡皮擦\",\"stock\":9,\"available\":true}",
+    "rejected": "{\"product\":\"橡皮擦\",\"stock\":9,\"available\":true}\n/* 已完成 */"
+  },
+  {
+    "id": 15,
+    "task_type": "數值與布林型別",
+    "prompt": "商品：尺；庫存：12件。只輸出JSON物件，包含product（字串）、stock（整數）、available（布林值，庫存大於0為true，否則false）。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"product\":\"尺\",\"stock\":12,\"available\":true}",
+    "rejected": "以下是整理結果：\n{\"product\":\"尺\",\"stock\":12,\"available\":true}"
+  },
+  {
+    "id": 16,
+    "task_type": "數值與布林型別",
+    "prompt": "商品：便利貼；庫存：15件。只輸出JSON物件，包含product（字串）、stock（整數）、available（布林值，庫存大於0為true，否則false）。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"product\":\"便利貼\",\"stock\":15,\"available\":true}",
+    "rejected": "```json\n{\"product\":\"便利貼\",\"stock\":15,\"available\":true}\n```"
+  },
+  {
+    "id": 17,
+    "task_type": "數值與布林型別",
+    "prompt": "商品：鉛筆；庫存：18件。只輸出JSON物件，包含product（字串）、stock（整數）、available（布林值，庫存大於0為true，否則false）。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"product\":\"鉛筆\",\"stock\":18,\"available\":true}",
+    "rejected": "{\"product\":\"鉛筆\",\"stock\":18,\"available\":true}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 18,
+    "task_type": "數值與布林型別",
+    "prompt": "商品：膠帶；庫存：21件。只輸出JSON物件，包含product（字串）、stock（整數）、available（布林值，庫存大於0為true，否則false）。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"product\":\"膠帶\",\"stock\":21,\"available\":true}",
+    "rejected": "整理結果如下。\n```json\n{\"product\":\"膠帶\",\"stock\":21,\"available\":true}\n```"
+  },
+  {
+    "id": 19,
+    "task_type": "數值與布林型別",
+    "prompt": "商品：剪刀；庫存：24件。只輸出JSON物件，包含product（字串）、stock（整數）、available（布林值，庫存大於0為true，否則false）。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"product\":\"剪刀\",\"stock\":24,\"available\":true}",
+    "rejected": "{\"product\":\"剪刀\",\"stock\":24,\"available\":true}\n/* 已完成 */"
+  },
+  {
+    "id": 20,
+    "task_type": "數值與布林型別",
+    "prompt": "商品：信封；庫存：27件。只輸出JSON物件，包含product（字串）、stock（整數）、available（布林值，庫存大於0為true，否則false）。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"product\":\"信封\",\"stock\":27,\"available\":true}",
+    "rejected": "以下是整理結果：\n{\"product\":\"信封\",\"stock\":27,\"available\":true}"
+  },
+  {
+    "id": 21,
+    "task_type": "陣列輸出",
+    "prompt": "清單依序為：筆記本、原子筆、橡皮擦。只輸出JSON陣列，保留原順序，每個元素是物品名稱字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[\"筆記本\",\"原子筆\",\"橡皮擦\"]",
+    "rejected": "[\"筆記本\",\"原子筆\",\"橡皮擦\"]\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 22,
+    "task_type": "陣列輸出",
+    "prompt": "清單依序為：原子筆、資料夾、尺。只輸出JSON陣列，保留原順序，每個元素是物品名稱字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[\"原子筆\",\"資料夾\",\"尺\"]",
+    "rejected": "整理結果如下。\n```json\n[\"原子筆\",\"資料夾\",\"尺\"]\n```"
+  },
+  {
+    "id": 23,
+    "task_type": "陣列輸出",
+    "prompt": "清單依序為：資料夾、橡皮擦、便利貼。只輸出JSON陣列，保留原順序，每個元素是物品名稱字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[\"資料夾\",\"橡皮擦\",\"便利貼\"]",
+    "rejected": "[\"資料夾\",\"橡皮擦\",\"便利貼\"]\n/* 已完成 */"
+  },
+  {
+    "id": 24,
+    "task_type": "陣列輸出",
+    "prompt": "清單依序為：橡皮擦、尺、鉛筆。只輸出JSON陣列，保留原順序，每個元素是物品名稱字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[\"橡皮擦\",\"尺\",\"鉛筆\"]",
+    "rejected": "以下是整理結果：\n[\"橡皮擦\",\"尺\",\"鉛筆\"]"
+  },
+  {
+    "id": 25,
+    "task_type": "陣列輸出",
+    "prompt": "清單依序為：尺、便利貼、膠帶。只輸出JSON陣列，保留原順序，每個元素是物品名稱字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[\"尺\",\"便利貼\",\"膠帶\"]",
+    "rejected": "```json\n[\"尺\",\"便利貼\",\"膠帶\"]\n```"
+  },
+  {
+    "id": 26,
+    "task_type": "陣列輸出",
+    "prompt": "清單依序為：便利貼、鉛筆、剪刀。只輸出JSON陣列，保留原順序，每個元素是物品名稱字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[\"便利貼\",\"鉛筆\",\"剪刀\"]",
+    "rejected": "[\"便利貼\",\"鉛筆\",\"剪刀\"]\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 27,
+    "task_type": "陣列輸出",
+    "prompt": "清單依序為：鉛筆、膠帶、信封。只輸出JSON陣列，保留原順序，每個元素是物品名稱字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[\"鉛筆\",\"膠帶\",\"信封\"]",
+    "rejected": "整理結果如下。\n```json\n[\"鉛筆\",\"膠帶\",\"信封\"]\n```"
+  },
+  {
+    "id": 28,
+    "task_type": "陣列輸出",
+    "prompt": "清單依序為：膠帶、剪刀、筆記本。只輸出JSON陣列，保留原順序，每個元素是物品名稱字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[\"膠帶\",\"剪刀\",\"筆記本\"]",
+    "rejected": "[\"膠帶\",\"剪刀\",\"筆記本\"]\n/* 已完成 */"
+  },
+  {
+    "id": 29,
+    "task_type": "陣列輸出",
+    "prompt": "清單依序為：剪刀、信封、原子筆。只輸出JSON陣列，保留原順序，每個元素是物品名稱字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[\"剪刀\",\"信封\",\"原子筆\"]",
+    "rejected": "以下是整理結果：\n[\"剪刀\",\"信封\",\"原子筆\"]"
+  },
+  {
+    "id": 30,
+    "task_type": "陣列輸出",
+    "prompt": "清單依序為：信封、筆記本、資料夾。只輸出JSON陣列，保留原順序，每個元素是物品名稱字串。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[\"信封\",\"筆記本\",\"資料夾\"]",
+    "rejected": "```json\n[\"信封\",\"筆記本\",\"資料夾\"]\n```"
+  },
+  {
+    "id": 31,
+    "task_type": "巢狀物件",
+    "prompt": "姓名：林子晴；聯絡資訊：城市臺北，電子郵件user1@example.com。只輸出JSON物件，結構為name（字串）與contact（物件）；contact包含city與email兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"林子晴\",\"contact\":{\"city\":\"臺北\",\"email\":\"user1@example.com\"}}",
+    "rejected": "整理結果如下。\n```json\n{\"name\":\"林子晴\",\"contact\":{\"city\":\"臺北\",\"email\":\"user1@example.com\"}}\n```"
+  },
+  {
+    "id": 32,
+    "task_type": "巢狀物件",
+    "prompt": "姓名：陳柏宇；聯絡資訊：城市臺中，電子郵件user2@example.com。只輸出JSON物件，結構為name（字串）與contact（物件）；contact包含city與email兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"陳柏宇\",\"contact\":{\"city\":\"臺中\",\"email\":\"user2@example.com\"}}",
+    "rejected": "{\"name\":\"陳柏宇\",\"contact\":{\"city\":\"臺中\",\"email\":\"user2@example.com\"}}\n/* 已完成 */"
+  },
+  {
+    "id": 33,
+    "task_type": "巢狀物件",
+    "prompt": "姓名：黃雅婷；聯絡資訊：城市高雄，電子郵件user3@example.com。只輸出JSON物件，結構為name（字串）與contact（物件）；contact包含city與email兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"黃雅婷\",\"contact\":{\"city\":\"高雄\",\"email\":\"user3@example.com\"}}",
+    "rejected": "以下是整理結果：\n{\"name\":\"黃雅婷\",\"contact\":{\"city\":\"高雄\",\"email\":\"user3@example.com\"}}"
+  },
+  {
+    "id": 34,
+    "task_type": "巢狀物件",
+    "prompt": "姓名：吳承恩；聯絡資訊：城市臺南，電子郵件user4@example.com。只輸出JSON物件，結構為name（字串）與contact（物件）；contact包含city與email兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"吳承恩\",\"contact\":{\"city\":\"臺南\",\"email\":\"user4@example.com\"}}",
+    "rejected": "```json\n{\"name\":\"吳承恩\",\"contact\":{\"city\":\"臺南\",\"email\":\"user4@example.com\"}}\n```"
+  },
+  {
+    "id": 35,
+    "task_type": "巢狀物件",
+    "prompt": "姓名：張詠芯；聯絡資訊：城市新竹，電子郵件user5@example.com。只輸出JSON物件，結構為name（字串）與contact（物件）；contact包含city與email兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"張詠芯\",\"contact\":{\"city\":\"新竹\",\"email\":\"user5@example.com\"}}",
+    "rejected": "{\"name\":\"張詠芯\",\"contact\":{\"city\":\"新竹\",\"email\":\"user5@example.com\"}}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 36,
+    "task_type": "巢狀物件",
+    "prompt": "姓名：李冠廷；聯絡資訊：城市嘉義，電子郵件user6@example.com。只輸出JSON物件，結構為name（字串）與contact（物件）；contact包含city與email兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"李冠廷\",\"contact\":{\"city\":\"嘉義\",\"email\":\"user6@example.com\"}}",
+    "rejected": "整理結果如下。\n```json\n{\"name\":\"李冠廷\",\"contact\":{\"city\":\"嘉義\",\"email\":\"user6@example.com\"}}\n```"
+  },
+  {
+    "id": 37,
+    "task_type": "巢狀物件",
+    "prompt": "姓名：王品妤；聯絡資訊：城市基隆，電子郵件user7@example.com。只輸出JSON物件，結構為name（字串）與contact（物件）；contact包含city與email兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"王品妤\",\"contact\":{\"city\":\"基隆\",\"email\":\"user7@example.com\"}}",
+    "rejected": "{\"name\":\"王品妤\",\"contact\":{\"city\":\"基隆\",\"email\":\"user7@example.com\"}}\n/* 已完成 */"
+  },
+  {
+    "id": 38,
+    "task_type": "巢狀物件",
+    "prompt": "姓名：劉哲安；聯絡資訊：城市宜蘭，電子郵件user8@example.com。只輸出JSON物件，結構為name（字串）與contact（物件）；contact包含city與email兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"劉哲安\",\"contact\":{\"city\":\"宜蘭\",\"email\":\"user8@example.com\"}}",
+    "rejected": "以下是整理結果：\n{\"name\":\"劉哲安\",\"contact\":{\"city\":\"宜蘭\",\"email\":\"user8@example.com\"}}"
+  },
+  {
+    "id": 39,
+    "task_type": "巢狀物件",
+    "prompt": "姓名：蔡宜庭；聯絡資訊：城市花蓮，電子郵件user9@example.com。只輸出JSON物件，結構為name（字串）與contact（物件）；contact包含city與email兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"蔡宜庭\",\"contact\":{\"city\":\"花蓮\",\"email\":\"user9@example.com\"}}",
+    "rejected": "```json\n{\"name\":\"蔡宜庭\",\"contact\":{\"city\":\"花蓮\",\"email\":\"user9@example.com\"}}\n```"
+  },
+  {
+    "id": 40,
+    "task_type": "巢狀物件",
+    "prompt": "姓名：許家豪；聯絡資訊：城市彰化，電子郵件user10@example.com。只輸出JSON物件，結構為name（字串）與contact（物件）；contact包含city與email兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"許家豪\",\"contact\":{\"city\":\"彰化\",\"email\":\"user10@example.com\"}}",
+    "rejected": "{\"name\":\"許家豪\",\"contact\":{\"city\":\"彰化\",\"email\":\"user10@example.com\"}}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 41,
+    "task_type": "缺值處理",
+    "prompt": "姓名：林子晴；電話：未提供。只輸出JSON物件，欄位name為字串；phone若有提供則保留為字串，未提供則使用JSON的null。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"林子晴\",\"phone\":null}",
+    "rejected": "{\"name\":\"林子晴\",\"phone\":null}\n/* 已完成 */"
+  },
+  {
+    "id": 42,
+    "task_type": "缺值處理",
+    "prompt": "姓名：陳柏宇；電話：0900000001。只輸出JSON物件，欄位name為字串；phone若有提供則保留為字串，未提供則使用JSON的null。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"陳柏宇\",\"phone\":\"0900000001\"}",
+    "rejected": "以下是整理結果：\n{\"name\":\"陳柏宇\",\"phone\":\"0900000001\"}"
+  },
+  {
+    "id": 43,
+    "task_type": "缺值處理",
+    "prompt": "姓名：黃雅婷；電話：未提供。只輸出JSON物件，欄位name為字串；phone若有提供則保留為字串，未提供則使用JSON的null。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"黃雅婷\",\"phone\":null}",
+    "rejected": "```json\n{\"name\":\"黃雅婷\",\"phone\":null}\n```"
+  },
+  {
+    "id": 44,
+    "task_type": "缺值處理",
+    "prompt": "姓名：吳承恩；電話：0900000003。只輸出JSON物件，欄位name為字串；phone若有提供則保留為字串，未提供則使用JSON的null。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"吳承恩\",\"phone\":\"0900000003\"}",
+    "rejected": "{\"name\":\"吳承恩\",\"phone\":\"0900000003\"}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 45,
+    "task_type": "缺值處理",
+    "prompt": "姓名：張詠芯；電話：未提供。只輸出JSON物件，欄位name為字串；phone若有提供則保留為字串，未提供則使用JSON的null。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"張詠芯\",\"phone\":null}",
+    "rejected": "整理結果如下。\n```json\n{\"name\":\"張詠芯\",\"phone\":null}\n```"
+  },
+  {
+    "id": 46,
+    "task_type": "缺值處理",
+    "prompt": "姓名：李冠廷；電話：0900000005。只輸出JSON物件，欄位name為字串；phone若有提供則保留為字串，未提供則使用JSON的null。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"李冠廷\",\"phone\":\"0900000005\"}",
+    "rejected": "{\"name\":\"李冠廷\",\"phone\":\"0900000005\"}\n/* 已完成 */"
+  },
+  {
+    "id": 47,
+    "task_type": "缺值處理",
+    "prompt": "姓名：王品妤；電話：未提供。只輸出JSON物件，欄位name為字串；phone若有提供則保留為字串，未提供則使用JSON的null。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"王品妤\",\"phone\":null}",
+    "rejected": "以下是整理結果：\n{\"name\":\"王品妤\",\"phone\":null}"
+  },
+  {
+    "id": 48,
+    "task_type": "缺值處理",
+    "prompt": "姓名：劉哲安；電話：0900000007。只輸出JSON物件，欄位name為字串；phone若有提供則保留為字串，未提供則使用JSON的null。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"劉哲安\",\"phone\":\"0900000007\"}",
+    "rejected": "```json\n{\"name\":\"劉哲安\",\"phone\":\"0900000007\"}\n```"
+  },
+  {
+    "id": 49,
+    "task_type": "缺值處理",
+    "prompt": "姓名：蔡宜庭；電話：未提供。只輸出JSON物件，欄位name為字串；phone若有提供則保留為字串，未提供則使用JSON的null。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"蔡宜庭\",\"phone\":null}",
+    "rejected": "{\"name\":\"蔡宜庭\",\"phone\":null}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 50,
+    "task_type": "缺值處理",
+    "prompt": "姓名：許家豪；電話：0900000009。只輸出JSON物件，欄位name為字串；phone若有提供則保留為字串，未提供則使用JSON的null。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"許家豪\",\"phone\":\"0900000009\"}",
+    "rejected": "整理結果如下。\n```json\n{\"name\":\"許家豪\",\"phone\":\"0900000009\"}\n```"
+  },
+  {
+    "id": 51,
+    "task_type": "分類映射",
+    "prompt": "規則：晴天對應sunny，下雨對應rainy，陰天對應cloudy。紀錄：臺北今天晴天。只輸出JSON物件，包含city與weather_code兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"city\":\"臺北\",\"weather_code\":\"sunny\"}",
+    "rejected": "以下是整理結果：\n{\"city\":\"臺北\",\"weather_code\":\"sunny\"}"
+  },
+  {
+    "id": 52,
+    "task_type": "分類映射",
+    "prompt": "規則：晴天對應sunny，下雨對應rainy，陰天對應cloudy。紀錄：臺中今天下雨。只輸出JSON物件，包含city與weather_code兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"city\":\"臺中\",\"weather_code\":\"rainy\"}",
+    "rejected": "```json\n{\"city\":\"臺中\",\"weather_code\":\"rainy\"}\n```"
+  },
+  {
+    "id": 53,
+    "task_type": "分類映射",
+    "prompt": "規則：晴天對應sunny，下雨對應rainy，陰天對應cloudy。紀錄：高雄今天陰天。只輸出JSON物件，包含city與weather_code兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"city\":\"高雄\",\"weather_code\":\"cloudy\"}",
+    "rejected": "{\"city\":\"高雄\",\"weather_code\":\"cloudy\"}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 54,
+    "task_type": "分類映射",
+    "prompt": "規則：晴天對應sunny，下雨對應rainy，陰天對應cloudy。紀錄：臺南今天晴天。只輸出JSON物件，包含city與weather_code兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"city\":\"臺南\",\"weather_code\":\"sunny\"}",
+    "rejected": "整理結果如下。\n```json\n{\"city\":\"臺南\",\"weather_code\":\"sunny\"}\n```"
+  },
+  {
+    "id": 55,
+    "task_type": "分類映射",
+    "prompt": "規則：晴天對應sunny，下雨對應rainy，陰天對應cloudy。紀錄：新竹今天下雨。只輸出JSON物件，包含city與weather_code兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"city\":\"新竹\",\"weather_code\":\"rainy\"}",
+    "rejected": "{\"city\":\"新竹\",\"weather_code\":\"rainy\"}\n/* 已完成 */"
+  },
+  {
+    "id": 56,
+    "task_type": "分類映射",
+    "prompt": "規則：晴天對應sunny，下雨對應rainy，陰天對應cloudy。紀錄：嘉義今天陰天。只輸出JSON物件，包含city與weather_code兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"city\":\"嘉義\",\"weather_code\":\"cloudy\"}",
+    "rejected": "以下是整理結果：\n{\"city\":\"嘉義\",\"weather_code\":\"cloudy\"}"
+  },
+  {
+    "id": 57,
+    "task_type": "分類映射",
+    "prompt": "規則：晴天對應sunny，下雨對應rainy，陰天對應cloudy。紀錄：基隆今天晴天。只輸出JSON物件，包含city與weather_code兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"city\":\"基隆\",\"weather_code\":\"sunny\"}",
+    "rejected": "```json\n{\"city\":\"基隆\",\"weather_code\":\"sunny\"}\n```"
+  },
+  {
+    "id": 58,
+    "task_type": "分類映射",
+    "prompt": "規則：晴天對應sunny，下雨對應rainy，陰天對應cloudy。紀錄：宜蘭今天下雨。只輸出JSON物件，包含city與weather_code兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"city\":\"宜蘭\",\"weather_code\":\"rainy\"}",
+    "rejected": "{\"city\":\"宜蘭\",\"weather_code\":\"rainy\"}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 59,
+    "task_type": "分類映射",
+    "prompt": "規則：晴天對應sunny，下雨對應rainy，陰天對應cloudy。紀錄：花蓮今天陰天。只輸出JSON物件，包含city與weather_code兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"city\":\"花蓮\",\"weather_code\":\"cloudy\"}",
+    "rejected": "整理結果如下。\n```json\n{\"city\":\"花蓮\",\"weather_code\":\"cloudy\"}\n```"
+  },
+  {
+    "id": 60,
+    "task_type": "分類映射",
+    "prompt": "規則：晴天對應sunny，下雨對應rainy，陰天對應cloudy。紀錄：彰化今天晴天。只輸出JSON物件，包含city與weather_code兩個字串欄位。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"city\":\"彰化\",\"weather_code\":\"sunny\"}",
+    "rejected": "{\"city\":\"彰化\",\"weather_code\":\"sunny\"}\n/* 已完成 */"
+  },
+  {
+    "id": 61,
+    "task_type": "紀錄陣列",
+    "prompt": "採購紀錄：筆記本1件；資料夾2件。只輸出JSON陣列，依原順序各建立一個物件，每個物件包含item字串與quantity整數。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[{\"item\":\"筆記本\",\"quantity\":1},{\"item\":\"資料夾\",\"quantity\":2}]",
+    "rejected": "```json\n[{\"item\":\"筆記本\",\"quantity\":1},{\"item\":\"資料夾\",\"quantity\":2}]\n```"
+  },
+  {
+    "id": 62,
+    "task_type": "紀錄陣列",
+    "prompt": "採購紀錄：原子筆2件；橡皮擦3件。只輸出JSON陣列，依原順序各建立一個物件，每個物件包含item字串與quantity整數。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[{\"item\":\"原子筆\",\"quantity\":2},{\"item\":\"橡皮擦\",\"quantity\":3}]",
+    "rejected": "[{\"item\":\"原子筆\",\"quantity\":2},{\"item\":\"橡皮擦\",\"quantity\":3}]\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 63,
+    "task_type": "紀錄陣列",
+    "prompt": "採購紀錄：資料夾3件；尺4件。只輸出JSON陣列，依原順序各建立一個物件，每個物件包含item字串與quantity整數。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[{\"item\":\"資料夾\",\"quantity\":3},{\"item\":\"尺\",\"quantity\":4}]",
+    "rejected": "整理結果如下。\n```json\n[{\"item\":\"資料夾\",\"quantity\":3},{\"item\":\"尺\",\"quantity\":4}]\n```"
+  },
+  {
+    "id": 64,
+    "task_type": "紀錄陣列",
+    "prompt": "採購紀錄：橡皮擦4件；便利貼5件。只輸出JSON陣列，依原順序各建立一個物件，每個物件包含item字串與quantity整數。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[{\"item\":\"橡皮擦\",\"quantity\":4},{\"item\":\"便利貼\",\"quantity\":5}]",
+    "rejected": "[{\"item\":\"橡皮擦\",\"quantity\":4},{\"item\":\"便利貼\",\"quantity\":5}]\n/* 已完成 */"
+  },
+  {
+    "id": 65,
+    "task_type": "紀錄陣列",
+    "prompt": "採購紀錄：尺5件；鉛筆6件。只輸出JSON陣列，依原順序各建立一個物件，每個物件包含item字串與quantity整數。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[{\"item\":\"尺\",\"quantity\":5},{\"item\":\"鉛筆\",\"quantity\":6}]",
+    "rejected": "以下是整理結果：\n[{\"item\":\"尺\",\"quantity\":5},{\"item\":\"鉛筆\",\"quantity\":6}]"
+  },
+  {
+    "id": 66,
+    "task_type": "紀錄陣列",
+    "prompt": "採購紀錄：便利貼6件；膠帶7件。只輸出JSON陣列，依原順序各建立一個物件，每個物件包含item字串與quantity整數。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[{\"item\":\"便利貼\",\"quantity\":6},{\"item\":\"膠帶\",\"quantity\":7}]",
+    "rejected": "```json\n[{\"item\":\"便利貼\",\"quantity\":6},{\"item\":\"膠帶\",\"quantity\":7}]\n```"
+  },
+  {
+    "id": 67,
+    "task_type": "紀錄陣列",
+    "prompt": "採購紀錄：鉛筆7件；剪刀8件。只輸出JSON陣列，依原順序各建立一個物件，每個物件包含item字串與quantity整數。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[{\"item\":\"鉛筆\",\"quantity\":7},{\"item\":\"剪刀\",\"quantity\":8}]",
+    "rejected": "[{\"item\":\"鉛筆\",\"quantity\":7},{\"item\":\"剪刀\",\"quantity\":8}]\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 68,
+    "task_type": "紀錄陣列",
+    "prompt": "採購紀錄：膠帶8件；信封9件。只輸出JSON陣列，依原順序各建立一個物件，每個物件包含item字串與quantity整數。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[{\"item\":\"膠帶\",\"quantity\":8},{\"item\":\"信封\",\"quantity\":9}]",
+    "rejected": "整理結果如下。\n```json\n[{\"item\":\"膠帶\",\"quantity\":8},{\"item\":\"信封\",\"quantity\":9}]\n```"
+  },
+  {
+    "id": 69,
+    "task_type": "紀錄陣列",
+    "prompt": "採購紀錄：剪刀9件；筆記本10件。只輸出JSON陣列，依原順序各建立一個物件，每個物件包含item字串與quantity整數。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[{\"item\":\"剪刀\",\"quantity\":9},{\"item\":\"筆記本\",\"quantity\":10}]",
+    "rejected": "[{\"item\":\"剪刀\",\"quantity\":9},{\"item\":\"筆記本\",\"quantity\":10}]\n/* 已完成 */"
+  },
+  {
+    "id": 70,
+    "task_type": "紀錄陣列",
+    "prompt": "採購紀錄：信封10件；原子筆11件。只輸出JSON陣列，依原順序各建立一個物件，每個物件包含item字串與quantity整數。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "[{\"item\":\"信封\",\"quantity\":10},{\"item\":\"原子筆\",\"quantity\":11}]",
+    "rejected": "以下是整理結果：\n[{\"item\":\"信封\",\"quantity\":10},{\"item\":\"原子筆\",\"quantity\":11}]"
+  },
+  {
+    "id": 71,
+    "task_type": "字串跳脫",
+    "prompt": "請原樣保存以下文字：\n林子晴說：\"請帶筆記本。\"\n只輸出JSON物件，只有text一個字串欄位；保留原文的半形雙引號與標點。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"text\":\"林子晴說：\\\"請帶筆記本。\\\"\"}",
+    "rejected": "{\"text\":\"林子晴說：\\\"請帶筆記本。\\\"\"}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 72,
+    "task_type": "字串跳脫",
+    "prompt": "請原樣保存以下文字：\n陳柏宇說：\"請帶原子筆。\"\n只輸出JSON物件，只有text一個字串欄位；保留原文的半形雙引號與標點。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"text\":\"陳柏宇說：\\\"請帶原子筆。\\\"\"}",
+    "rejected": "整理結果如下。\n```json\n{\"text\":\"陳柏宇說：\\\"請帶原子筆。\\\"\"}\n```"
+  },
+  {
+    "id": 73,
+    "task_type": "字串跳脫",
+    "prompt": "請原樣保存以下文字：\n黃雅婷說：\"請帶資料夾。\"\n只輸出JSON物件，只有text一個字串欄位；保留原文的半形雙引號與標點。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"text\":\"黃雅婷說：\\\"請帶資料夾。\\\"\"}",
+    "rejected": "{\"text\":\"黃雅婷說：\\\"請帶資料夾。\\\"\"}\n/* 已完成 */"
+  },
+  {
+    "id": 74,
+    "task_type": "字串跳脫",
+    "prompt": "請原樣保存以下文字：\n吳承恩說：\"請帶橡皮擦。\"\n只輸出JSON物件，只有text一個字串欄位；保留原文的半形雙引號與標點。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"text\":\"吳承恩說：\\\"請帶橡皮擦。\\\"\"}",
+    "rejected": "以下是整理結果：\n{\"text\":\"吳承恩說：\\\"請帶橡皮擦。\\\"\"}"
+  },
+  {
+    "id": 75,
+    "task_type": "字串跳脫",
+    "prompt": "請原樣保存以下文字：\n張詠芯說：\"請帶尺。\"\n只輸出JSON物件，只有text一個字串欄位；保留原文的半形雙引號與標點。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"text\":\"張詠芯說：\\\"請帶尺。\\\"\"}",
+    "rejected": "```json\n{\"text\":\"張詠芯說：\\\"請帶尺。\\\"\"}\n```"
+  },
+  {
+    "id": 76,
+    "task_type": "字串跳脫",
+    "prompt": "請原樣保存以下文字：\n李冠廷說：\"請帶便利貼。\"\n只輸出JSON物件，只有text一個字串欄位；保留原文的半形雙引號與標點。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"text\":\"李冠廷說：\\\"請帶便利貼。\\\"\"}",
+    "rejected": "{\"text\":\"李冠廷說：\\\"請帶便利貼。\\\"\"}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 77,
+    "task_type": "字串跳脫",
+    "prompt": "請原樣保存以下文字：\n王品妤說：\"請帶鉛筆。\"\n只輸出JSON物件，只有text一個字串欄位；保留原文的半形雙引號與標點。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"text\":\"王品妤說：\\\"請帶鉛筆。\\\"\"}",
+    "rejected": "整理結果如下。\n```json\n{\"text\":\"王品妤說：\\\"請帶鉛筆。\\\"\"}\n```"
+  },
+  {
+    "id": 78,
+    "task_type": "字串跳脫",
+    "prompt": "請原樣保存以下文字：\n劉哲安說：\"請帶膠帶。\"\n只輸出JSON物件，只有text一個字串欄位；保留原文的半形雙引號與標點。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"text\":\"劉哲安說：\\\"請帶膠帶。\\\"\"}",
+    "rejected": "{\"text\":\"劉哲安說：\\\"請帶膠帶。\\\"\"}\n/* 已完成 */"
+  },
+  {
+    "id": 79,
+    "task_type": "字串跳脫",
+    "prompt": "請原樣保存以下文字：\n蔡宜庭說：\"請帶剪刀。\"\n只輸出JSON物件，只有text一個字串欄位；保留原文的半形雙引號與標點。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"text\":\"蔡宜庭說：\\\"請帶剪刀。\\\"\"}",
+    "rejected": "以下是整理結果：\n{\"text\":\"蔡宜庭說：\\\"請帶剪刀。\\\"\"}"
+  },
+  {
+    "id": 80,
+    "task_type": "字串跳脫",
+    "prompt": "請原樣保存以下文字：\n許家豪說：\"請帶信封。\"\n只輸出JSON物件，只有text一個字串欄位；保留原文的半形雙引號與標點。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"text\":\"許家豪說：\\\"請帶信封。\\\"\"}",
+    "rejected": "```json\n{\"text\":\"許家豪說：\\\"請帶信封。\\\"\"}\n```"
+  },
+  {
+    "id": 81,
+    "task_type": "空集合與狀態",
+    "prompt": "第1日的紀錄：沒有待辦事項。只輸出JSON物件，tasks為待辦字串陣列，無待辦時用空陣列；has_tasks為布林值，表示是否有待辦。不輸出日期。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"tasks\":[],\"has_tasks\":false}",
+    "rejected": "整理結果如下。\n```json\n{\"tasks\":[],\"has_tasks\":false}\n```"
+  },
+  {
+    "id": 82,
+    "task_type": "空集合與狀態",
+    "prompt": "第2日的紀錄：待辦事項只有：購買原子筆。只輸出JSON物件，tasks為待辦字串陣列，無待辦時用空陣列；has_tasks為布林值，表示是否有待辦。不輸出日期。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"tasks\":[\"購買原子筆\"],\"has_tasks\":true}",
+    "rejected": "{\"tasks\":[\"購買原子筆\"],\"has_tasks\":true}\n/* 已完成 */"
+  },
+  {
+    "id": 83,
+    "task_type": "空集合與狀態",
+    "prompt": "第3日的紀錄：沒有待辦事項。只輸出JSON物件，tasks為待辦字串陣列，無待辦時用空陣列；has_tasks為布林值，表示是否有待辦。不輸出日期。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"tasks\":[],\"has_tasks\":false}",
+    "rejected": "以下是整理結果：\n{\"tasks\":[],\"has_tasks\":false}"
+  },
+  {
+    "id": 84,
+    "task_type": "空集合與狀態",
+    "prompt": "第4日的紀錄：待辦事項只有：購買橡皮擦。只輸出JSON物件，tasks為待辦字串陣列，無待辦時用空陣列；has_tasks為布林值，表示是否有待辦。不輸出日期。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"tasks\":[\"購買橡皮擦\"],\"has_tasks\":true}",
+    "rejected": "```json\n{\"tasks\":[\"購買橡皮擦\"],\"has_tasks\":true}\n```"
+  },
+  {
+    "id": 85,
+    "task_type": "空集合與狀態",
+    "prompt": "第5日的紀錄：沒有待辦事項。只輸出JSON物件，tasks為待辦字串陣列，無待辦時用空陣列；has_tasks為布林值，表示是否有待辦。不輸出日期。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"tasks\":[],\"has_tasks\":false}",
+    "rejected": "{\"tasks\":[],\"has_tasks\":false}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 86,
+    "task_type": "空集合與狀態",
+    "prompt": "第6日的紀錄：待辦事項只有：購買便利貼。只輸出JSON物件，tasks為待辦字串陣列，無待辦時用空陣列；has_tasks為布林值，表示是否有待辦。不輸出日期。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"tasks\":[\"購買便利貼\"],\"has_tasks\":true}",
+    "rejected": "整理結果如下。\n```json\n{\"tasks\":[\"購買便利貼\"],\"has_tasks\":true}\n```"
+  },
+  {
+    "id": 87,
+    "task_type": "空集合與狀態",
+    "prompt": "第7日的紀錄：沒有待辦事項。只輸出JSON物件，tasks為待辦字串陣列，無待辦時用空陣列；has_tasks為布林值，表示是否有待辦。不輸出日期。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"tasks\":[],\"has_tasks\":false}",
+    "rejected": "{\"tasks\":[],\"has_tasks\":false}\n/* 已完成 */"
+  },
+  {
+    "id": 88,
+    "task_type": "空集合與狀態",
+    "prompt": "第8日的紀錄：待辦事項只有：購買膠帶。只輸出JSON物件，tasks為待辦字串陣列，無待辦時用空陣列；has_tasks為布林值，表示是否有待辦。不輸出日期。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"tasks\":[\"購買膠帶\"],\"has_tasks\":true}",
+    "rejected": "以下是整理結果：\n{\"tasks\":[\"購買膠帶\"],\"has_tasks\":true}"
+  },
+  {
+    "id": 89,
+    "task_type": "空集合與狀態",
+    "prompt": "第9日的紀錄：沒有待辦事項。只輸出JSON物件，tasks為待辦字串陣列，無待辦時用空陣列；has_tasks為布林值，表示是否有待辦。不輸出日期。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"tasks\":[],\"has_tasks\":false}",
+    "rejected": "```json\n{\"tasks\":[],\"has_tasks\":false}\n```"
+  },
+  {
+    "id": 90,
+    "task_type": "空集合與狀態",
+    "prompt": "第10日的紀錄：待辦事項只有：購買信封。只輸出JSON物件，tasks為待辦字串陣列，無待辦時用空陣列；has_tasks為布林值，表示是否有待辦。不輸出日期。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"tasks\":[\"購買信封\"],\"has_tasks\":true}",
+    "rejected": "{\"tasks\":[\"購買信封\"],\"has_tasks\":true}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 91,
+    "task_type": "指定欄位與排除資訊",
+    "prompt": "原始資料：姓名林子晴，城市臺北，喜歡的文具是筆記本，內部編號X100。只輸出JSON物件，僅包含name、favorite_item兩個字串欄位，不輸出城市或內部編號。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"林子晴\",\"favorite_item\":\"筆記本\"}",
+    "rejected": "{\"name\":\"林子晴\",\"favorite_item\":\"筆記本\"}\n/* 已完成 */"
+  },
+  {
+    "id": 92,
+    "task_type": "指定欄位與排除資訊",
+    "prompt": "原始資料：姓名陳柏宇，城市臺中，喜歡的文具是原子筆，內部編號X101。只輸出JSON物件，僅包含name、favorite_item兩個字串欄位，不輸出城市或內部編號。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"陳柏宇\",\"favorite_item\":\"原子筆\"}",
+    "rejected": "以下是整理結果：\n{\"name\":\"陳柏宇\",\"favorite_item\":\"原子筆\"}"
+  },
+  {
+    "id": 93,
+    "task_type": "指定欄位與排除資訊",
+    "prompt": "原始資料：姓名黃雅婷，城市高雄，喜歡的文具是資料夾，內部編號X102。只輸出JSON物件，僅包含name、favorite_item兩個字串欄位，不輸出城市或內部編號。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"黃雅婷\",\"favorite_item\":\"資料夾\"}",
+    "rejected": "```json\n{\"name\":\"黃雅婷\",\"favorite_item\":\"資料夾\"}\n```"
+  },
+  {
+    "id": 94,
+    "task_type": "指定欄位與排除資訊",
+    "prompt": "原始資料：姓名吳承恩，城市臺南，喜歡的文具是橡皮擦，內部編號X103。只輸出JSON物件，僅包含name、favorite_item兩個字串欄位，不輸出城市或內部編號。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"吳承恩\",\"favorite_item\":\"橡皮擦\"}",
+    "rejected": "{\"name\":\"吳承恩\",\"favorite_item\":\"橡皮擦\"}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 95,
+    "task_type": "指定欄位與排除資訊",
+    "prompt": "原始資料：姓名張詠芯，城市新竹，喜歡的文具是尺，內部編號X104。只輸出JSON物件，僅包含name、favorite_item兩個字串欄位，不輸出城市或內部編號。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"張詠芯\",\"favorite_item\":\"尺\"}",
+    "rejected": "整理結果如下。\n```json\n{\"name\":\"張詠芯\",\"favorite_item\":\"尺\"}\n```"
+  },
+  {
+    "id": 96,
+    "task_type": "指定欄位與排除資訊",
+    "prompt": "原始資料：姓名李冠廷，城市嘉義，喜歡的文具是便利貼，內部編號X105。只輸出JSON物件，僅包含name、favorite_item兩個字串欄位，不輸出城市或內部編號。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"李冠廷\",\"favorite_item\":\"便利貼\"}",
+    "rejected": "{\"name\":\"李冠廷\",\"favorite_item\":\"便利貼\"}\n/* 已完成 */"
+  },
+  {
+    "id": 97,
+    "task_type": "指定欄位與排除資訊",
+    "prompt": "原始資料：姓名王品妤，城市基隆，喜歡的文具是鉛筆，內部編號X106。只輸出JSON物件，僅包含name、favorite_item兩個字串欄位，不輸出城市或內部編號。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"王品妤\",\"favorite_item\":\"鉛筆\"}",
+    "rejected": "以下是整理結果：\n{\"name\":\"王品妤\",\"favorite_item\":\"鉛筆\"}"
+  },
+  {
+    "id": 98,
+    "task_type": "指定欄位與排除資訊",
+    "prompt": "原始資料：姓名劉哲安，城市宜蘭，喜歡的文具是膠帶，內部編號X107。只輸出JSON物件，僅包含name、favorite_item兩個字串欄位，不輸出城市或內部編號。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"劉哲安\",\"favorite_item\":\"膠帶\"}",
+    "rejected": "```json\n{\"name\":\"劉哲安\",\"favorite_item\":\"膠帶\"}\n```"
+  },
+  {
+    "id": 99,
+    "task_type": "指定欄位與排除資訊",
+    "prompt": "原始資料：姓名蔡宜庭，城市花蓮，喜歡的文具是剪刀，內部編號X108。只輸出JSON物件，僅包含name、favorite_item兩個字串欄位，不輸出城市或內部編號。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"蔡宜庭\",\"favorite_item\":\"剪刀\"}",
+    "rejected": "{\"name\":\"蔡宜庭\",\"favorite_item\":\"剪刀\"}\n以上資料已依要求整理完成。"
+  },
+  {
+    "id": 100,
+    "task_type": "指定欄位與排除資訊",
+    "prompt": "原始資料：姓名許家豪，城市彰化，喜歡的文具是信封，內部編號X109。只輸出JSON物件，僅包含name、favorite_item兩個字串欄位，不輸出城市或內部編號。 不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "chosen": "{\"name\":\"許家豪\",\"favorite_item\":\"信封\"}",
+    "rejected": "整理結果如下。\n```json\n{\"name\":\"許家豪\",\"favorite_item\":\"信封\"}\n```"
+  }
+]

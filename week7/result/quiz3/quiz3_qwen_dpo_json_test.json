@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "category": "JSON格式遵循",
+    "question": "把溫度紀錄整理成JSON物件，只包含station字串與celsius數字。資料：測站北港，攝氏23.5度。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\"station\": \"北港\", \"celsius\": 23.5}"
+  },
+  {
+    "id": 2,
+    "category": "JSON格式遵循",
+    "question": "將以下三個整數依原順序輸出為JSON陣列：17、4、29。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "[\"17\", \"4\", \"29\"]"
+  },
+  {
+    "id": 3,
+    "category": "JSON格式遵循",
+    "question": "輸出JSON物件，欄位passed為布林值，score為整數。規則：60分及格。這次分數為58。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\"passed\": false, \"score\": 58}"
+  },
+  {
+    "id": 4,
+    "category": "JSON格式遵循",
+    "question": "資料：活動名稱星空導覽，取消日期未定。輸出JSON物件，title為活動名稱字串，cancel_date在未定時必須為null。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\n  \"title\": \"星空導覽\",\n  \"cancel_date\": null\n}"
+  },
+  {
+    "id": 5,
+    "category": "JSON格式遵循",
+    "question": "輸出JSON物件，將以下原文保存在message字串中，保留半形雙引號：請按\"確認\"繼續。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\"message\": \"\\\"請按\\\"確認\\\"繼續\\\"\"}"
+  },
+  {
+    "id": 6,
+    "category": "JSON格式遵循",
+    "question": "輸出JSON物件，欄位為order物件。order內有id字串與paid布林值。資料：訂單K802，已付款。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\n  \"order\": {\n    \"id\": \"K802\",\n    \"paid\": true\n  }\n}"
+  },
+  {
+    "id": 7,
+    "category": "JSON格式遵循",
+    "question": "輸出JSON陣列，保留兩筆測站紀錄順序，每筆只有name字串與rain_mm數字。資料：海岸站0毫米；山麓站12.5毫米。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "[\n    {\n        \"name\": \"海岸站\",\n        \"rain_mm\": 0\n    },\n    {\n        \"name\": \"山麓站\",\n        \"rain_mm\": 12.5\n    }\n]"
+  },
+  {
+    "id": 8,
+    "category": "JSON格式遵循",
+    "question": "原始紀錄：作者周若涵、書名遠山日記、頁數180。輸出JSON物件，只保留title與pages，分別為字串與整數。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\"title\": \"遠山日記\", \"pages\": 180}"
+  },
+  {
+    "id": 9,
+    "category": "JSON格式遵循",
+    "question": "輸出JSON物件，欄位alerts為字串陣列。資料：目前沒有任何警報。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\"alerts\":[]}"
+  },
+  {
+    "id": 10,
+    "category": "JSON格式遵循",
+    "question": "規則：低對應L、中對應M、高對應H。任務優先度為高。輸出JSON物件，只包含priority_code字串。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\"priority_code\":\"H\"}"
+  },
+  {
+    "id": 11,
+    "category": "JSON格式遵循",
+    "question": "輸出JSON物件，欄位為route字串陣列與stops整數，站點依序為湖畔、松林、港口，stops表示站點數。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\"route\":[\"湖畔\",\"松林\",\"港口\"],\"stops\":3}"
+  },
+  {
+    "id": 12,
+    "category": "JSON格式遵循",
+    "question": "輸出JSON物件，owner為字串，backup為字串或null。資料：負責人杜予安，沒有備援人員。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\"owner\": \"杜予安\", \"backup\": null}"
+  },
+  {
+    "id": 13,
+    "category": "JSON格式遵循",
+    "question": "資料：設備S-19已關閉，電量為42%。輸出JSON物件，device_id為字串，power_on為布林值，battery_percent為整數。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\"device_id\":\"S-19\",\"power_on\":false,\"battery_percent\":42}"
+  },
+  {
+    "id": 14,
+    "category": "JSON格式遵循",
+    "question": "將兩行文字存入JSON物件的text欄位，欄位值必須保留換行：\n第一行\n第二行 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\"text\": \"第一行\\n第二行\"}"
+  },
+  {
+    "id": 15,
+    "category": "JSON格式遵循",
+    "question": "輸出JSON物件，bounds包含min與max兩個整數。資料：下限-3，上限8。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\"bounds\":{\"min\":-3,\"max\":8}}"
+  },
+  {
+    "id": 16,
+    "category": "JSON格式遵循",
+    "question": "輸出JSON陣列，只有兩個字串元素，依序為「真」與「假」，不要將它們轉成布林值。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "[\"真\", \"假\"]"
+  },
+  {
+    "id": 17,
+    "category": "JSON格式遵循",
+    "question": "輸出JSON物件，code必須為字串並保留前導零。資料：代碼0047。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\"code\": \"0047\"}"
+  },
+  {
+    "id": 18,
+    "category": "JSON格式遵循",
+    "question": "輸出JSON物件，category為字串，enabled為布林值，options為空陣列。資料：類別音效，功能已啟用，尚無選項。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\n  \"category\": \"音效\",\n  \"enabled\": true,\n  \"options\": []\n}"
+  },
+  {
+    "id": 19,
+    "category": "JSON格式遵循",
+    "question": "輸出JSON陣列，依序包含一個整數0、一個布林值false，以及一個null。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "[\"0\", false, null]"
+  },
+  {
+    "id": 20,
+    "category": "JSON格式遵循",
+    "question": "原始資料：展館海風館，地址東街12號，館長葉芷柔。只輸出JSON物件，venue為海風館，location為含street字串欄位的物件；不包含館長資料。 只輸出一份標準JSON，不要加入Markdown程式碼區塊、註解、前言或結語。",
+    "response": "{\n  \"venue\": {\n    \"name\": \"海風館\"\n  },\n  \"location\": {\n    \"street\": \"東街12號\"\n  }\n}"
+  }
+]

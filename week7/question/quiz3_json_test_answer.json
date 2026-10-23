@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "reference_answer": "{\"station\":\"北港\",\"celsius\":23.5}",
+    "expected_json": {
+      "station": "北港",
+      "celsius": 23.5
+    }
+  },
+  {
+    "id": 2,
+    "reference_answer": "[17,4,29]",
+    "expected_json": [
+      17,
+      4,
+      29
+    ]
+  },
+  {
+    "id": 3,
+    "reference_answer": "{\"passed\":false,\"score\":58}",
+    "expected_json": {
+      "passed": false,
+      "score": 58
+    }
+  },
+  {
+    "id": 4,
+    "reference_answer": "{\"title\":\"星空導覽\",\"cancel_date\":null}",
+    "expected_json": {
+      "title": "星空導覽",
+      "cancel_date": null
+    }
+  },
+  {
+    "id": 5,
+    "reference_answer": "{\"message\":\"請按\\\"確認\\\"繼續。\"}",
+    "expected_json": {
+      "message": "請按\"確認\"繼續。"
+    }
+  },
+  {
+    "id": 6,
+    "reference_answer": "{\"order\":{\"id\":\"K802\",\"paid\":true}}",
+    "expected_json": {
+      "order": {
+        "id": "K802",
+        "paid": true
+      }
+    }
+  },
+  {
+    "id": 7,
+    "reference_answer": "[{\"name\":\"海岸站\",\"rain_mm\":0},{\"name\":\"山麓站\",\"rain_mm\":12.5}]",
+    "expected_json": [
+      {
+        "name": "海岸站",
+        "rain_mm": 0
+      },
+      {
+        "name": "山麓站",
+        "rain_mm": 12.5
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "reference_answer": "{\"title\":\"遠山日記\",\"pages\":180}",
+    "expected_json": {
+      "title": "遠山日記",
+      "pages": 180
+    }
+  },
+  {
+    "id": 9,
+    "reference_answer": "{\"alerts\":[]}",
+    "expected_json": {
+      "alerts": []
+    }
+  },
+  {
+    "id": 10,
+    "reference_answer": "{\"priority_code\":\"H\"}",
+    "expected_json": {
+      "priority_code": "H"
+    }
+  },
+  {
+    "id": 11,
+    "reference_answer": "{\"route\":[\"湖畔\",\"松林\",\"港口\"],\"stops\":3}",
+    "expected_json": {
+      "route": [
+        "湖畔",
+        "松林",
+        "港口"
+      ],
+      "stops": 3
+    }
+  },
+  {
+    "id": 12,
+    "reference_answer": "{\"owner\":\"杜予安\",\"backup\":null}",
+    "expected_json": {
+      "owner": "杜予安",
+      "backup": null
+    }
+  },
+  {
+    "id": 13,
+    "reference_answer": "{\"device_id\":\"S-19\",\"power_on\":false,\"battery_percent\":42}",
+    "expected_json": {
+      "device_id": "S-19",
+      "power_on": false,
+      "battery_percent": 42
+    }
+  },
+  {
+    "id": 14,
+    "reference_answer": "{\"text\":\"第一行\\n第二行\"}",
+    "expected_json": {
+      "text": "第一行\n第二行"
+    }
+  },
+  {
+    "id": 15,
+    "reference_answer": "{\"bounds\":{\"min\":-3,\"max\":8}}",
+    "expected_json": {
+      "bounds": {
+        "min": -3,
+        "max": 8
+      }
+    }
+  },
+  {
+    "id": 16,
+    "reference_answer": "[\"真\",\"假\"]",
+    "expected_json": [
+      "真",
+      "假"
+    ]
+  },
+  {
+    "id": 17,
+    "reference_answer": "{\"code\":\"0047\"}",
+    "expected_json": {
+      "code": "0047"
+    }
+  },
+  {
+    "id": 18,
+    "reference_answer": "{\"category\":\"音效\",\"enabled\":true,\"options\":[]}",
+    "expected_json": {
+      "category": "音效",
+      "enabled": true,
+      "options": []
+    }
+  },
+  {
+    "id": 19,
+    "reference_answer": "[0,false,null]",
+    "expected_json": [
+      0,
+      false,
+      null
+    ]
+  },
+  {
+    "id": 20,
+    "reference_answer": "{\"venue\":\"海風館\",\"location\":{\"street\":\"東街12號\"}}",
+    "expected_json": {
+      "venue": "海風館",
+      "location": {
+        "street": "東街12號"
+      }
+    }
+  }
+]
