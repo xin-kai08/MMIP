@@ -1,0 +1,1002 @@
+[
+  {
+    "id": 1,
+    "image": "question/quiz3_train_images/001.jpg",
+    "prompt": "Who is more likely to use these tools a leather crafter or a paper crafter?",
+    "chosen": "A leather crafter is more likely to use these tools. The image shows various crafting tools, including scissors and a hole punch, which are commonly used in leatherworking projects. Leather is a material that requires cutting, shaping, and precise hole-punching techniques to create desired designs or patterns. In contrast, paper crafters typically use different types of tools, such as adhesives, decorative papers, or specialized cutting machines like the Silhouette Cameo, for their projects.",
+    "rejected": "A leather crafter is more likely to use these tools as they consist of a hole punch, scissors, and a knife. These items are typically used in crafting projects involving fabric or leather materials for various designs and patterns. Paper crafters may also benefit from some of these tools, but their primary focus would be on paper-related projects, which might require different types of tools such as paper cutters or scrapbooking supplies.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 0,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_0"
+  },
+  {
+    "id": 2,
+    "image": "question/quiz3_train_images/002.jpg",
+    "prompt": "how many families?",
+    "chosen": "The image shows a Union Organization table setup with 18,000 families.",
+    "rejected": "The image does not provide any information about families.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 1,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_1"
+  },
+  {
+    "id": 3,
+    "image": "question/quiz3_train_images/003.jpg",
+    "prompt": "What is the setting or environment in which the image takes place?",
+    "chosen": "The image depicts a train traveling on a track through a countryside setting with tall grass, trees, and power lines in the background.",
+    "rejected": "The image is set in an open area with train tracks, grassy fields, and trees in the background.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 2,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_2"
+  },
+  {
+    "id": 4,
+    "image": "question/quiz3_train_images/004.jpg",
+    "prompt": "Can you point out the details that make this image unique?",
+    "chosen": "The image is unique due to the presence of a small Christmas tree sitting on top of a dining table, surrounded by food. This combination of holiday spirit with the festive atmosphere created by the decorated tree and the food on the table are what make this scene special and stand out from typical everyday occurrences.",
+    "rejected": "This image is unique due to the presence of a Christmas tree centerpiece on the dining table, alongside a plate filled with various types of cake. The combination of a festive holiday decoration and an assortment of desserts suggests that this gathering might be celebrating the holiday season or a special occasion. Additionally, there are several people in the background, possibly attending the event or enjoying the food and atmosphere together.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 3,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_3"
+  },
+  {
+    "id": 5,
+    "image": "question/quiz3_train_images/005.jpg",
+    "prompt": "What are the main elements in this image? Describe them thoroughly.",
+    "chosen": "In the image, a woman is standing confidently on a red carpet at what appears to be an event. She is dressed in a black halter top paired with black pants, and her long brown hair cascades down her shoulders. In her left hand, she holds a microphone, suggesting that she might be a performer or a host for the event. A camera is aimed directly at her, capturing her every move. The backdrop features several advertisements, including one for Heineken beer, indicating the commercial nature of the event.",
+    "rejected": "The image showcases a woman standing on a red carpet. She's wearing a pink top paired with black pants and has her hair styled in an updo. A name tag is visible on her outfit, suggesting she might be a celebrity or guest of honor at the event. The backdrop features a green wall adorned with blue text and logos, possibly indicating the location or sponsors of the event. Additionally, there are plants lining the background, adding a touch of nature to the setting.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 4,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_4"
+  },
+  {
+    "id": 6,
+    "image": "question/quiz3_train_images/006.jpg",
+    "prompt": "Which teddy bear is for girls?",
+    "chosen": "The teddy bear on the left is for girls. They are often designed with feminine colors or patterns, and this one has a pink color scheme, which is typically associated with female toys.",
+    "rejected": "The left teddy bear is for girls. It is wearing a pink outfit, suggesting a feminine theme and design. The right teddy bear, on the other hand, is not wearing any clothes, indicating a more neutral or gender-neutral choice of stuffed animal.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 5,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_5"
+  },
+  {
+    "id": 7,
+    "image": "question/quiz3_train_images/007.jpg",
+    "prompt": "Identify and describe each object in the image in detail.",
+    "chosen": "A child stands in the snow, dressed in a ski parka and holding two skis. The child is also wearing a beanie hat on their head. There are five flags positioned around them: three to the left, one to the right, and another further behind. Additionally, there's a bib with the number \"33\" placed on the child's chest.",
+    "rejected": "A young boy wearing a red jacket is skiing, holding two ski poles. He's near several Norwegian flags planted in the snow, and his skis are clearly visible beneath him. There are three of these flags positioned at different points on the slope, all standing upright. Additionally, the boy has a bib pinned to his jacket with the number \"33\" on it.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 6,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_6"
+  },
+  {
+    "id": 8,
+    "image": "question/quiz3_train_images/008.jpg",
+    "prompt": "What kind of utensil is being used?",
+    "chosen": "The utensil being used in the image is a fork. The fork is likely an essential tool for consuming food, allowing people to spear and eat their desired portion without the need for additional utensils such as knives or spoons.",
+    "rejected": "A fork is being used in this image. It's a common utensil used for eating various foods, including meats and vegetables.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 7,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_7"
+  },
+  {
+    "id": 9,
+    "image": "question/quiz3_train_images/009.jpg",
+    "prompt": "What sport can you play here?",
+    "chosen": "The sport that can be played in this location is frisbee. The presence of a blue frisbee in the image suggests that it's likely being used for playing or practicing frisbee with the dog in the park.",
+    "rejected": "This is a soccer field. Soccer, also known as football in some parts of the world, can be played here. It's a popular sport that involves two teams competing to score goals by kicking or heading a ball into their opponent's net.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 8,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_8"
+  },
+  {
+    "id": 10,
+    "image": "question/quiz3_train_images/010.jpg",
+    "prompt": "Analyze this art image, describing its spatial arrangement, interactive elements, and conceptual message.",
+    "chosen": "The image depicts a detailed scene, possibly from the Middle Ages or Renaissance period. Several people are gathered around tables, engaged in various activities. There's a person smoking a pipe, another holding a drink, and others sitting or standing. The background features a window and a wall with a tapestry hanging on it. The artist has used oil paints to create this realistic illustration. This artwork captures a moment of everyday life, showcasing the interactions between characters and their environment.",
+    "rejected": "The image presents a lively scene of people in a room, gathered around a table laden with food and drink. The central focus is a woman dressed in red, who is lying on the floor, surrounded by a man holding a pipe and another man smoking a tobacco pipe. A man with a feathered hat, a man with a red turban, and a man wearing a green hat are also present, adding to the diversity of the gathering. A dog lies at the edge of the group, creating a sense of companionship. On the left side of the image, a vase rests on the table, while to the right, a jug can be seen. The interactions and positions of these individuals suggest a communal meal or celebration.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 9,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_9"
+  },
+  {
+    "id": 11,
+    "image": "question/quiz3_train_images/011.jpg",
+    "prompt": "Is this a river?",
+    "chosen": "Yes, this is a river. It appears to be a wide and calm body of water that provides a serene environment for various activities such as swimming or boating.",
+    "rejected": "Yes, this appears to be a river. The water seems to be flowing in one direction and is relatively narrow, suggesting that it could be a small or medium-sized body of water.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 10,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_10"
+  },
+  {
+    "id": 12,
+    "image": "question/quiz3_train_images/012.jpg",
+    "prompt": "Detail the texts and other components in the image in depth, explaining their relevance to the overall picture.",
+    "chosen": "The image promotes a special offer for the Huawei Honor 5C mobile phone. The phone is displayed on a purple background, which contrasts with the white color of the device. Above the phone, there's text that confirms its availability in black and white colors. Below the phone, more detailed information about the offer is provided: a recommended retail price of MYR 1,499 and the fact that it is available for purchase. This information indicates that the phone is being marketed at an attractive price point, making it accessible to a broader audience.",
+    "rejected": "The image features a **Huawei Honor 6** smartphone prominently displayed against a purple background. The phone itself is black and white, with the Huawei logo clearly visible on its back. \n\nA purple text box overlays the phone, providing important information about it. It states that the phone has a **1.499 MYR recommended retail price**, indicating its value in Malaysian ringgit. Additionally, the text mentions that this particular model of the phone is available in both black and white color options. \n\nThis suggests that viewers of the image can choose from either black or white versions of the phone when making a purchase. The focus on price and availability emphasizes the commercial nature of the image, likely intended to entice potential buyers.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 11,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_11"
+  },
+  {
+    "id": 13,
+    "image": "question/quiz3_train_images/013.jpg",
+    "prompt": "Is it night time?",
+    "chosen": "Yes, based on the image's lighting and darkness of the surroundings, it appears to be nighttime.",
+    "rejected": "No, it doesn't seem to be night time. The image is well-lit and shows clear and sharp details without any noticeable shadows or darkness.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 12,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_12"
+  },
+  {
+    "id": 14,
+    "image": "question/quiz3_train_images/014.jpg",
+    "prompt": "How many hours on average do these animals sleep daily?",
+    "chosen": "Cat's typically sleep for about 13 to 14 hours a day on average. They are known to be quite relaxed and enjoy sleeping in many different areas, including suitcases as seen in the image.",
+    "rejected": "These animals can sleep up to 16 hours a day on average. This high amount of sleeping time is typical for cats as they are known for their slow metabolism and low energy levels.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 13,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_13"
+  },
+  {
+    "id": 15,
+    "image": "question/quiz3_train_images/015.jpg",
+    "prompt": "Convey the specifics of the image with meticulous attention to detail.",
+    "chosen": "A kitchen counter with a sink, blue plate, and knife block, along with cabinets below and above it; a dishwasher at the base of the cabinetry; a window with curtains on the left side; a towel rack on the wall to the right of the sink; a bottle on the counter; and a silver exhaust hood above the stove.",
+    "rejected": "A clean and well-organized kitchen showcases a stainless steel gas cooktop, positioned centrally on the counter. Nearby, a stack of plates rests on a shelf above the dishwasher. The wall-mounted air vent is to the left of the sink and gas stove, while the paper towel holder containing white paper towels sits on the right, closer to the dishwasher. A chopping board with a knife lies on the counter, next to a green coffee mug and a bottle, both placed near the edge of the counter. The window's view reveals a glimpse of trees in the distance.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 14,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_14"
+  },
+  {
+    "id": 16,
+    "image": "question/quiz3_train_images/016.jpg",
+    "prompt": "Look at the image and describe the celebrity's facial expressions, clothing, and any distinctive features.",
+    "chosen": "JACKIE CHAN is wearing a black coat, with his mouth open revealing teeth, and has short black hair.",
+    "rejected": "The celebrity is wearing a black jacket, has a surprised look on his face as he opens his mouth wide and sticks out his tongue.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 15,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_15"
+  },
+  {
+    "id": 17,
+    "image": "question/quiz3_train_images/017.jpg",
+    "prompt": "What kind of dog is in the photo?",
+    "chosen": "The dog in the photo is a terrier. Terriers are a popular breed of dog known for their small size and friendly personality. They often make great pets as they are easy to train, energetic, and have a lot of love to give to their owners.",
+    "rejected": "The dog in the photo is a poodle. Poodles are known for their distinctive curly coat and their intelligence, making them popular pets among dog enthusiasts.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 16,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_16"
+  },
+  {
+    "id": 18,
+    "image": "question/quiz3_train_images/018.jpg",
+    "prompt": "What are the main elements in this image? Describe them thoroughly.",
+    "chosen": "The image showcases a white t-shirt that prominently features the phrase \"Ghost Hunters Do It In The Dark\" printed in bold, black letters. The text is positioned centrally on the shirt and spans across its width. Just below this, there's a small logo or design element, though the specific details of the logo are not clearly discernible from the image. The overall arrangement of the text and logo gives the impression of a deliberate design choice, likely aimed at capturing attention with the playful yet intriguing message.",
+    "rejected": "The image showcases a white t-shirt that is laid flat. The t-shirt has a text written on it which reads \"GHOST HUNTERS DO IT IN THE DARK\". Below the text, there's a logo of the brand \"HUGO BOSS\" in black color. At the bottom of the image, there's also a tag with the word \"Tee\" on it.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 17,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_17"
+  },
+  {
+    "id": 19,
+    "image": "question/quiz3_train_images/019.jpg",
+    "prompt": "Explain what's happening in the image with as much detail as possible.",
+    "chosen": "In the center of a dark wooden table, a blue bowl filled with soup commands attention. The soup is garnished with shrimp and red peppers floating on its surface, adding a pop of color against the soup's creamy hue. A sprig of rosemary, its leaves green and fragrant, rests atop the bowl, completing the presentation.\n\nSurrounding the bowl are various objects, each contributing to the overall aesthetic of the scene. A starfish, perhaps a decorative piece, lies near the edge of the table. A piece of coral, vibrant in orange and white, adds a touch of tropical flair. A feathered plant, its plumage a blend of yellow and pink, brings a hint of nature indoors. Lastly, a small wooden sculpture sits quietly, blending seamlessly with the other elements on the table.\n\nEach object has its place, creating a harmonious arrangement that draws the viewer's eye from one item to another. Despite the variety, there's a sense of balance and tranquility in this still life composition. It's a snapshot of a moment, frozen in time, inviting the viewer to imagine the warmth of the meal and the comfort of the surroundings.",
+    "rejected": "The image captures a vibrant and colorful setting. Dominating the scene is a blue bowl filled with an orange soup, topped with red peppers and a sprig of green herb. The bowl rests on a wooden surface, which is adorned with tropical leaves in shades of pink and green. \n\nScattered around the bowl are several objects that add to the tropical theme. A starfish, a seashell, and a bamboo stick can be seen nearby, suggesting a beach or coastal location. In the background, there's a plant with delicate light-colored flowers, providing a contrast to the darker tones of the wooden surface. \n\nThe arrangement of these elements creates a harmonious composition, evoking a sense of warmth and tranquility. The precise placement of each object suggests careful consideration, enhancing the overall aesthetic appeal of the scene. Despite the complexity of the image, there's a clear focal point - the blue bowl with its appetizing contents - drawing the viewer's attention immediately upon viewing. \n\nIt's worth noting that there's no text present in the image, allowing the visual elements to tell their own story without any interference from written content. The relative positions of the objects also contribute to this narrative, with the bowl serving as the central point around which all other elements are arranged. \n\nOverall, the image presents a carefully curated collection of objects, each contributing to a cohesive and visually appealing scene. It's a testament to the power of design and composition, transforming everyday objects into a work of art.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 18,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_18"
+  },
+  {
+    "id": 20,
+    "image": "question/quiz3_train_images/020.jpg",
+    "prompt": "Convey the specifics of the image with meticulous attention to detail.",
+    "chosen": "A large, delicious pizza with fresh basil and melted cheese sits on a table, accompanied by an array of chairs. One person, wearing a green shirt, carefully removes the crust using their hands while another individual in the background appears to be eating something else. The scene takes place indoors, with a clear view of the dining area's various elements such as tables, chairs, and additional food items.",
+    "rejected": "In the image, there's a table with a white marble surface on which sits a pizza loaded with toppings like cheese and vegetables. Two hands are seen hovering over the pizza, seemingly reaching out to grab a slice. The hands belong to a person wearing a green shirt adorned with a frog design. There are several chairs positioned around the table, some near the camera and others in the background. Next to one of these chairs is a glass, possibly containing water or another beverage. In the background, behind the table, there's a kitchen area equipped with various appliances such as a coffee maker and other items that appear to be on shelves or counters.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 19,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_19"
+  },
+  {
+    "id": 21,
+    "image": "question/quiz3_train_images/021.jpg",
+    "prompt": "Explain the image's various components in depth.",
+    "chosen": "The image captures a serene rural landscape painted in an impressionistic style. Dominating the center of the scene is a red brick church, its steeple reaching towards the sky. The church is nestled amidst trees and bushes that fill the foreground, their leaves rustling in the wind. \n\nA dirt path meanders through the lower part of the image, inviting viewers to imagine themselves on a leisurely stroll through this idyllic setting. In the distance, beyond the immediate landscape, buildings can be discerned, adding depth to the scene and hinting at a nearby village or settlement.\n\nAbove it all, the sky is a vast expanse of blue, dotted with white clouds that add a sense of movement and dynamism to the otherwise tranquil scene. Despite the detailed elements in the painting, there are no discernible texts or countable objects, and the relative positions of the objects follow the typical layout of a rural landscape with nature in the foreground and built structures further away.",
+    "rejected": "The image is a captivating oil painting that transports us to a serene village setting. The artist's use of impressionism is evident in the loose brushstrokes and vibrant colors, which come together to create a sense of depth and movement.\n\nAt the heart of the scene is a church with a tall steeple reaching towards the sky. The church, rendered in warm tones of brown and orange, stands as a focal point against the backdrop of a light blue sky dotted with white clouds. \n\nOn either side of the church, houses nestled amidst lush green trees add a touch of homeliness to the landscape. A dirt road meanders through the scene, inviting viewers into this peaceful village.\n\nScattered throughout the scene are several boats, adding an element of mystery and intrigue. Their presence suggests stories untold - perhaps of journeys made or adventures embarked upon.\n\nOverall, the painting beautifully encapsulates a moment frozen in time, inviting viewers to imagine themselves in this tranquil village scene.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 20,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_20"
+  },
+  {
+    "id": 22,
+    "image": "question/quiz3_train_images/022.jpg",
+    "prompt": "Detail the image's components with particular focus on each entity.",
+    "chosen": "The image portrays a white cockatoo perched on a branch in a lush, tropical environment. The bird's feathers are immaculate and pristine white, contrasting with its distinct yellow beak and black eyes. Its position on the branch suggests it is ready to take flight at any moment. In the background, green foliage and palm trees provide a sense of depth and location, reinforcing the tropical setting. The cockatoo appears calm and undisturbed, adding a serene atmosphere to the overall scene.",
+    "rejected": "The image captures a white cockatoo perched on a branch amidst lush green foliage. The bird's sharp beak and dark eyes are prominently visible, while its wings are neatly folded. The branches supporting the bird display yellow stains on their ends. The backdrop is a vibrant mix of tropical plants with various shades of green leaves, creating a natural haven for this avian creature.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 21,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_21"
+  },
+  {
+    "id": 23,
+    "image": "question/quiz3_train_images/023.jpg",
+    "prompt": "Explain what's happening in the image with as much detail as possible.",
+    "chosen": "In the heart of a cozy room, a young child is comfortably seated on a wooden floor. The child's gray shirt, adorned with white polka dots, adds a playful touch to their attire. A bib hangs around their neck, ready to catch any food that might escape their mouth.\n\nThe child holds a spoon in their hand, perhaps preparing for a meal or simply exploring the taste of metal. Their gaze is fixed directly at the camera, creating an intimate connection between the viewer and the subject.\n\nBehind the child, a white wall serves as a simple backdrop. To the right, a door stands closed, hinting at more spaces beyond this frame. The entire scene exudes warmth and innocence, capturing a moment in time that is both ordinary and extraordinary in its own way.",
+    "rejected": "A baby is wearing a jersey that covers most of their torso, with the upper part of the garment extending to around the middle of the image. The baby has a bib on, which wraps around their neck and covers a portion of their chest. To the right side, near the wall's base, there's a bottle cap.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 22,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_22"
+  },
+  {
+    "id": 24,
+    "image": "question/quiz3_train_images/024.jpg",
+    "prompt": "Itemize the elements you identify in the image and describe them thoroughly.",
+    "chosen": "A person snowboarding wearing white pants, black boots, a black jacket and goggles, with ski poles in the background.",
+    "rejected": "Man wearing a black and white outfit, ski boots, sunglasses, snowboarding on white pants; snowy mountain with people in the background; clear sky above.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 23,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_23"
+  },
+  {
+    "id": 25,
+    "image": "question/quiz3_train_images/025.jpg",
+    "prompt": "What are the main elements in this image? Describe them thoroughly.",
+    "chosen": "The image features a black t-shirt with a white design on the front. The design is a phrase that reads \"Let's Make Candles\". This text is written in a playful, whimsical font and includes a small illustration of a candle on top of an exclamation point, adding a touch of creativity to the overall design.",
+    "rejected": "The image features a black t-shirt that prominently displays the phrase \"Let's Make Candles\" in white text. The text is arranged horizontally across the chest area of the shirt. The shirt appears to be a standard fit, suitable for everyday wear or casual occasions. It doesn't have any additional design elements apart from the text. The shirt fits snugly on the model, indicating it could be a medium size.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 24,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_24"
+  },
+  {
+    "id": 26,
+    "image": "question/quiz3_train_images/026.jpg",
+    "prompt": "Describe this landmark in detail, highlighting its unique aspects, location, and the experience of visiting it.",
+    "chosen": "The New Christ the King monument, located in Quito, Ecuador, is a tall monument featuring a large globe on top. It boasts a scenic view with mountains and blue skies above. Visitors can admire the beauty of this landmark during the day when the sky is full of clouds.",
+    "rejected": "The Torre de Agustin, located in the Andes Mountains of Ecuador, attracts visitors with its rich history and impressive architecture. Visitors experience an emotional journey as they explore the monument's significance to the country's independence movement, while enjoying panoramic views from the observation deck atop the tower.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 25,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_25"
+  },
+  {
+    "id": 27,
+    "image": "question/quiz3_train_images/027.jpg",
+    "prompt": "Analyze this artwork, focusing on its visual elements, style, and emotional impact.",
+    "chosen": "The artwork features a collection of 16 playing cards with intricate designs in square shapes. The style is abstract, featuring geometric patterns and colorful motifs that evoke a sense of playfulness and mystery.",
+    "rejected": "This artwork showcases a collection of 16 playing cards, featuring geometric patterns and bold colors. The emotional impact is strong, with the vibrant hues evoking a sense of excitement and anticipation. The style is abstract, with sharp lines and shapes creating an intriguing visual experience.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 26,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_26"
+  },
+  {
+    "id": 28,
+    "image": "question/quiz3_train_images/028.jpg",
+    "prompt": "the text is small, what is this device trying to tell me?",
+    "chosen": "The text in the image is too small to determine its exact content. However, considering that the device is a cell phone and it's displaying Twitter on the screen, the content could be related to social media updates or messages.",
+    "rejected": "The text on the device appears to be in Japanese. It might be providing some information or instructions, but without a clearer context, it's challenging to determine its exact purpose.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 27,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_27"
+  },
+  {
+    "id": 29,
+    "image": "question/quiz3_train_images/029.jpg",
+    "prompt": "What types of ducks are these?",
+    "chosen": "These ducks seen in the image are mallards. Mallard is a common species of duck found in various environments around the world, including lakes and ponds.",
+    "rejected": "These ducks are mallards. Mallards are a common type of duck that can be found in various habitats such as lakes, rivers, and ponds. They are known for their distinct features such as their green heads and brown bodies.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 28,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_28"
+  },
+  {
+    "id": 30,
+    "image": "question/quiz3_train_images/030.jpg",
+    "prompt": "What is the woman with the long coat holding in her right hand?",
+    "chosen": "The woman with the long coat is holding a baby stroller in her right hand. This suggests that she may be caring for an infant or toddler and using the stroller to transport them while walking down the busy street.",
+    "rejected": "The woman in the long coat is holding a baby stroller in her right hand. The stroller appears to be empty, suggesting that she may not have a child with her at the moment or could have left them at home.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 29,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_29"
+  },
+  {
+    "id": 31,
+    "image": "question/quiz3_train_images/031.jpg",
+    "prompt": "What language is that?",
+    "chosen": "The language displayed in the image is Japanese. It appears on a label or sign that may be associated with the food item in question.",
+    "rejected": "The language depicted in the image is Chinese. The text on the food packaging and labels provides information about the product, such as ingredients or nutritional facts.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 30,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_30"
+  },
+  {
+    "id": 32,
+    "image": "question/quiz3_train_images/032.jpg",
+    "prompt": "What sort of backsplash is there?",
+    "chosen": "The backsplash in this kitchen appears to be made of white tiles. The white color provides a clean and fresh look that complements the other elements present in the kitchen.",
+    "rejected": "The backsplash in this kitchen appears to be made of subway tiles. This type of tile is thin and rectangular, often used for walls or other small surfaces where a durable and low-maintenance option is desired.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 31,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_31"
+  },
+  {
+    "id": 33,
+    "image": "question/quiz3_train_images/033.jpg",
+    "prompt": "Give a comprehensive description of this artwork, from its visual elements to its conceptual meaning.",
+    "chosen": "The artwork is a sculpture crafted from bone, exhibiting an ivory hue with intricate patterning. The figure is fashioned in the form of a seated woman, adding a sense of tranquility to the piece. The base, made of black stone or possibly marble, grounds the sculpture and highlights its elegant composition. This work could be interpreted as a representation of feminine grace or a tribute to the artistry involved in creating such intricate pieces.",
+    "rejected": "The sculpture is a small, white figure of an ancient Egyptian goddess, standing on a black pedestal. The figure has a long neck and is adorned with intricate details, including a skirt and a headdress. The use of white and gold colors for the figure contrasts with the black base, creating a striking visual effect that draws attention to the figure's elegance and complexity. The figure's pose suggests a sense of reverence and worship, reflecting the importance of religion in ancient Egyptian culture. Despite its small size, the sculpture conveys a sense of grandeur and majesty, showcasing the craftsmanship and artistic prowess of the period.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 32,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_32"
+  },
+  {
+    "id": 34,
+    "image": "question/quiz3_train_images/034.jpg",
+    "prompt": "How do the elements in the image relate to each other in terms of positioning or composition?",
+    "chosen": "The elements in the image are well-positioned to create an aesthetically pleasing composition. The oval frame with golden edges is centrally placed, drawing attention to the portrait of an older man wearing a blue jacket and grey wig.",
+    "rejected": "The man's face, hair, and eyes are highlighted in the image. They seem to be positioned in such a way that the viewer's attention is drawn towards them, making them stand out as important elements within the composition of the picture.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 33,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_33"
+  },
+  {
+    "id": 35,
+    "image": "question/quiz3_train_images/035.jpg",
+    "prompt": "Convey the specifics of the image with meticulous attention to detail.",
+    "chosen": "In the image, there's a young girl who is the central figure. She has long brown hair and is adorned with a tiara on her head. Her attire consists of a purple dress that features a white collar and cuffs. The dress also sports a pink sash around the waist, adding a pop of color to her ensemble.\n\nShe stands against a light blue background, which contrasts nicely with her clothing. Around her, there are two pink hearts floating in mid-air, perhaps symbolizing love or affection. Adding to the whimsical theme, there are small stars scattered throughout the background, creating a starry effect.\n\nThe girl is positioned slightly to the right of the center of the image, drawing the viewer's attention towards her. Despite the numerous elements in the image, there's no text present. The overall composition appears to be a digital illustration, characterized by clean lines and vibrant colors.",
+    "rejected": "The image portrays a young girl, bathed in the soft glow of a light blue backdrop. Her long brown hair cascades down her shoulders, complementing her bright blue eyes that sparkle with innocence. She is adorned in a vibrant purple dress, which features a delicate white collar and a belt cinched at her waist. The crown perched upon her head shines like gold, adding to her regal appearance.\n\nShe stands confidently on a pink carpet, her hands gently resting on her hips. The carpet extends outwards from beneath her, creating a pool of color that contrasts beautifully with her dress. In her immediate vicinity, two toys - a heart-shaped object and a star-shaped one - add a playful touch to the scene.\n\nScattered throughout the image are stars and flowers, their presence hinting at a festive or celebratory occasion. The stars, shining bright in various colors against the light blue background, seem to dance around her, while the flowers, blooming in hues of pink and green, line the edges of the image like cheerful guards.\n\nDespite the multitude of elements, the image maintains an air of harmony and balance. Each component, whether it's the girl or one of the many other elements, contributes to the overall composition without overpowering the others. It's a snapshot of a moment frozen in time, capturing the essence of childhood joy and wonder.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 34,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_34"
+  },
+  {
+    "id": 36,
+    "image": "question/quiz3_train_images/036.jpg",
+    "prompt": "Are there curtains on the window?",
+    "chosen": "Yes, there are curtains on the window. The curtains appear to be patterned with a floral design.",
+    "rejected": "Yes, there are curtains on the window. The curtains appear to be green and provide a contrasting color to the room's overall decor.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 35,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_35"
+  },
+  {
+    "id": 37,
+    "image": "question/quiz3_train_images/037.jpg",
+    "prompt": "Provide an intricate description of every entity in the image.",
+    "chosen": "In the image, there's a busy street with various vehicles, including cars and trucks. Several traffic lights are present, displaying both red and green signals. The traffic light at the bottom right shows a green signal while another one above it displays a red signal. There is also a yellow traffic light near the center of the scene. Signboards can be seen around the area, some attached to utility poles that rise tall in the background. A few telephone wires crisscross against the clear blue sky. A white van is driving on the road, followed by other cars. In the distant background, a building with several windows stands out prominently.",
+    "rejected": "In the image, there are several traffic and pedestrian lights. The first traffic light is positioned on the left side, while another one is visible in the middle of the scene. Additionally, a green pedestrian light can be seen towards the right. Cars are present throughout the frame, with a black pickup truck near the bottom left corner, followed by a white van situated slightly to its right. A silver car occupies the far right part of the image. Buildings with windows dominate the background, creating an urban atmosphere.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 36,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_36"
+  },
+  {
+    "id": 38,
+    "image": "question/quiz3_train_images/038.jpg",
+    "prompt": "What cooking thing is on the table?",
+    "chosen": "There is a pot on the table. The pot might be used for cooking or preparing food, with its presence suggesting that this scene takes place in a kitchen setting.",
+    "rejected": "There is a pot on the table. The pot's presence suggests that food preparation or cooking may be taking place in this location, possibly as part of a larger social gathering or event.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 37,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_37"
+  },
+  {
+    "id": 39,
+    "image": "question/quiz3_train_images/039.jpg",
+    "prompt": "Tell me what catches your eye in the image, and describe those elements in depth.",
+    "chosen": "A striking black train with a yellow caboose moves along its track, surrounded by a scenic mountain landscape. It is positioned in front of a majestic mountain range and runs parallel to a hillside dotted with verdant trees. The vibrant green grass and wildflowers accentuate the beauty of this picturesque scene.",
+    "rejected": "The train, with its yellow and black colors, is moving along the tracks surrounded by lush green vegetation. It has a prominent smoke emitting from it, contrasting against the clear blue sky above.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 38,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_38"
+  },
+  {
+    "id": 40,
+    "image": "question/quiz3_train_images/040.jpg",
+    "prompt": "Explain what's happening in the image with as much detail as possible.",
+    "chosen": "The image captures a bustling scene in an industrial setting. Dominating the foreground is a large machine, its metallic structure gleaming under the artificial lighting. This is no ordinary machine - it's a hot rolling mill, and it's hard at work.\n\nA long strip of metal, glowing red-hot, emerges from the machine. The heat seems to cling to the metal even as it continues on its journey across the factory floor, guided by a metal rail that runs parallel to it. \n\nIn the background, other machines can be seen, each playing their part in this symphony of industry. Stacks of steel rods stand tall, ready for their turn to be shaped into something new. Cranes loom over the scene, their arms hanging idle but poised for action.\n\nDespite the heavy machinery and intense activity, there's a sense of order to the scene. Each object has its place, and every piece of equipment contributes to the overall process. It's a snapshot of industry in action, a testament to human ingenuity and the power of technology.",
+    "rejected": "The image captures a bustling scene in an industrial setting, dominated by the gleaming red hot metal being shaped into a cylindrical form. The metal is held firmly between two large, robust machines that exude an air of mechanical power. These machines are strategically positioned on the right side of the image, their imposing presence adding to the industrial ambiance.\n\nThe entire process unfolds on a sturdy wooden floor, its rough texture contrasting with the smooth metallic forms above. Scattered around this main area of activity are several smaller metal objects, possibly tools or parts of the machinery, lending a sense of organized chaos to the scene.\n\nIn the background, partially obscured but still noticeable, are a few individuals engaged in the work. Their relative positions and actions suggest they are part of the crew managing the operation. Despite their presence, it's the machines and the red hot metal that command attention, highlighting the industrial process at hand.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 39,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_39"
+  },
+  {
+    "id": 41,
+    "image": "question/quiz3_train_images/041.jpg",
+    "prompt": "Offer a comprehensive description of this landmark.",
+    "chosen": "The landmark is Schönbrunn Palace, a Baroque palace in Vienna, Austria. It was once the summer residence of the Habsburg rulers and is now a popular tourist attraction.",
+    "rejected": "The landmark is the Schönbrunn Palace, located in Vienna, Austria. It was built during the 18th century and served as the summer residence of the Habsburg rulers. The palace features a large garden, a maze, orangery, and zoo. It has been designated a UNESCO World Heritage Site since 1996.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 40,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_40"
+  },
+  {
+    "id": 42,
+    "image": "question/quiz3_train_images/042.jpg",
+    "prompt": "Identify and describe each object in the image in detail.",
+    "chosen": "A large brown and white giraffe stands in a lush green field with sparse trees, consuming food from a hanging feeder attached to a tree trunk.",
+    "rejected": "There's a giraffe with spots, green grass covering the ground, several trees with different shades of bark, branches, and leaves, a wooden fence surrounding the area, a pole supporting a mesh bag with hay, and an animal feeder.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 41,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_41"
+  },
+  {
+    "id": 43,
+    "image": "question/quiz3_train_images/043.jpg",
+    "prompt": "Is the small tomato in the bottom or in the top part of the image?",
+    "chosen": "The small tomato is in the top part of the image. It appears to be a slice of tomato that has been placed on top of one of the food items, likely the burger.",
+    "rejected": "The small tomato appears to be in the top part of the image. It's likely that it is one of the ingredients on a hamburger or hot dog, as it's not immediately apparent from its location alone what it represents.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 42,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_42"
+  },
+  {
+    "id": 44,
+    "image": "question/quiz3_train_images/044.jpg",
+    "prompt": "How many people are in the photo?",
+    "chosen": "There is one person present in the photo. The man is standing alone on a dock, near an umbrella and a body of water.",
+    "rejected": "There is one person in the photo. The man is standing on a pier, gazing out towards the water and enjoying the view of the beach.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 43,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_43"
+  },
+  {
+    "id": 45,
+    "image": "question/quiz3_train_images/045.jpg",
+    "prompt": "What are the main objects or subjects in the image? Please describe them in detail.",
+    "chosen": "The image showcases a lively scene, likely at an outdoor event or gathering. Multiple individuals are present, scattered across the frame. Two skateboarders, one adult and one child, are prominently featured in the foreground. They seem to be engaged in the activity of skateboarding. There's also a variety of onlookers, some standing while others might be seated, watching the activities unfold. In addition to people, there are various objects like speakers, backpacks, and shoes present throughout the image.",
+    "rejected": "The image showcases an urban street scene where a group of people, including adults and children, are engaging in various activities. There's a prominent person wearing headphones standing to the left side, while another individual on the right seems focused on something amidst other individuals. A child is riding a skateboard, with another skateboard visible nearby. Additionally, there are multiple individuals scattered throughout the scene, some appearing to be spectators or participants in the event.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 44,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_44"
+  },
+  {
+    "id": 46,
+    "image": "question/quiz3_train_images/046.jpg",
+    "prompt": "What are the main elements in this image? Describe them thoroughly.",
+    "chosen": "The image portrays a beautifully decorated wedding setup, comprising two white high-back chairs adorned with blue and purple pillows. These chairs are situated on a blue carpet. The backdrop features a blue wall embellished with white flowers, which appears to be the focal point of the event decoration. A floral chandelier hangs from the ceiling, casting a soft glow on the setup below. In addition, there are white flower arrangements placed in white wire stands to the left and right sides of the scene, adding to the overall elegance of the setting.",
+    "rejected": "The image features a beautifully decorated room with blue walls and white decorative elements. The main focus is on two chairs placed in the center of the room, adorned with pillows in blue and white colors. These chairs are positioned under a floral chandelier that hangs from the ceiling, adding an elegant touch to the scene.\n\nOn each side of the room are flower arrangements in vases, enhancing the overall ambiance of the space. The left wall has a light fixture, while the right wall is decorated with a unique light design. The floor beneath is covered by a blue carpet, which complements the blue wall and other decorations.\n\nOverall, this image portrays a well-decorated room with a harmonious color scheme and thoughtful arrangement of objects.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 45,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_45"
+  },
+  {
+    "id": 47,
+    "image": "question/quiz3_train_images/047.jpg",
+    "prompt": "Examine the image and provide a detailed introduction of the given image including the visible texts.",
+    "chosen": "The image presents a close-up view of three light switches mounted on a brown wall. Each switch is white with black lettering, indicating the \"OFF\" state. The switches are arranged in a horizontal line. They all appear to be identical and are positioned at equal distances from each other, suggesting they are part of a coordinated installation. The text \"OFF\" can be clearly seen on each switch, indicating that the room's lights are currently switched off.",
+    "rejected": "The image captures a trio of white light switches, each bearing the word \"OFF\" inscribed in black. They are neatly aligned on a brown wooden background. The top and bottom switches are slightly larger than the middle one, adding an element of visual interest. Each switch is distinct, yet they form a harmonious grouping, suggesting their shared purpose of controlling the flow of electricity. Despite their collective function, each switch maintains its individuality through size and position. The overall composition evokes a sense of order and precision.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 46,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_46"
+  },
+  {
+    "id": 48,
+    "image": "question/quiz3_train_images/048.jpg",
+    "prompt": "Explain what's happening in the image with as much detail as possible.",
+    "chosen": "Two men are the primary subjects in this scene. The man on the left is wearing a blue jersey, and he's holding a book open in front of him. On the right side, another individual wears a black jersey and stands observing. Between them, there's a laptop computer placed on the table, with a mouse beside it on the tabletop. There are also several wall sockets on the wall behind the desk, with cables plugged into some of them.",
+    "rejected": "In the image, multiple computer monitors are distributed across the frame. One is located near the top left corner, while another is placed a bit to the right and lower. Two other monitors are further down on the right side of the desk. A laptop computer is centrally positioned in front of one individual. Nearby, two computer keyboards can be seen, with one situated directly in front of the laptop and the other slightly to its right. Another keyboard is placed more to the bottom right. There's a blue pen lying on the desk towards the middle. Additionally, there are several wall sockets: one just above the left monitor, another closer to the center but a bit below, and a third one on the far right at about waist height.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 47,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_47"
+  },
+  {
+    "id": 49,
+    "image": "question/quiz3_train_images/049.jpg",
+    "prompt": "Detail the image's components with particular focus on each entity.",
+    "chosen": "A man sails on the water, seagulls fly in the sky, a lighthouse stands tall near the shoreline, and green hills form the backdrop.",
+    "rejected": "The image features a man in a sailboat with two sails, a flying seagull, a lighthouse on the shoreline, and hills in the background.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 48,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_48"
+  },
+  {
+    "id": 50,
+    "image": "question/quiz3_train_images/050.jpg",
+    "prompt": "What geometric shape is the top?",
+    "chosen": "The top of the clock tower is a pyramid shape. This is a triangular-based geometric shape with flat sides and an apex at the top. The pyramidal shape adds to the overall grandeur and architectural significance of the clock tower.",
+    "rejected": "The top of the building appears to be triangular in shape. The triangular structure is likely a cone-shaped steeple, which is commonly seen in church steeples and clock towers. This type of roof design can help divert rainwater away from the building while providing an architectural element that adds aesthetic value to the structure.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 49,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_49"
+  },
+  {
+    "id": 51,
+    "image": "question/quiz3_train_images/051.jpg",
+    "prompt": "Convey the specifics of the image with meticulous attention to detail.",
+    "chosen": "In the image, a green and white ferry is docked at a pier with multiple pillars. The ferry has several round life rings attached to it for safety purposes. Around the ferry, there are people sitting both inside and outside of it, engaged in different activities. Some individuals can be seen wearing life jackets while others are interacting with their surroundings. In addition, there are a couple of trash cans placed near the water and the boat. A portion of the sky is visible above, along with some clouds scattered across the backdrop.",
+    "rejected": "The image showcases a bustling harbor scene with a large ferry docked alongside a pier. The ferry, painted green, has multiple levels and features round windows on its upper deck. Numerous life rings are attached to the boat for safety measures. People can be seen inside the ferry, possibly passengers or crew members. \n\nNearby, there's a building with white columns, adding an architectural touch to the surroundings. The water near the ferry is calm with visible ripples, indicating recent movement of the boat or another object. On the horizon, the city skyline forms a picturesque background, completing this captivating maritime vista.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 50,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_50"
+  },
+  {
+    "id": 52,
+    "image": "question/quiz3_train_images/052.jpg",
+    "prompt": "Is the man wearing a tie?",
+    "chosen": "Yes, the man is wearing a tie in this image. The tie adds an element of formality to his outfit and complements the other clothing items he's wearing.",
+    "rejected": "Yes, the man is wearing a tie. The tie appears to be black with white stripes and complements his overall attire of formal clothing.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 51,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_51"
+  },
+  {
+    "id": 53,
+    "image": "question/quiz3_train_images/053.jpg",
+    "prompt": "Is that a skittle?",
+    "chosen": "Yes, that is a skittle. The image shows the child holding a donut with brightly colored decorations on top of it. Among these decorations are Skittles candies, which are visible in various colors and sizes.",
+    "rejected": "Yes, it is a skittle that can be seen on the donut. Skittles are a type of candy with a crunchy texture and sweet taste. They come in various colors and flavors and are often used as toppings or decorations for desserts such as cakes or pastries.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 52,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_52"
+  },
+  {
+    "id": 54,
+    "image": "question/quiz3_train_images/054.jpg",
+    "prompt": "Are there only yellow marigolds in the photo?",
+    "chosen": "No, there are more flowers in the photo than just yellow marigolds. The scene is quite colorful and vibrant with various types of flowers present.",
+    "rejected": "No, there are no yellow marigolds present in the photo. The flowers present in this image include red and orange colors.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 53,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_53"
+  },
+  {
+    "id": 55,
+    "image": "question/quiz3_train_images/055.jpg",
+    "prompt": "Who is the author of this book?",
+    "chosen": "David R. Goldmann is the author of this book.",
+    "rejected": "David Goldmann is the author of this book.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 54,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_54"
+  },
+  {
+    "id": 56,
+    "image": "question/quiz3_train_images/056.jpg",
+    "prompt": "What is holding the sign?",
+    "chosen": "The sign is hanging from a building. The building appears to be a movie theater, and the sign is likely an advertisement for upcoming movies or events at the venue.",
+    "rejected": "The sign is held up by a building, presumably a hotel. The building acts as a support structure for the sign, ensuring that it remains visible and in place.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 55,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_55"
+  },
+  {
+    "id": 57,
+    "image": "question/quiz3_train_images/057.jpg",
+    "prompt": "Detail the texts and other components in the image in depth, explaining their relevance to the overall picture.",
+    "chosen": "The image is a playful representation of the Star Wars universe, featuring a blue \"Jedi Passport\" with gold lettering. A hand holds the passport, which prominently displays the words \"Star Wars Celebration IV\". The backdrop is filled with various Star Wars merchandise and toys, creating an immersive environment that captures the essence of the beloved franchise. The date \"May 25-28, 2007\" is also mentioned, indicating when this event likely took place.",
+    "rejected": "The image captures a hand holding a blue passport, adorned with the words \"Kessel Run\" and \"Celebration IV\" in yellow letters. The passport is being held against a background of other Star Wars toys and packages, hinting at a collection or event. The text, \"Star Wars,\" \"IV,\" and \"May 25\", printed in varying sizes on the passport, reinforce the theme and add context to its design. The use of color, typography, and objects all contribute to creating an immersive Star Wars fan experience.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 56,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_56"
+  },
+  {
+    "id": 58,
+    "image": "question/quiz3_train_images/058.jpg",
+    "prompt": "Which color does the frisbee she is throwing have?",
+    "chosen": "The frisbee she is throwing has a red color. This vibrant hue allows for the frisbee to stand out in various environments, making it easier to follow its trajectory and locate once thrown.",
+    "rejected": "The frisbee she is throwing has red color.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 57,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_57"
+  },
+  {
+    "id": 59,
+    "image": "question/quiz3_train_images/059.jpg",
+    "prompt": "Itemize the elements you identify in the image and describe them thoroughly.",
+    "chosen": "The image features a delicious slice of pizza with tomato sauce, cheese, and green peppers on a white plate. A fork is also present next to the pizza, resting on the tablecloth which has red and white checkered patterns. The background includes glasses containing drinks, one of which appears blurry.",
+    "rejected": "A delicious slice of deep dish pizza sits on a plate, topped with melted cheese and green peppers. A fork lies nearby, ready to dive into the food. The pizza is surrounded by various beverages including water, beer, and milk in glasses, jars, and bottles. Additionally, there's a red and white checkered tablecloth underneath it all.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 58,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_58"
+  },
+  {
+    "id": 60,
+    "image": "question/quiz3_train_images/060.jpg",
+    "prompt": "What resort is this snowboarder at?",
+    "chosen": "The snowboarder is at a ski resort. While the specific name of the resort is not visible in the image, it's clear that this picture was taken on a mountain where people can engage in winter sports such as snowboarding or skiing.",
+    "rejected": "The snowboarder is at Vail Resort. Vail Resort is a popular ski and snowboard destination located in the Rocky Mountains of Colorado, USA. It is renowned for its vast terrain, world-class facilities, and excellent snow conditions.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 59,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_59"
+  },
+  {
+    "id": 61,
+    "image": "question/quiz3_train_images/061.jpg",
+    "prompt": "Identify and describe each object in the image in detail.",
+    "chosen": "The image captures a baseball game in progress, with several key elements highlighted. There are multiple players wearing shirts and trousers, indicating their participation on the field. A prominent baseball bat is being held by one player, ready for action. The home plate, an essential element of the sport, can be seen close to where the batter stands.\n\nIn addition to these primary subjects, various objects such as a bench and cooler are placed around the scene, perhaps for resting or hydration purposes. Additionally, there's a flag waving in the background, possibly representing the team or location, adding to the atmosphere of the game.",
+    "rejected": "The image features a baseball game in progress, with several players and objects on the field. A batter is preparing to swing his bat during the game. He has a mask positioned nearby for protection. Another player can be seen wearing a helmet, likely as an extra safety measure or waiting for their turn at bat.\n\nIn the background, there are multiple chairs placed along the side of the field, possibly for players to rest or watch the game. There are also two coolers present - one near the middle of the field and another slightly closer to the edge. \n\nA few benches are located around the area, providing seating options for players or spectators. Additionally, some of the players have belts and masks, further emphasizing the competitive nature of the scene.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 60,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_60"
+  },
+  {
+    "id": 62,
+    "image": "question/quiz3_train_images/062.jpg",
+    "prompt": "What are the red objects on the plate?",
+    "chosen": "The red objects on the plate are raspberries. They add vibrant color to the dessert and may provide a sweet and tangy flavor.",
+    "rejected": "The red objects on the plate are currants. They appear to be small, round fruits with a vibrant red color that adds a pop of flavor and texture to the dessert dish.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 61,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_61"
+  },
+  {
+    "id": 63,
+    "image": "question/quiz3_train_images/063.jpg",
+    "prompt": "What is on the bush?",
+    "chosen": "The bush has lights on it. The lights are likely illuminating the outdoor space and adding a festive touch to the scene.",
+    "rejected": "The bush is covered in lights. It seems like a festive decoration to bring brightness and cheerfulness to the surroundings during nighttime.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 62,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_62"
+  },
+  {
+    "id": 64,
+    "image": "question/quiz3_train_images/064.jpg",
+    "prompt": "How many light fixtures do you see?",
+    "chosen": "I see one light fixture in the scene. It is not the main focus of the image, but it can be seen if observed closely.",
+    "rejected": "There is only one light fixture visible in the image. It appears to be a wall-mounted light that is placed above and slightly to the side of the snowboarders, illuminating the surrounding area.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 63,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_63"
+  },
+  {
+    "id": 65,
+    "image": "question/quiz3_train_images/065.jpg",
+    "prompt": "Explain the elements of the image with thorough attention to detail.",
+    "chosen": "The image captures a serene and compact bathroom, bathed in the soft glow of ambient light. Dominating the scene is a pristine white toilet, its lid firmly closed, standing as the central figure in this intimate space. \n\nAbove it, a small window punctuates the otherwise unadorned wall, offering a glimpse of the world outside. The window's position above the toilet creates an interesting interplay between nature and man-made structures.\n\nOn either side of this central figure are two silver sinks, their metallic sheen adding a touch of modernity to the room. They stand like silent sentinels on both sides of the toilet, ready for use at a moment's notice.\n\nThe walls, painted in a soothing shade of beige, enclose the space, creating an atmosphere of intimacy and privacy. A door with a sleek black handle is visible on the left side of the photo, providing the only entrance and exit to this private sanctuary.\n\nDespite its small size, each element in this bathroom has been thoughtfully placed and serves its purpose well. The overall effect is one of cleanliness and tranquility, making it an inviting oasis amidst daily life.",
+    "rejected": "This image captures a small, well-lit bathroom that exudes a sense of tranquility. The walls and ceiling are painted in soothing shades of white, providing a clean and fresh atmosphere. \n\nThe floor contrasts this with its natural wood grain texture, adding a touch of warmth to the space. On the left wall, there's a white sink mounted beneath a round mirror, reflecting the room's interior. Above it hangs a light fixture, casting soft illumination across the space.\n\nOpposite the sink, on the right wall, is a white toilet. Its lid is closed, maintaining the neatness of the bathroom. A light fixture above it matches the one on the opposite side, ensuring symmetry in the room's design.\n\nA window is also present on the right wall, letting in natural light during the day. This not only brightens up the room but also adds depth to the overall ambiance.\n\nIn summary, this image portrays a small yet aesthetically pleasing bathroom that combines functionality with style.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 64,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_64"
+  },
+  {
+    "id": 66,
+    "image": "question/quiz3_train_images/066.jpg",
+    "prompt": "Explain what's happening in the image with as much detail as possible.",
+    "chosen": "The image features a quote by Lil Wayne, \"I am probably in the sky, flying with the fish, or maybe in the ocean, swimming with the pigeons. See, my world is different.\" This text is placed against an atmospheric backdrop of a sunset with a palm tree and waves crashing onto the shore. The words \"palm\" and \"ocean\" can be seen in smaller fonts within the image, suggesting that these elements are part of the visual scenery.",
+    "rejected": "In the image, a tall palm tree dominates the scene, stretching from the bottom to the top. The leaves of the palm tree are a vibrant green color, contrasting with the orange and pinkish hues of the sky. The sun is setting behind the horizon, casting a warm glow that illuminates the palm tree and surroundings. Near the base of the palm tree, there's a quote in white text that reads, \"I am probably in the sky, flying with the fish, or maybe in the ocean, swimming with the pigeons. See my world is different...\" by Lil Wayne.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 65,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_65"
+  },
+  {
+    "id": 67,
+    "image": "question/quiz3_train_images/067.jpg",
+    "prompt": "What is the shape of that sign?",
+    "chosen": "The shape of the sign in the image is an octagon. This shape is commonly used for stop signs, helping to ensure that drivers are immediately alerted to potential hazards or traffic regulations ahead.",
+    "rejected": "The sign is an octagon shape. This particular shape is commonly used for stop signs, as it provides a clear and recognizable symbol to drivers. The octagon shape can be distinguishable from other shapes while providing ample space for additional information or warnings if necessary.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 66,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_66"
+  },
+  {
+    "id": 68,
+    "image": "question/quiz3_train_images/068.jpg",
+    "prompt": "What religion does this family belong to?",
+    "chosen": "From the image, it does not appear that this family belongs to any particular religion. There are no visible clues or symbols in the scene that would suggest a specific religious affiliation.",
+    "rejected": "The family in this image appears to be Christian. The presence of religious items such as a cross and a Bible on the wall suggests their faith affiliation, while the family's behavior and dress code also indicate a conservative Christian background.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 67,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_67"
+  },
+  {
+    "id": 69,
+    "image": "question/quiz3_train_images/069.jpg",
+    "prompt": "Explain what's happening in the image with as much detail as possible.",
+    "chosen": "A row of red stop signs with varying numbers of holes is on a sidewalk, near a white building featuring signs for \"Lucky Tattoo\" and \"ATM inside.\"",
+    "rejected": "The image features a red stop sign with stickers on it, along with other stop signs, surrounded by various objects like a tree trunk and a yellow ATM sign.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 68,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_68"
+  },
+  {
+    "id": 70,
+    "image": "question/quiz3_train_images/070.jpg",
+    "prompt": "Detail the image's components with particular focus on each entity.",
+    "chosen": "The image showcases a page filled with text, positioned within a neatly framed rectangle. The words appear to be in black font, providing information about communication strategies and diverse audiences.",
+    "rejected": "The image features a poster presenting information about communication skills. It contains text and graphics.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 69,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_69"
+  },
+  {
+    "id": 71,
+    "image": "question/quiz3_train_images/071.jpg",
+    "prompt": "What character is on the birthday hat?",
+    "chosen": "The character on the birthday hat is Elmo, a beloved character from Sesame Street. The use of Elmo on the hat adds a fun and playful element to the boy's celebration.",
+    "rejected": "The birthday hat is adorned with Elmo, the beloved Sesame Street character. The bright yellow color of the hat makes it easily noticeable and adds a playful element to the baby's celebration.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 70,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_70"
+  },
+  {
+    "id": 72,
+    "image": "question/quiz3_train_images/072.jpg",
+    "prompt": "What species of bird is this?",
+    "chosen": "The bird in the image is a crow. Crows are intelligent and adaptable birds commonly found worldwide. They have shiny black feathers, a curved beak, and a distinctive \"cawing\" call that can be heard from afar.",
+    "rejected": "The bird in the image is a crow. Crows are known for their intelligence, adaptability, and social behavior. They are commonly found in urban areas and can be seen in various environments such as parks, woodlands, or city streets.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 71,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_71"
+  },
+  {
+    "id": 73,
+    "image": "question/quiz3_train_images/073.jpg",
+    "prompt": "Is this a mixing bowl or a pour container?",
+    "chosen": "This is a mixing bowl. The blue color and the size of the bowl indicate that it's designed for mixing various ingredients or batter in kitchen preparations.",
+    "rejected": "This is a mixing bowl. It's designed for holding and mixing ingredients, unlike pour containers that are used to measure or transfer liquids.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 72,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_72"
+  },
+  {
+    "id": 74,
+    "image": "question/quiz3_train_images/074.jpg",
+    "prompt": "Tell me what catches your eye in the image, and describe those elements in depth.",
+    "chosen": "The image captures a thrilling moment in a baseball game, with the batter in the box ready to hit the ball, the catcher crouched and focused on the pitch, and the umpire attentively watching the action. The ball is suspended in mid-air, adding suspense as it approaches the batter. Around them, the lush green field contrasts against the dirt mound and home plate area, creating an immersive scene of the sport's competitive spirit.",
+    "rejected": "As I scour the image, my attention is captured by a baseball player in gray uniform wielding a black bat, about to make contact with an incoming white ball. The batter is wearing a black helmet and red gloves, while he stands on brown dirt near home plate. Behind him, there's a catcher in blue gear, poised to receive the pitch. Additionally, an umpire dressed in a black shirt observes the play intently from behind the catcher. All these elements are set against the backdrop of vibrant green grass and a clear sky above.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 73,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_73"
+  },
+  {
+    "id": 75,
+    "image": "question/quiz3_train_images/075.jpg",
+    "prompt": "What color is the plane?",
+    "chosen": "The plane is white in color. This white hue gives the aircraft a clean and modern appearance, which is common among modern commercial planes.",
+    "rejected": "The plane is white in color. It's a common color used for commercial planes and provides a simple yet clean appearance.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 74,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_74"
+  },
+  {
+    "id": 76,
+    "image": "question/quiz3_train_images/076.jpg",
+    "prompt": "Is this near the water?",
+    "chosen": "Yes, this scene is near the water. The presence of a body of water can be seen in the background and adds to the overall ambiance and atmosphere of the setting.",
+    "rejected": "Yes, the image depicts a beach setting with waves in the background. It indicates that the location is near the water body.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 75,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_75"
+  },
+  {
+    "id": 77,
+    "image": "question/quiz3_train_images/077.jpg",
+    "prompt": "What team does the batter play for?",
+    "chosen": "The batter is a member of the Mets team. His jersey and the logo on his helmet are indicative of being part of this particular baseball team.",
+    "rejected": "The batter is playing for the Mets. This information can be confirmed by observing his uniform, which features a logo representing the team and its corresponding colors.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 76,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_76"
+  },
+  {
+    "id": 78,
+    "image": "question/quiz3_train_images/078.jpg",
+    "prompt": "The frontmost car is known as what brand?",
+    "chosen": "The frontmost car in the image is a Mini Cooper. The Mini Cooper is a small, compact vehicle known for its iconic design and agile driving style.",
+    "rejected": "The frontmost car is a Mini Cooper. This small and compact car is known for its unique design, fuel efficiency, and sporty handling. It's often an ideal option for city dwellers or those who prefer driving in tight spaces.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 77,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_77"
+  },
+  {
+    "id": 79,
+    "image": "question/quiz3_train_images/079.jpg",
+    "prompt": "What does she have on her feet?",
+    "chosen": "She is wearing skis on her feet. Skis are a type of equipment designed for sliding over snow and provide efficient and safe movement in the winter season.",
+    "rejected": "She has skis on her feet. This equipment is designed for cross-country skiing and provides a gliding sensation over snowy terrains.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 78,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_78"
+  },
+  {
+    "id": 80,
+    "image": "question/quiz3_train_images/080.jpg",
+    "prompt": "What hairstyle is this?",
+    "chosen": "The hairstyle in the image is a long hair. The length of the hair appears to be past his shoulders, indicating that it might require more maintenance and care compared to shorter hairstyles.",
+    "rejected": "The hairstyle in the image appears to be long. This could mean that the man's hair is grown out past his shoulders, which is a popular style among some men.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 79,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_79"
+  },
+  {
+    "id": 81,
+    "image": "question/quiz3_train_images/081.jpg",
+    "prompt": "What train company is this?",
+    "chosen": "The train in the image belongs to Canadian Pacific. This company is a prominent railroad operator, providing freight services across North America and has a significant presence in Canada and the United States.",
+    "rejected": "This train belongs to the Canadian Pacific Railway. The red and green engine is one of their distinct symbols, representing their commitment to safety and efficiency in transportation services.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 80,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_80"
+  },
+  {
+    "id": 82,
+    "image": "question/quiz3_train_images/082.jpg",
+    "prompt": "How's the weather?",
+    "chosen": "The weather appears to be overcast in the image. The sky is covered with clouds, which may suggest that it's a cloudy day or possibly going into the evening hours.",
+    "rejected": "The weather seems cloudy, as indicated by the presence of clouds in the sky. This could suggest an overcast or gloomy day and may affect people's mood and activities.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 81,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_81"
+  },
+  {
+    "id": 83,
+    "image": "question/quiz3_train_images/083.jpg",
+    "prompt": "Create a detailed description describing the contents of the given art image. Include the objects, colors, art style, art genre, etc.",
+    "chosen": "This is a painting that falls under the portrait genre. It features a man with black hair, a white collar, and an open book in his hand. The overall color scheme of the painting is dark, predominantly featuring shades of black and brown.",
+    "rejected": "This is a portrait painting by Rembrandt. The painting features a man in a black robe with a white collar, holding an open book. The background is dark and shadowy. The style of the artwork is characteristic of Rembrandt's later works, known for their use of light and shadow to create depth and texture. This piece can be categorized under the art genre of portraiture.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 82,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_82"
+  },
+  {
+    "id": 84,
+    "image": "question/quiz3_train_images/084.jpg",
+    "prompt": "Explain the elements of the image with thorough attention to detail.",
+    "chosen": "The image presents a close-up view of a vibrant cluster of purple flowers. The flowers, in full bloom, are the main focus of the image, their petals spread wide open to reveal the inner structure of the flower. These petals exhibit a rich purple hue, adding a pop of color to the scene. \n\nInterspersed among the purple flowers are green leaves and stems, providing a contrasting backdrop that accentuates the flowers' color. The green elements also add depth to the image, creating a layered effect with the flowers positioned on top and the leaves and stems beneath them.\n\nThe arrangement of the flowers and leaves is somewhat chaotic, suggesting a natural and organic growth pattern rather than a structured or manicured appearance. This gives the image a sense of spontaneity and rawness.\n\nDespite the apparent chaos, there is a certain harmony in the way the flowers, leaves, and stems are intertwined. Each element complements the others, contributing to a balanced composition overall.\n\nThere is no text present in the image, allowing the viewer to fully immerse themselves in the visual spectacle of the flowers and foliage without any distraction.\n\nThe relative positions of the objects have been accurately captured, allowing for a clear understanding of the image content. The precise locations of each object, such as the centers of the flowers and the bases of the stems, can be confidently determined from the image.\n\nIn summary, the image captures a close-up view of a cluster of purple flowers in full bloom, surrounded by green leaves and stems. The image is devoid of text and has a harmonious composition, with each element perfectly positioned to contribute to the overall aesthetic.",
+    "rejected": "The image captures a close-up view of a cluster of purple and white flowers, their vibrant colors standing out against a blurred green background. The purple flowers are the main focus, their petals radiating outwards from a central bud. Each flower is adorned with small green leaves that add a touch of contrast to the overall scene.\n\nScattered throughout this sea of purple are a few white flowers, their pristine color providing a striking contrast. These white flowers, although fewer in number, stand out due to their unique hue, adding an element of surprise to the otherwise uniform purple landscape.\n\nThe entire scene is framed by a blurred green background, which serves to highlight the flowers without drawing attention away from them. This background could be interpreted as a field or garden, further emphasizing the natural setting in which these flowers grow. Despite the blurriness, the green background manages to complement the flowers perfectly, creating a harmonious balance between the foreground and background. \n\nOverall, the image presents a beautiful snapshot of nature's diversity, captured in a single frame. It's a testament to the beauty of simplicity, where the focus on a simple cluster of flowers reveals a world of color and detail.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 83,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_83"
+  },
+  {
+    "id": 85,
+    "image": "question/quiz3_train_images/085.jpg",
+    "prompt": "What type of pizza is this slice?",
+    "chosen": "This slice of pizza appears to be supreme with its variety of toppings. It may contain multiple ingredients such as pepperoni, onions, bell peppers, and mushrooms, creating a flavorful and satisfying meal.",
+    "rejected": "The pizza slice in the image is a pepperoni pizza. It looks like it has been freshly made and is full of flavor, with the pepperoni being the main topping.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 84,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_84"
+  },
+  {
+    "id": 86,
+    "image": "question/quiz3_train_images/086.jpg",
+    "prompt": "What is the common name of the orange items seen here?",
+    "chosen": "The orange items in the image are often referred to as noodles. They might be used for various purposes, such as food or decoration.",
+    "rejected": "The orange items in this image are called noodles. They are a popular food item often made from wheat flour that can be served in various ways, such as stir-fried or boiled.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 85,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_85"
+  },
+  {
+    "id": 87,
+    "image": "question/quiz3_train_images/087.jpg",
+    "prompt": "Detail the image's components with particular focus on each entity.",
+    "chosen": "A man holding a cell phone, standing near a blue metal fence with graffiti on it and a red metal fence behind. He wears a red sweater, grey pants, and gray shoes.",
+    "rejected": "A bald man in a red sweater with black pants and grey sneakers is talking on his cellphone near a tall metal gate, a blue fence, and a concrete bench.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 86,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_86"
+  },
+  {
+    "id": 88,
+    "image": "question/quiz3_train_images/088.jpg",
+    "prompt": "Does the elephant have tusks?",
+    "chosen": "Yes, the elephant has tusks. They are visible in the image and appear to be a significant part of its physical appearance.",
+    "rejected": "Yes, the elephant has tusks. They appear to be quite long and prominent, indicating that they have not been removed or damaged in any way.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 87,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_87"
+  },
+  {
+    "id": 89,
+    "image": "question/quiz3_train_images/089.jpg",
+    "prompt": "Is the sky cloudy?",
+    "chosen": "No, the sky is not cloudy. In fact, it's described as being bright blue and clear in the image. This lack of clouds suggests that the weather conditions are calm and potentially warm.",
+    "rejected": "No, the sky is clear and blue in this scene. There are no visible clouds present in the image.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 88,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_88"
+  },
+  {
+    "id": 90,
+    "image": "question/quiz3_train_images/090.jpg",
+    "prompt": "Explain what's happening in the image with as much detail as possible.",
+    "chosen": "A vibrant and colorful meal setting is depicted. On the left, there's a large green banana leaf covering almost half of the table, with some food items placed on it. A white spoon lies beside this setup. Towards the right, a basket filled with bread rolls sits atop a white napkin. Another smaller basket containing more bread rolls can be found above these. At the bottom right corner, a coffee cup brimming with dark liquid rests on another napkin. The entire scene gives an impression of a diverse and appetizing feast.",
+    "rejected": "The image captures a delightful meal set against a backdrop of a silver table. A white tray holds the main dish - a large mound of yellow rice, its surface glistening under the light, with a vibrant green banana leaf beneath it adding a touch of color and authenticity to the presentation. The rice seems fluffy and well-cooked, ready to be savored.\n\nNext to the rice is a small white bowl filled with brown soup, its dark hue suggesting a rich and hearty flavor. The spoon resting in the bowl hints at the anticipation of the first sip.\n\nCompleting this ensemble are two golden brown rolls, their crust appearing crisp and tempting. They sit invitingly on a white napkin, waiting to be picked up and enjoyed.\n\nEach element in this image - from the food to the utensils and even the background - comes together to create an inviting scene that speaks of good food and enjoyment.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 89,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_89"
+  },
+  {
+    "id": 91,
+    "image": "question/quiz3_train_images/091.jpg",
+    "prompt": "What are they doing to the plane?",
+    "chosen": "They are spraying the plane with water. This is likely to clean the plane, remove any dirt or debris that may have accumulated during its use. While it's unclear whether the water is for cleaning purposes only, or if there was a specific reason for spraying water on the plane, the activity suggests that the aircraft is being maintained and prepared for future flights.",
+    "rejected": "The image shows firefighting trucks spraying water on an airplane. The water is being used to cool the plane down, which is a common practice after a long flight or when parked in a hot environment. This cooling process helps to prevent overheating and damage to crucial parts of the aircraft.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 90,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_90"
+  },
+  {
+    "id": 92,
+    "image": "question/quiz3_train_images/092.jpg",
+    "prompt": "How far off the ground is this animals kneecaps?",
+    "chosen": "The animal in question is a giraffe, and its knees are approximately 5 feet off the ground. This height difference allows giraffes to engage in various activities such as browsing for food from tall trees or reaching high branches that other animals cannot access.",
+    "rejected": "It appears that the animal's kneecaps are approximately 10 feet off the ground. This estimation is based on the height of the barrier between the viewers and the giraffe, which seems to be about that distance away from the ground level.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 91,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_91"
+  },
+  {
+    "id": 93,
+    "image": "question/quiz3_train_images/093.jpg",
+    "prompt": "What part of the traffic day is this?",
+    "chosen": "This appears to be the evening. The image shows heavy traffic and a lot of vehicles on the road, which is typically seen during rush hour when people are commuting home from work or other activities.",
+    "rejected": "This image portrays the evening rush hour. During this time, people are returning home or heading to other destinations after a long day of work or travel. Traffic congestion is common during this period due to the high volume of vehicles on the road.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 92,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_92"
+  },
+  {
+    "id": 94,
+    "image": "question/quiz3_train_images/094.jpg",
+    "prompt": "What are the key features you observe in the image?",
+    "chosen": "The image portrays an old, dilapidated room with a gray cement wall and a wooden beam running down the center. The floor is made of concrete, which appears to be wet with water stains visible in some areas. There's also a metal pipe attached to the left side of the wall and another one on its right side.",
+    "rejected": "The image shows a room with two walls made of stone and a brick wall. There is also a door on the left side, an orange metal railing in front of the stone wall, and a small window above it.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 93,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_93"
+  },
+  {
+    "id": 95,
+    "image": "question/quiz3_train_images/095.jpg",
+    "prompt": "Analyze this artwork, focusing on its visual elements, style, and emotional impact.",
+    "chosen": "The artwork features a group of three people, possibly in the forest, with one person lying on the ground. The painting's style is characterized by loose brushstrokes and a focus on form over detail. It evokes emotions of tranquility and harmony with nature.",
+    "rejected": "The artwork showcases a surrealist style with an Impressionistic influence, characterized by the use of vivid colors and loose brushstrokes. The emotional impact is mysterious and intriguing due to its dreamlike elements and the presence of partially concealed human figures under tree branches.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 94,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_94"
+  },
+  {
+    "id": 96,
+    "image": "question/quiz3_train_images/096.jpg",
+    "prompt": "Is the boy's hair wet?",
+    "chosen": "Yes, the boy's hair is wet in this image. It appears to have been soaked by water, indicating that he has been swimming or engaged in some other aquatic activity.",
+    "rejected": "From the image, it doesn't appear that the boy's hair is wet. It looks like the boy has dry hair while he is in the water.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 95,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_95"
+  },
+  {
+    "id": 97,
+    "image": "question/quiz3_train_images/097.jpg",
+    "prompt": "What pattern is on the mans shirt?",
+    "chosen": "The man is wearing a shirt with stripes. Specifically, the stripes are yellow and gray in color, creating a visually appealing pattern on his attire.",
+    "rejected": "The man is wearing a shirt with stripes. The specific pattern or color of the stripes is unclear, but they appear to be horizontal in orientation.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 96,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_96"
+  },
+  {
+    "id": 98,
+    "image": "question/quiz3_train_images/098.jpg",
+    "prompt": "What are the main objects or subjects in the image? Please describe them in detail.",
+    "chosen": "The image depicts a nighttime urban setting. There are multiple traffic lights scattered throughout the scene, illuminating the area with their colors. A prominent street sign reads \"S. Burry Dr.\", indicating the location. Alongside the road, there are several telephone poles and street signs. The sky is dark, suggesting it's late evening or during the night hours.",
+    "rejected": "The image showcases a nighttime cityscape with multiple traffic lights, buildings, and street signs. There's a prominent intersection with several traffic lights that are illuminated. Some of these traffic lights display different colors — red, yellow, and green. In the background, there's a building labeled \"S. DeBury Rd.\" alongside a couple of other street signs. A fireplug or fire hydrant is also visible on the right side of the road.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 97,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_97"
+  },
+  {
+    "id": 99,
+    "image": "question/quiz3_train_images/099.jpg",
+    "prompt": "Is the plate on a tablecloth?",
+    "chosen": "No, there is no tablecloth visible in the image. The plate appears to be placed directly on the white surface, which might be a countertop or a dining table.",
+    "rejected": "No, the plate is not on a tablecloth. It is placed directly atop the table's surface.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 98,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_98"
+  },
+  {
+    "id": 100,
+    "image": "question/quiz3_train_images/100.jpg",
+    "prompt": "What is the meaning of the number 20 inside the green circle?",
+    "chosen": "The number 20 inside the green circle represents a speed limit. It indicates that vehicles must not exceed a maximum speed of 20 units, whether they are miles per hour or kilometer per hour, depending on local regulations.",
+    "rejected": "The number 20 inside the green circle is a speed limit sign, indicating that drivers should not exceed the maximum speed of 20 miles per hour when traveling on this road. The presence of this sign suggests that it's a safer and more controlled environment for pedestrians or other vehicles to navigate safely.",
+    "source": "openbmb/RLAIF-V-Dataset",
+    "source_index": 99,
+    "source_id": "OmniLMM-12B_OmniLMM-12B_99"
+  }
+]

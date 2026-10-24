@@ -1,6 +1,6 @@
 import torch
 from pathlib import Path
-from PIL import Image
+from PIL import Image, ImageOps
 
 @torch.inference_mode()
 def generate_answer(question, image_path, model, processor):
@@ -10,7 +10,7 @@ def generate_answer(question, image_path, model, processor):
         raise FileNotFoundError(f"找不到圖片：{image_path.resolve()}")
 
     with Image.open(image_path) as img:
-        image = img.convert("RGB")
+        image = ImageOps.exif_transpose(img).convert("RGB")
 
     messages = [
         {"role": "system", "content": ("請根據圖片回答問題。"

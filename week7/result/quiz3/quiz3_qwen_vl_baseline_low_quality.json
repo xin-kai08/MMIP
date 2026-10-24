@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "category": "物件辨識",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/1.jpg",
+    "question": "圖片中的動物是什麼？",
+    "response": "圖片中的動物是梅花鹿。梅花鹿的身體呈淺棕色，耳朵尖尖的，尾巴短小，四肢修長。梅花鹿通常生活在亞洲的森林和草原地區。"
+  },
+  {
+    "id": 2,
+    "category": "數量計算",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/1.jpg",
+    "question": "圖片中共有幾隻鹿？",
+    "response": "圖片中共有三隻鹿。"
+  },
+  {
+    "id": 3,
+    "category": "數量計算",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/1.jpg",
+    "question": "圖片中有幾隻鹿呈站立姿勢？",
+    "response": "圖片中有兩隻鹿呈站立姿勢。"
+  },
+  {
+    "id": 4,
+    "category": "數量計算",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/2.jpg",
+    "question": "展示台上共有幾個立體角色模型？",
+    "response": "展示台上共有五個立體角色模型。"
+  },
+  {
+    "id": 5,
+    "category": "外觀辨識",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/2.jpg",
+    "question": "最左邊角色模型的主要配色是什麼？",
+    "response": "最左邊的角色模型是拉帝亞斯，它的主要配色是綠色和白色。"
+  },
+  {
+    "id": 6,
+    "category": "外觀辨識",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/2.jpg",
+    "question": "正中央的黃色角色模型是否有可見的尾巴？",
+    "response": "是的，中央的黃色角色模型有可見的尾巴。"
+  },
+  {
+    "id": 7,
+    "category": "物件辨識",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/3.jpg",
+    "question": "托盤上的食物是什麼？",
+    "response": "托盤上的食物有薯條和飲料。"
+  },
+  {
+    "id": 8,
+    "category": "空間關係",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/3.jpg",
+    "question": "以畫面方向為準，包裝中的吸管放在托盤的哪一側？",
+    "response": "包裝中的吸管放在托盤的左側。"
+  },
+  {
+    "id": 9,
+    "category": "數量計算",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/3.jpg",
+    "question": "圖片中有幾杯飲料？",
+    "response": "圖片中有兩杯飲料。"
+  },
+  {
+    "id": 10,
+    "category": "數量計算",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/4.jpg",
+    "question": "圖片上方共有幾面錦旗？",
+    "response": "圖片上方共有八面錦旗。"
+  },
+  {
+    "id": 11,
+    "category": "數量計算",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/4.jpg",
+    "question": "圖片下方共有幾顆球？包含被塑膠袋部分遮住的球。",
+    "response": "圖片下方共有四顆球，包括被塑膠袋部分遮住的球。"
+  },
+  {
+    "id": 12,
+    "category": "文字辨識",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/4.jpg",
+    "question": "紅色錦旗上的名次文字是什麼？",
+    "response": "足球冠軍"
+  },
+  {
+    "id": 13,
+    "category": "文字辨識",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/5.jpg",
+    "question": "站牌上的中文站名是什麼？",
+    "response": "車埕"
+  },
+  {
+    "id": 14,
+    "category": "文字辨識",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/5.jpg",
+    "question": "根據站牌，本站距離水里站幾公里？",
+    "response": "本站距離水里站2.3公里。"
+  },
+  {
+    "id": 15,
+    "category": "數量計算",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/6.jpg",
+    "question": "畫面中央穿著黑色畢業袍、參與合照的人共有幾位？",
+    "response": "7位"
+  },
+  {
+    "id": 16,
+    "category": "空間關係",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/6.jpg",
+    "question": "蹲著的兩位合照人物位於人群的前方還是後方？",
+    "response": "蹲著的兩位合照人物位於人群的前方。"
+  },
+  {
+    "id": 17,
+    "category": "空間關係",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/6.jpg",
+    "question": "以畫面方向為準，手持紫色玩偶的人位於合照人群的哪個位置？",
+    "response": "手持紫色玩偶的人位於合照人群的右下角。"
+  },
+  {
+    "id": 18,
+    "category": "物件辨識",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/2.jpg",
+    "question": "正中央的黃色角色是什麼？",
+    "response": "中央的黃色角色是皮卡丘（Pikachu）。"
+  },
+  {
+    "id": 19,
+    "category": "外觀辨識",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/6.jpg",
+    "question": "合照人物的畢業袍主要是什麼顏色？",
+    "response": "畢業袍主要是黑色。"
+  },
+  {
+    "id": 20,
+    "category": "圖片描述",
+    "version": "low_quality",
+    "image": "question/quiz3_test_images/low_quality/1.jpg",
+    "question": "請描述三隻鹿的姿態與所在位置。",
+    "response": "第一隻鹿站在石板路上，正在舔舐自己的前爪。第二隻鹿和第三隻鹿則在沙地上，其中第二隻鹿正趴在地上，第三隻鹿則站立著。"
+  }
+]
