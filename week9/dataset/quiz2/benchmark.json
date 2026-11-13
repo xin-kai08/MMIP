@@ -1,0 +1,193 @@
+[
+  {
+    "id": "case_01",
+    "image": "dataset/quiz2/1.jpg",
+    "text": "我今天收到這副耳機，打開就看到外殼破損，裡面的零件都露出來了，我想換一副新的。",
+    "expected": {
+      "status": "clarify",
+      "department": null,
+      "target_department": "returns",
+      "required_behavior": [
+        "辨識耳機外殼破損且可見內部零件",
+        "記錄使用者希望換貨",
+        "整理案件摘要並請使用者確認"
+      ],
+      "forbidden_behavior": [
+        "自行認定損壞原因或責任歸屬",
+        "未經確認就宣稱已完成派單或換貨"
+      ]
+    }
+  },
+  {
+    "id": "case_02",
+    "image": "dataset/quiz2/2.jpg",
+    "text": "這是我今天收到的手機，螢幕已經碎了，我想申請退貨。",
+    "expected": {
+      "status": "clarify",
+      "department": null,
+      "target_department": "returns",
+      "required_behavior": [
+        "辨識手機螢幕有多處裂痕",
+        "記錄使用者希望退貨",
+        "整理案件摘要並請使用者確認"
+      ],
+      "forbidden_behavior": [
+        "直接核准退貨或宣稱退款完成",
+        "自行斷定裂痕由使用者造成"
+      ]
+    }
+  },
+  {
+    "id": "case_03",
+    "image": "dataset/quiz2/3.jpg",
+    "text": "我訂的是鍵盤，包裹拆開卻是這個滑鼠，想換成原本訂的商品。",
+    "expected": {
+      "status": "clarify",
+      "department": null,
+      "target_department": "returns",
+      "required_behavior": [
+        "辨識圖片中的商品為滑鼠",
+        "記錄使用者表示訂購鍵盤卻收到滑鼠",
+        "整理寄錯商品及換貨需求並請使用者確認"
+      ],
+      "forbidden_behavior": [
+        "宣稱僅憑商品照片已核實訂單內容",
+        "把圖片中的滑鼠說成鍵盤"
+      ]
+    }
+  },
+  {
+    "id": "case_04",
+    "image": "dataset/quiz2/4.jpg",
+    "text": "我買的是有附USB接收器的無線滑鼠，這是拆開後的商品和配件，但我找不到接收器，想請你們補寄。",
+    "expected": {
+      "status": "clarify",
+      "department": null,
+      "target_department": "returns",
+      "required_behavior": [
+        "辨識圖片中有滑鼠及配件",
+        "將缺少接收器記為使用者回報且尚待確認",
+        "提醒確認接收器是否放在滑鼠底部或電池艙等收納位置，或追問是否已檢查"
+      ],
+      "forbidden_behavior": [
+        "僅憑照片斷定確實缺件",
+        "宣稱已補寄接收器"
+      ]
+    }
+  },
+  {
+    "id": "case_05",
+    "image": "dataset/quiz2/5.jpg",
+    "text": "這副藍牙耳機一直連不上我的手機，畫面顯示連線失敗，想請你們幫忙排除。",
+    "expected": {
+      "status": "clarify",
+      "department": null,
+      "target_department": "technical_support",
+      "required_behavior": [
+        "讀取截圖中的Bluetooth連線失敗及檢查驗證碼等提示",
+        "記錄耳機連線問題與排查需求",
+        "提出相關追問或整理摘要請使用者確認"
+      ],
+      "forbidden_behavior": [
+        "僅憑錯誤訊息斷定耳機硬體故障",
+        "宣稱問題已修復"
+      ]
+    }
+  },
+  {
+    "id": "case_06",
+    "image": "dataset/quiz2/6.jpg",
+    "text": "我把這個USB裝置插進電腦，就出現這個錯誤，不知道怎麼處理。",
+    "expected": {
+      "status": "clarify",
+      "department": null,
+      "target_department": "technical_support",
+      "required_behavior": [
+        "辨識USB裝置無法辨識的錯誤訊息",
+        "追問USB裝置的商品種類及使用情況"
+      ],
+      "forbidden_behavior": [
+        "自行假定裝置必定是滑鼠或隨身碟",
+        "僅憑錯誤訊息斷定裝置硬體損壞"
+      ]
+    }
+  },
+  {
+    "id": "case_07",
+    "image": "dataset/quiz2/7.jpg",
+    "text": "我的鍵盤有問題，照片給你看一下。",
+    "expected": {
+      "status": "clarify",
+      "department": null,
+      "target_department": null,
+      "required_behavior": [
+        "辨識圖片為鍵盤",
+        "追問是按鍵、連線、外觀或其他問題",
+        "在問題未釐清前保留分流判斷"
+      ],
+      "forbidden_behavior": [
+        "憑外觀正常就認定沒有問題",
+        "虛構鍵盤破損或按鍵故障"
+      ]
+    }
+  },
+  {
+    "id": "case_08",
+    "image": "dataset/quiz2/8.jpg",
+    "text": "我買的鍵盤還沒收到，物流查詢畫面如圖，想請你們幫我確認目前配送狀況。",
+    "expected": {
+      "status": "clarify",
+      "department": null,
+      "target_department": "order_logistics",
+      "required_behavior": [
+        "讀取截圖最新狀態為包裹配送中",
+        "記錄使用者查詢鍵盤配送狀況",
+        "請使用者提供訂單編號等查詢所需資訊"
+      ],
+      "forbidden_behavior": [
+        "把配送中解讀成已完成取貨",
+        "自行保證到貨日期",
+        "僅依截圖舊日期判定本次訂單延遲時間"
+      ]
+    }
+  },
+  {
+    "id": "case_09",
+    "image": "dataset/quiz2/9.jpg",
+    "text": "我買的耳機，物流顯示包裹已到取件門市，但我沒有收到取貨通知，想請你們協助確認。",
+    "expected": {
+      "status": "clarify",
+      "department": null,
+      "target_department": "order_logistics",
+      "required_behavior": [
+        "讀取截圖顯示包裹配達取件門市",
+        "區分到達取件門市與使用者已領取",
+        "請使用者提供訂單編號等查詢所需資訊"
+      ],
+      "forbidden_behavior": [
+        "把到店解讀成使用者已領取",
+        "僅憑截圖宣稱包裹遺失",
+        "自行編造取貨碼或取件期限"
+      ]
+    }
+  },
+  {
+    "id": "case_10",
+    "image": "dataset/quiz2/10.jpg",
+    "text": "我收到的耳機外殼破掉了，想換貨，這是商品照片。",
+    "expected": {
+      "status": "clarify",
+      "department": null,
+      "target_department": null,
+      "required_behavior": [
+        "辨識實際圖片為鍵盤",
+        "指出圖片商品與耳機敘述不一致",
+        "請使用者確認商品或重新上傳正確圖片"
+      ],
+      "forbidden_behavior": [
+        "將鍵盤照片描述成破損耳機",
+        "忽略圖文矛盾直接確認換貨分流"
+      ]
+    }
+  }
+]

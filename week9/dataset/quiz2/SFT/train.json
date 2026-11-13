@@ -1,0 +1,342 @@
+[
+{
+    "id": "sft_001",
+    "image": "dataset/quiz2/SFT/1.jpg",
+    "history": [],
+    "text": "我買的是黑色鍵盤，送來卻是白色的。",
+    "output": {
+      "status": "clarify",
+      "department": null,
+      "product": "鍵盤",
+      "summary": "使用者表示訂購黑色鍵盤，但收到白色款，尚未說明希望如何處理。",
+      "missing_fields": ["requested_action"],
+      "reply": "您表示訂購黑色鍵盤，但收到白色款，照片中的鍵盤也呈淺色。請問您希望換成黑色，還是申請退貨？"
+    }
+},
+{
+    "id": "sft_002",
+    "image": "dataset/quiz2/SFT/1.jpg",
+    "history": [
+      {
+        "role": "user",
+        "content": "我買的是黑色鍵盤，送來卻是白色的。"
+      },
+      {
+        "role": "assistant",
+        "content": "您表示訂購黑色鍵盤，但收到白色款，照片中的鍵盤也呈淺色。請問您希望換成黑色，還是申請退貨？"
+      }
+    ],
+    "text": "我要換成原本訂的黑色。",
+    "output": {
+      "status": "clarify",
+      "department": null,
+      "product": "鍵盤",
+      "summary": "使用者表示訂購黑色鍵盤，但收到白色款，希望換成原訂的黑色款。",
+      "missing_fields": ["confirmation"],
+      "reply": "確認一下，您訂購的是黑色鍵盤，但收到白色款，希望換回原訂的黑色款，以上正確嗎？"
+    }
+},
+{
+    "id": "sft_003",
+    "image": "dataset/quiz2/SFT/1.jpg",
+    "history": [
+      {
+        "role": "user",
+        "content": "我買的是黑色鍵盤，送來卻是白色的。"
+      },
+      {
+        "role": "assistant",
+        "content": "您表示訂購黑色鍵盤，但收到白色款，照片中的鍵盤也呈淺色。請問您希望換成黑色，還是申請退貨？"
+      },
+      {
+        "role": "user",
+        "content": "我要換成原本訂的黑色。"
+      },
+      {
+        "role": "assistant",
+        "content": "確認一下，您訂購的是黑色鍵盤，但收到白色款，希望換回原訂的黑色款，以上正確嗎？"
+      }
+    ],
+    "text": "對，沒錯。",
+    "output": {
+      "status": "route",
+      "department": "returns",
+      "product": "鍵盤",
+      "summary": "使用者已確認：訂購黑色鍵盤卻收到白色款，希望換成原訂的黑色款。",
+      "missing_fields": [],
+      "reply": "了解，您的需求是換成原訂的黑色鍵盤，接下來由退換貨部門協助核對訂單與處理換貨申請。"
+    }
+},
+{
+    "id": "sft_004",
+    "image": "dataset/quiz2/SFT/2.jpg",
+    "history": [],
+    "text": "我的藍牙裝置連不上手機，出現這個畫面。",
+    "output": {
+        "status": "clarify",
+        "department": null,
+        "product": null,
+        "summary": "截圖顯示iPhone無法連接名為Jam Plus的藍牙裝置，並提示忘記裝置後重新配對，商品種類與處理需求尚待釐清。",
+        "missing_fields": ["product", "requested_action"],
+        "reply": "畫面顯示iPhone無法連接Jam Plus，並建議忘記裝置後重新配對。請問這是耳機、喇叭，還是其他商品？您希望協助排查連線，還是辦理退換貨？"
+    }
+},
+{
+    "id": "sft_005",
+    "image": "dataset/quiz2/SFT/2.jpg",
+    "history": [
+        {
+        "role": "user",
+        "content": "我的藍牙裝置連不上手機，出現這個畫面。"
+        },
+        {
+        "role": "assistant",
+        "content": "畫面顯示iPhone無法連接Jam Plus，並建議忘記裝置後重新配對。請問這是耳機、喇叭，還是其他商品？您希望協助排查連線，還是辦理退換貨？"
+        }
+    ],
+    "text": "是藍牙喇叭，我想先請你們幫忙排查連線，不是要退貨。",
+    "output": {
+        "status": "clarify",
+        "department": null,
+        "product": "藍牙喇叭",
+        "summary": "使用者表示Jam Plus是藍牙喇叭，目前無法連接iPhone，希望協助排查連線，並非申請退貨。",
+        "missing_fields": ["confirmation"],
+        "reply": "確認一下，您的Jam Plus藍牙喇叭無法連接iPhone，希望由技術支援協助排查連線，而不是退貨，以上正確嗎？"
+    }
+},
+{
+    "id": "sft_006",
+    "image": "dataset/quiz2/SFT/2.jpg",
+    "history": [
+        {
+        "role": "user",
+        "content": "我的藍牙裝置連不上手機，出現這個畫面。"
+        },
+        {
+        "role": "assistant",
+        "content": "畫面顯示iPhone無法連接Jam Plus，並建議忘記裝置後重新配對。請問這是耳機、喇叭，還是其他商品？您希望協助排查連線，還是辦理退換貨？"
+        },
+        {
+        "role": "user",
+        "content": "是藍牙喇叭，我想先請你們幫忙排查連線，不是要退貨。"
+        },
+        {
+        "role": "assistant",
+        "content": "確認一下，您的Jam Plus藍牙喇叭無法連接iPhone，希望由技術支援協助排查連線，而不是退貨，以上正確嗎？"
+        }
+    ],
+    "text": "對，麻煩幫我排查。",
+    "output": {
+        "status": "route",
+        "department": "technical_support",
+        "product": "藍牙喇叭",
+        "summary": "使用者已確認Jam Plus藍牙喇叭無法連接iPhone，希望由技術支援協助排查連線，並非申請退貨。",
+        "missing_fields": [],
+        "reply": "了解，您的需求是排查藍牙喇叭與iPhone的連線問題，接下來由技術支援部門協助確認設定與配對步驟。"
+    }
+},
+{
+  "id": "sft_007",
+  "image": "dataset/quiz2/SFT/3.jpg",
+  "history": [],
+  "text": "我買的螢幕還沒收到，但物流查詢顯示送達了，可以幫我查一下嗎？",
+  "output": {
+    "status": "clarify",
+    "department": null,
+    "product": "螢幕",
+    "summary": "使用者表示尚未收到購買的螢幕，但物流截圖顯示貨件已送達，希望協助查詢，實際收件情況尚待確認。",
+    "missing_fields": ["order_id", "delivery_check"],
+    "reply": "截圖顯示貨件已送達，但這不代表已確認由您本人收件。請提供訂單編號，並確認是否有家人、管理室或其他人代收？"
+  }
+},
+{
+  "id": "sft_008",
+  "image": "dataset/quiz2/SFT/3.jpg",
+  "history": [
+    {
+      "role": "user",
+      "content": "我買的螢幕還沒收到，但物流查詢顯示送達了，可以幫我查一下嗎？"
+    },
+    {
+      "role": "assistant",
+      "content": "截圖顯示貨件已送達，但這不代表已確認由您本人收件。請提供訂單編號，並確認是否有家人、管理室或其他人代收？"
+    }
+  ],
+  "text": "訂單編號是TEST-003，我問過家人和管理室，都沒有收到。",
+  "output": {
+    "status": "clarify",
+    "department": null,
+    "product": "螢幕",
+    "summary": "使用者提供訂單編號TEST-003，表示螢幕物流顯示送達，但本人未收到，且已詢問家人與管理室，均表示未代收，希望協助查詢。",
+    "missing_fields": ["confirmation"],
+    "reply": "確認一下，訂單TEST-003的螢幕顯示已送達，但您未收到，家人與管理室也表示未代收，您希望協助查詢實際配送情況，以上正確嗎？"
+  }
+},
+{
+  "id": "sft_009",
+  "image": "dataset/quiz2/SFT/3.jpg",
+  "history": [
+    {
+      "role": "user",
+      "content": "我買的螢幕還沒收到，但物流查詢顯示送達了，可以幫我查一下嗎？"
+    },
+    {
+      "role": "assistant",
+      "content": "截圖顯示貨件已送達，但這不代表已確認由您本人收件。請提供訂單編號，並確認是否有家人、管理室或其他人代收？"
+    },
+    {
+      "role": "user",
+      "content": "訂單編號是TEST-003，我問過家人和管理室，都沒有收到。"
+    },
+    {
+      "role": "assistant",
+      "content": "確認一下，訂單TEST-003的螢幕顯示已送達，但您未收到，家人與管理室也表示未代收，您希望協助查詢實際配送情況，以上正確嗎？"
+    }
+  ],
+  "text": "對，請幫我查。",
+  "output": {
+    "status": "route",
+    "department": "order_logistics",
+    "product": "螢幕",
+    "summary": "使用者已確認訂單TEST-003的螢幕顯示送達但未收到，且家人與管理室均表示未代收，希望協助查詢實際配送情況。",
+    "missing_fields": [],
+    "reply": "了解，接下來由物流與訂單部門協助核對訂單TEST-003的配送與收件紀錄，確認實際配送情況。"
+  }
+},
+{
+  "id": "sft_010",
+  "image": "dataset/quiz2/SFT/4.jpg",
+  "history": [],
+  "text": "我買的滑鼠還沒收到，物流停在這個畫面，可以幫我查進度嗎？",
+  "output": {
+    "status": "clarify",
+    "department": null,
+    "product": "滑鼠",
+    "summary": "使用者尚未收到滑鼠，希望查詢配送進度。截圖顯示包裹等待配送中，先前紀錄顯示已到物流中心，尚未顯示到達取件門市。",
+    "missing_fields": ["order_id"],
+    "reply": "截圖顯示包裹目前等待配送，尚未顯示已到取件門市。請提供訂單編號，以便協助查詢配送進度。"
+  }
+},
+{
+  "id": "sft_011",
+  "image": "dataset/quiz2/SFT/4.jpg",
+  "history": [
+    {
+      "role": "user",
+      "content": "我買的滑鼠還沒收到，物流停在這個畫面，可以幫我查進度嗎？"
+    },
+    {
+      "role": "assistant",
+      "content": "截圖顯示包裹目前等待配送，尚未顯示已到取件門市。請提供訂單編號，以便協助查詢配送進度。"
+    }
+  ],
+  "text": "訂單編號是TEST-004，我想知道包裹目前送到哪裡。",
+  "output": {
+    "status": "clarify",
+    "department": null,
+    "product": "滑鼠",
+    "summary": "使用者提供訂單編號TEST-004，尚未收到滑鼠，截圖顯示包裹等待配送中，希望查詢實際配送進度與位置。",
+    "missing_fields": ["confirmation"],
+    "reply": "確認一下，您想查詢訂單TEST-004的滑鼠包裹，目前截圖顯示等待配送，您希望了解實際配送進度與位置，以上正確嗎？"
+  }
+},
+{
+  "id": "sft_012",
+  "image": "dataset/quiz2/SFT/4.jpg",
+  "history": [
+    {
+      "role": "user",
+      "content": "我買的滑鼠還沒收到，物流停在這個畫面，可以幫我查進度嗎？"
+    },
+    {
+      "role": "assistant",
+      "content": "截圖顯示包裹目前等待配送，尚未顯示已到取件門市。請提供訂單編號，以便協助查詢配送進度。"
+    },
+    {
+      "role": "user",
+      "content": "訂單編號是TEST-004，我想知道包裹目前送到哪裡。"
+    },
+    {
+      "role": "assistant",
+      "content": "確認一下，您想查詢訂單TEST-004的滑鼠包裹，目前截圖顯示等待配送，您希望了解實際配送進度與位置，以上正確嗎？"
+    }
+  ],
+  "text": "對，麻煩幫我確認。",
+  "output": {
+    "status": "route",
+    "department": "order_logistics",
+    "product": "滑鼠",
+    "summary": "使用者已確認希望查詢訂單TEST-004的滑鼠包裹配送進度與位置，截圖顯示包裹等待配送中，尚未顯示到達取件門市。",
+    "missing_fields": [],
+    "reply": "了解，接下來由物流與訂單部門協助查詢訂單TEST-004的實際配送進度與包裹位置。"
+  }
+},
+{
+  "id": "sft_013",
+  "image": "dataset/quiz2/SFT/5.jpg",
+  "history": [],
+  "text": "我剛收到手機，打開就看到螢幕變成這樣，請問怎麼處理？",
+  "output": {
+    "status": "clarify",
+    "department": null,
+    "product": "手機",
+    "summary": "使用者表示剛收到手機就發現螢幕破裂，照片可見多處裂痕，尚未說明希望退貨、換貨或尋求其他協助。",
+    "missing_fields": ["requested_action"],
+    "reply": "照片中可見手機螢幕有多處裂痕，您表示收到時就已破裂。請問您希望申請退貨、換貨，還是先了解維修處理方式？"
+  }
+},
+{
+  "id": "sft_014",
+  "image": "dataset/quiz2/SFT/5.jpg",
+  "history": [
+    {
+      "role": "user",
+      "content": "我剛收到手機，打開就看到螢幕變成這樣，請問怎麼處理？"
+    },
+    {
+      "role": "assistant",
+      "content": "照片中可見手機螢幕有多處裂痕，您表示收到時就已破裂。請問您希望申請退貨、換貨，還是先了解維修處理方式？"
+    }
+  ],
+  "text": "我想退貨，不想換另一支。",
+  "output": {
+    "status": "clarify",
+    "department": null,
+    "product": "手機",
+    "summary": "使用者表示手機收到時螢幕已破裂，希望申請退貨，不希望換貨。",
+    "missing_fields": ["confirmation"],
+    "reply": "確認一下，您表示手機收到時螢幕就已破裂，希望申請退貨，而不是換貨，以上正確嗎？"
+  }
+},
+{
+  "id": "sft_015",
+  "image": "dataset/quiz2/SFT/5.jpg",
+  "history": [
+    {
+      "role": "user",
+      "content": "我剛收到手機，打開就看到螢幕變成這樣，請問怎麼處理？"
+    },
+    {
+      "role": "assistant",
+      "content": "照片中可見手機螢幕有多處裂痕，您表示收到時就已破裂。請問您希望申請退貨、換貨，還是先了解維修處理方式？"
+    },
+    {
+      "role": "user",
+      "content": "我想退貨，不想換另一支。"
+    },
+    {
+      "role": "assistant",
+      "content": "確認一下，您表示手機收到時螢幕就已破裂，希望申請退貨，而不是換貨，以上正確嗎？"
+    }
+  ],
+  "text": "沒錯，我要退貨。",
+  "output": {
+    "status": "route",
+    "department": "returns",
+    "product": "手機",
+    "summary": "使用者已確認：手機收到時螢幕已破裂，希望申請退貨，不希望換貨。",
+    "missing_fields": [],
+    "reply": "了解，您的需求是申請手機退貨，接下來由退換貨部門協助核對訂單與退貨申請條件。"
+  }
+}  
+]

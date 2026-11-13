@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["status", "department", "product", "summary", "missing_fields", "reply"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["clarify", "route", "off_topic", "blocked", "human"]
+    },
+    "department": {
+      "enum": ["order_logistics", "returns", "technical_support", null]
+    },
+    "product": {
+      "type": ["string", "null"]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "reply": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"status": {"const": "route"}}
+      },
+      "then": {
+        "properties": {
+          "department": {
+            "enum": ["order_logistics", "returns", "technical_support"]
+          },
+          "missing_fields": {"maxItems": 0}
+        }
+      },
+      "else": {
+        "properties": {"department": {"const": null}}
+      }
+    }
+  ]
+}
