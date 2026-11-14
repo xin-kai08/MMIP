@@ -1,0 +1,426 @@
+{
+  "format_version": 2,
+  "mode": "real_sft",
+  "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "adapter_dir": "/root/MMIP/week9/result/quiz2/B_sft_training_1794639692881206896/adapter",
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "status",
+      "department",
+      "product",
+      "summary",
+      "missing_fields",
+      "reply"
+    ],
+    "properties": {
+      "status": {
+        "type": "string",
+        "enum": [
+          "clarify",
+          "route",
+          "off_topic",
+          "blocked",
+          "human"
+        ]
+      },
+      "department": {
+        "enum": [
+          "order_logistics",
+          "returns",
+          "technical_support",
+          null
+        ]
+      },
+      "product": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "summary": {
+        "type": "string"
+      },
+      "missing_fields": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uniqueItems": true
+      },
+      "reply": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "allOf": [
+      {
+        "if": {
+          "properties": {
+            "status": {
+              "const": "route"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "department": {
+              "enum": [
+                "order_logistics",
+                "returns",
+                "technical_support"
+              ]
+            },
+            "missing_fields": {
+              "maxItems": 0
+            }
+          }
+        },
+        "else": {
+          "properties": {
+            "department": {
+              "const": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  "facts_schema": {
+    "type": "object",
+    "properties": {
+      "product": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "problem": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "requested_action": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "order_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "clarification_question": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "department": {
+        "enum": [
+          "returns",
+          "technical_support",
+          "order_logistics",
+          null
+        ]
+      },
+      "needs_clarification": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "product",
+      "problem",
+      "requested_action",
+      "order_id",
+      "department",
+      "needs_clarification",
+      "clarification_question"
+    ],
+    "additionalProperties": false
+  },
+  "facts": {
+    "product": "Razer BlackWidow V3",
+    "problem": "壞了",
+    "requested_action": "退貨",
+    "order_id": "20261114",
+    "clarification_question": "請確認是否收到同款新品",
+    "department": "returns",
+    "needs_clarification": true
+  },
+  "pending_summary": null,
+  "confirmed": false,
+  "routed": false,
+  "revision": 3,
+  "settings": {
+    "decoding": "prompt",
+    "max_new_tokens": 320,
+    "max_seconds": 35.0,
+    "max_input_tokens": 12000,
+    "max_images": 6
+  },
+  "confirmation_mode": "explicit_summary_id",
+  "messages": [
+    {
+      "role": "user",
+      "text": "我收到的鍵盤壞了，我想換成同款新品。",
+      "image": "001.png",
+      "case_context": true
+    },
+    {
+      "role": "assistant",
+      "text": "請提供訂單編號，以便後續查詢。 請確認是否收到同款新品",
+      "case_context": true
+    },
+    {
+      "role": "user",
+      "text": "20261114",
+      "image": null,
+      "case_context": true
+    },
+    {
+      "role": "assistant",
+      "text": "請確認是否收到同款新品",
+      "case_context": true
+    },
+    {
+      "role": "user",
+      "text": "我不要換貨，我要退貨",
+      "image": null,
+      "case_context": true
+    },
+    {
+      "role": "assistant",
+      "text": "請確認是否收到同款新品",
+      "case_context": true
+    }
+  ],
+  "turns": [
+    {
+      "event": "message",
+      "text": "我收到的鍵盤壞了，我想換成同款新品。",
+      "image": "001.png",
+      "timestamp": "2026-11-14T13:58:16.385335+00:00",
+      "state_before": {
+        "product": null,
+        "problem": null,
+        "requested_action": null,
+        "order_id": null,
+        "department": null,
+        "needs_clarification": true,
+        "clarification_question": null
+      },
+      "pending_before": null,
+      "classification": {
+        "selected_label": "A",
+        "candidate_probabilities": {
+          "A": 0.8385518193244934,
+          "B": 0.07559773325920105,
+          "C": 0.03627219423651695,
+          "D": 0.04957820475101471
+        },
+        "note": "候選間相對機率，未校準；不是安全性保證。"
+      },
+      "turn_kind": "case",
+      "extraction_raw": "{\n  \"product\": \"Razer BlackWidow V3\",\n  \"problem\": \"壞了\",\n  \"requested_action\": \"換新的\",\n  \"order_id\": \"123456789\",\n  \"department\": \"returns\",\n  \"needs_clarification\": true,\n  \"clarification_question\": \"請確認是否收到同款新品\"\n}",
+      "extraction_trace": {
+        "decoding": "prompt",
+        "preprocess_seconds": 0.41321794083341956,
+        "input_tokens": 990,
+        "output_tokens": 81,
+        "last_token_id": 151645,
+        "generation_seconds": 4.725111851934344,
+        "limit_reached": false,
+        "unsupported_order_id": "123456789"
+      },
+      "content_raw": null,
+      "content_generation_used": false,
+      "error": null,
+      "error_stage": null,
+      "classification_seconds": 0.38521870505064726,
+      "normalizations": [
+        {
+          "field": "order_id",
+          "from": "123456789",
+          "to": null,
+          "reason": "使用者案件訊息中未提供此編號"
+        }
+      ],
+      "elapsed_seconds": 5.647052377928048,
+      "final_output": {
+        "status": "clarify",
+        "department": null,
+        "product": "Razer BlackWidow V3",
+        "summary": "商品：Razer BlackWidow V3；問題：壞了；需求：換新的",
+        "missing_fields": [
+          "order_id",
+          "clarification"
+        ],
+        "reply": "請提供訂單編號，以便後續查詢。 請確認是否收到同款新品"
+      },
+      "state_after": {
+        "product": "Razer BlackWidow V3",
+        "problem": "壞了",
+        "requested_action": "換新的",
+        "order_id": null,
+        "department": "returns",
+        "needs_clarification": true,
+        "clarification_question": "請確認是否收到同款新品"
+      },
+      "pending_after": null,
+      "confirmed": false,
+      "routed": false
+    },
+    {
+      "event": "message",
+      "text": "20261114",
+      "image": null,
+      "timestamp": "2026-11-14T13:59:08.388244+00:00",
+      "state_before": {
+        "product": "Razer BlackWidow V3",
+        "problem": "壞了",
+        "requested_action": "換新的",
+        "order_id": null,
+        "department": "returns",
+        "needs_clarification": true,
+        "clarification_question": "請確認是否收到同款新品"
+      },
+      "pending_before": null,
+      "classification": {
+        "selected_label": "A",
+        "candidate_probabilities": {
+          "A": 0.7866681218147278,
+          "B": 0.10158861428499222,
+          "C": 0.06066133454442024,
+          "D": 0.05108196660876274
+        },
+        "note": "候選間相對機率，未校準；不是安全性保證。"
+      },
+      "turn_kind": "case",
+      "extraction_raw": "```json\n{\n  \"product\": \"Razer BlackWidow V3\",\n  \"problem\": \"壞了\",\n  \"requested_action\": \"換新的\",\n  \"order_id\": \"20261114\",\n  \"clarification_question\": \"請確認是否收到同款新品\",\n  \"department\": \"returns\",\n  \"needs_clarification\": true\n}\n```",
+      "extraction_trace": {
+        "decoding": "prompt",
+        "preprocess_seconds": 0.015950521919876337,
+        "input_tokens": 1031,
+        "output_tokens": 84,
+        "last_token_id": 151645,
+        "generation_seconds": 4.819055517204106,
+        "limit_reached": false
+      },
+      "content_raw": null,
+      "content_generation_used": false,
+      "error": null,
+      "error_stage": null,
+      "classification_seconds": 0.10709414212033153,
+      "normalizations": [
+        {
+          "field": "extraction_format",
+          "from": "markdown_code_block",
+          "to": "json"
+        }
+      ],
+      "elapsed_seconds": 4.9447160409763455,
+      "final_output": {
+        "status": "clarify",
+        "department": null,
+        "product": "Razer BlackWidow V3",
+        "summary": "商品：Razer BlackWidow V3；問題：壞了；需求：換新的；訂單編號：20261114",
+        "missing_fields": [
+          "clarification"
+        ],
+        "reply": "請確認是否收到同款新品"
+      },
+      "state_after": {
+        "product": "Razer BlackWidow V3",
+        "problem": "壞了",
+        "requested_action": "換新的",
+        "order_id": "20261114",
+        "clarification_question": "請確認是否收到同款新品",
+        "department": "returns",
+        "needs_clarification": true
+      },
+      "pending_after": null,
+      "confirmed": false,
+      "routed": false
+    },
+    {
+      "event": "message",
+      "text": "我不要換貨，我要退貨",
+      "image": null,
+      "timestamp": "2026-11-14T13:59:37.204482+00:00",
+      "state_before": {
+        "product": "Razer BlackWidow V3",
+        "problem": "壞了",
+        "requested_action": "換新的",
+        "order_id": "20261114",
+        "clarification_question": "請確認是否收到同款新品",
+        "department": "returns",
+        "needs_clarification": true
+      },
+      "pending_before": null,
+      "classification": {
+        "selected_label": "A",
+        "candidate_probabilities": {
+          "A": 0.7843932509422302,
+          "B": 0.0936824157834053,
+          "C": 0.06048591434955597,
+          "D": 0.0614384263753891
+        },
+        "note": "候選間相對機率，未校準；不是安全性保證。"
+      },
+      "turn_kind": "case",
+      "extraction_raw": "```json\n{\n  \"product\": \"Razer BlackWidow V3\",\n  \"problem\": \"壞了\",\n  \"requested_action\": \"退貨\",\n  \"order_id\": \"20261114\",\n  \"clarification_question\": \"請確認是否收到同款新品\",\n  \"department\": \"returns\",\n  \"needs_clarification\": true\n}\n```",
+      "extraction_trace": {
+        "decoding": "prompt",
+        "preprocess_seconds": 0.017077278345823288,
+        "input_tokens": 1060,
+        "output_tokens": 84,
+        "last_token_id": 151645,
+        "generation_seconds": 4.894478009082377,
+        "limit_reached": false
+      },
+      "content_raw": null,
+      "content_generation_used": false,
+      "error": null,
+      "error_stage": null,
+      "classification_seconds": 0.10453169979155064,
+      "normalizations": [
+        {
+          "field": "extraction_format",
+          "from": "markdown_code_block",
+          "to": "json"
+        }
+      ],
+      "elapsed_seconds": 5.018690675031394,
+      "final_output": {
+        "status": "clarify",
+        "department": null,
+        "product": "Razer BlackWidow V3",
+        "summary": "商品：Razer BlackWidow V3；問題：壞了；需求：退貨；訂單編號：20261114",
+        "missing_fields": [
+          "clarification"
+        ],
+        "reply": "請確認是否收到同款新品"
+      },
+      "state_after": {
+        "product": "Razer BlackWidow V3",
+        "problem": "壞了",
+        "requested_action": "退貨",
+        "order_id": "20261114",
+        "clarification_question": "請確認是否收到同款新品",
+        "department": "returns",
+        "needs_clarification": true
+      },
+      "pending_after": null,
+      "confirmed": false,
+      "routed": false
+    }
+  ],
+  "architecture": "SFT + candidate scoring + flat extraction + deterministic workflow"
+}

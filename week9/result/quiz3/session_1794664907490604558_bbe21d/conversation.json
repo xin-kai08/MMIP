@@ -1,0 +1,635 @@
+{
+  "format_version": 2,
+  "mode": "real_sft",
+  "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "adapter_dir": "/root/MMIP/week9/result/quiz2/B_sft_training_1794639692881206896/adapter",
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "status",
+      "department",
+      "product",
+      "summary",
+      "missing_fields",
+      "reply"
+    ],
+    "properties": {
+      "status": {
+        "type": "string",
+        "enum": [
+          "clarify",
+          "route",
+          "off_topic",
+          "blocked",
+          "human"
+        ]
+      },
+      "department": {
+        "enum": [
+          "order_logistics",
+          "returns",
+          "technical_support",
+          null
+        ]
+      },
+      "product": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "summary": {
+        "type": "string"
+      },
+      "missing_fields": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uniqueItems": true
+      },
+      "reply": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "allOf": [
+      {
+        "if": {
+          "properties": {
+            "status": {
+              "const": "route"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "department": {
+              "enum": [
+                "order_logistics",
+                "returns",
+                "technical_support"
+              ]
+            },
+            "missing_fields": {
+              "maxItems": 0
+            }
+          }
+        },
+        "else": {
+          "properties": {
+            "department": {
+              "const": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  "facts_schema": {
+    "type": "object",
+    "properties": {
+      "product": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "problem": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "requested_action": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "order_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "clarification_question": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "department": {
+        "enum": [
+          "returns",
+          "technical_support",
+          "order_logistics",
+          null
+        ]
+      },
+      "needs_clarification": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "product",
+      "problem",
+      "requested_action",
+      "order_id",
+      "department",
+      "needs_clarification",
+      "clarification_question"
+    ],
+    "additionalProperties": false
+  },
+  "facts": {
+    "product": "Razer BlackWidow V3",
+    "problem": "空白鍵按下去沒有反應",
+    "requested_action": "退貨",
+    "order_id": "20261114",
+    "clarification_question": null,
+    "department": "returns",
+    "needs_clarification": false
+  },
+  "pending_summary": null,
+  "confirmed": true,
+  "routed": true,
+  "revision": 5,
+  "settings": {
+    "decoding": "prompt",
+    "max_new_tokens": 320,
+    "max_seconds": 35.0,
+    "max_input_tokens": 12000,
+    "max_images": 6
+  },
+  "confirmation_mode": "explicit_summary_id",
+  "messages": [
+    {
+      "role": "user",
+      "text": "這是我收到的鍵盤，空白鍵按下去沒有反應，我想換成同款新品",
+      "image": "001.png",
+      "case_context": true
+    },
+    {
+      "role": "assistant",
+      "text": "請提供訂單編號，以便後續查詢。 請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。",
+      "case_context": true
+    },
+    {
+      "role": "user",
+      "text": "20261114",
+      "image": null,
+      "case_context": true
+    },
+    {
+      "role": "assistant",
+      "text": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。",
+      "case_context": true
+    },
+    {
+      "role": "user",
+      "text": "已重新連接，也換過另一台電腦測試，空白鍵仍沒有反應。",
+      "image": null,
+      "case_context": true
+    },
+    {
+      "role": "assistant",
+      "text": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。",
+      "case_context": true
+    },
+    {
+      "role": "user",
+      "text": "我改變主意了，不要換貨，我想申請退貨。",
+      "image": null,
+      "case_context": true
+    },
+    {
+      "role": "assistant",
+      "text": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。",
+      "case_context": true
+    },
+    {
+      "role": "user",
+      "text": "我已核對目前商品、問題、處理需求及訂單資料，結束此追問並整理摘要。",
+      "image": null,
+      "case_context": true
+    },
+    {
+      "role": "assistant",
+      "text": "您已核對目前案件資料。請確認案件摘要：商品：Razer BlackWidow V3；問題：空白鍵按下去沒有反應；需求：退貨；訂單編號：20261114。若正確，請按「確認摘要」；如需修改，請直接告訴我。",
+      "case_context": false
+    },
+    {
+      "role": "user",
+      "text": "確認以上案件摘要正確。",
+      "image": null
+    },
+    {
+      "role": "assistant",
+      "text": "已確認案件摘要，下一步應由退換貨部門協助。此為展示分流，尚未建立實際工單。",
+      "case_context": false
+    }
+  ],
+  "turns": [
+    {
+      "event": "message",
+      "text": "這是我收到的鍵盤，空白鍵按下去沒有反應，我想換成同款新品",
+      "image": "001.png",
+      "timestamp": "2026-11-14T14:02:27.526707+00:00",
+      "state_before": {
+        "product": null,
+        "problem": null,
+        "requested_action": null,
+        "order_id": null,
+        "department": null,
+        "needs_clarification": true,
+        "clarification_question": null
+      },
+      "pending_before": null,
+      "classification": {
+        "selected_label": "A",
+        "candidate_probabilities": {
+          "A": 0.8581345081329346,
+          "B": 0.0641363188624382,
+          "C": 0.03224977105855942,
+          "D": 0.045479461550712585
+        },
+        "note": "候選間相對機率，未校準；不是安全性保證。"
+      },
+      "turn_kind": "case",
+      "extraction_raw": "```json\n{\n  \"product\": \"Razer BlackWidow V3\",\n  \"problem\": \"空白鍵按下去沒有反應\",\n  \"requested_action\": \"換一個\",\n  \"order_id\": \"123456789\",\n  \"department\": \"returns\",\n  \"needs_clarification\": true,\n  \"clarification_question\": \"請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。\"\n}\n```",
+      "extraction_trace": {
+        "decoding": "prompt",
+        "preprocess_seconds": 0.31001175893470645,
+        "input_tokens": 996,
+        "output_tokens": 103,
+        "last_token_id": 151645,
+        "generation_seconds": 5.886551509145647,
+        "limit_reached": false,
+        "unsupported_order_id": "123456789"
+      },
+      "content_raw": null,
+      "content_generation_used": false,
+      "error": null,
+      "error_stage": null,
+      "classification_seconds": 0.3523401068523526,
+      "normalizations": [
+        {
+          "field": "extraction_format",
+          "from": "markdown_code_block",
+          "to": "json"
+        },
+        {
+          "field": "order_id",
+          "from": "123456789",
+          "to": null,
+          "reason": "使用者案件訊息中未提供此編號"
+        }
+      ],
+      "elapsed_seconds": 6.575939619913697,
+      "final_output": {
+        "status": "clarify",
+        "department": null,
+        "product": "Razer BlackWidow V3",
+        "summary": "商品：Razer BlackWidow V3；問題：空白鍵按下去沒有反應；需求：換一個",
+        "missing_fields": [
+          "order_id",
+          "clarification"
+        ],
+        "reply": "請提供訂單編號，以便後續查詢。 請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。"
+      },
+      "state_after": {
+        "product": "Razer BlackWidow V3",
+        "problem": "空白鍵按下去沒有反應",
+        "requested_action": "換一個",
+        "order_id": null,
+        "department": "returns",
+        "needs_clarification": true,
+        "clarification_question": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。"
+      },
+      "pending_after": null,
+      "confirmed": false,
+      "routed": false
+    },
+    {
+      "event": "message",
+      "text": "20261114",
+      "image": null,
+      "timestamp": "2026-11-14T14:02:40.895372+00:00",
+      "state_before": {
+        "product": "Razer BlackWidow V3",
+        "problem": "空白鍵按下去沒有反應",
+        "requested_action": "換一個",
+        "order_id": null,
+        "department": "returns",
+        "needs_clarification": true,
+        "clarification_question": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。"
+      },
+      "pending_before": null,
+      "classification": {
+        "selected_label": "A",
+        "candidate_probabilities": {
+          "A": 0.7908275127410889,
+          "B": 0.09898368269205093,
+          "C": 0.0555248036980629,
+          "D": 0.05466397479176521
+        },
+        "note": "候選間相對機率，未校準；不是安全性保證。"
+      },
+      "turn_kind": "case",
+      "extraction_raw": "```json\n{\n  \"product\": \"Razer BlackWidow V3\",\n  \"problem\": \"空白鍵按下去沒有反應\",\n  \"requested_action\": \"換一個\",\n  \"order_id\": \"20261114\",\n  \"department\": \"returns\",\n  \"needs_clarification\": true,\n  \"clarification_question\": \"請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。\"\n}\n```",
+      "extraction_trace": {
+        "decoding": "prompt",
+        "preprocess_seconds": 0.29722269997000694,
+        "input_tokens": 1055,
+        "output_tokens": 102,
+        "last_token_id": 151645,
+        "generation_seconds": 6.045977561734617,
+        "limit_reached": false
+      },
+      "content_raw": null,
+      "content_generation_used": false,
+      "error": null,
+      "error_stage": null,
+      "classification_seconds": 0.1005510832183063,
+      "normalizations": [
+        {
+          "field": "extraction_format",
+          "from": "markdown_code_block",
+          "to": "json"
+        }
+      ],
+      "elapsed_seconds": 6.528193006757647,
+      "final_output": {
+        "status": "clarify",
+        "department": null,
+        "product": "Razer BlackWidow V3",
+        "summary": "商品：Razer BlackWidow V3；問題：空白鍵按下去沒有反應；需求：換一個；訂單編號：20261114",
+        "missing_fields": [
+          "clarification"
+        ],
+        "reply": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。"
+      },
+      "state_after": {
+        "product": "Razer BlackWidow V3",
+        "problem": "空白鍵按下去沒有反應",
+        "requested_action": "換一個",
+        "order_id": "20261114",
+        "department": "returns",
+        "needs_clarification": true,
+        "clarification_question": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。"
+      },
+      "pending_after": null,
+      "confirmed": false,
+      "routed": false
+    },
+    {
+      "event": "message",
+      "text": "已重新連接，也換過另一台電腦測試，空白鍵仍沒有反應。",
+      "image": null,
+      "timestamp": "2026-11-14T14:03:54.545744+00:00",
+      "state_before": {
+        "product": "Razer BlackWidow V3",
+        "problem": "空白鍵按下去沒有反應",
+        "requested_action": "換一個",
+        "order_id": "20261114",
+        "department": "returns",
+        "needs_clarification": true,
+        "clarification_question": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。"
+      },
+      "pending_before": null,
+      "classification": {
+        "selected_label": "A",
+        "candidate_probabilities": {
+          "A": 0.8236686587333679,
+          "B": 0.08283853530883789,
+          "C": 0.0416538268327713,
+          "D": 0.05183903127908707
+        },
+        "note": "候選間相對機率，未校準；不是安全性保證。"
+      },
+      "turn_kind": "case",
+      "extraction_raw": "```json\n{\n  \"product\": \"Razer BlackWidow V3\",\n  \"problem\": \"空白鍵按下去沒有反應\",\n  \"requested_action\": \"換一個\",\n  \"order_id\": \"20261114\",\n  \"clarification_question\": \"請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。\",\n  \"department\": \"returns\",\n  \"needs_clarification\": true\n}\n```",
+      "extraction_trace": {
+        "decoding": "prompt",
+        "preprocess_seconds": 0.20361540978774428,
+        "input_tokens": 1097,
+        "output_tokens": 101,
+        "last_token_id": 151645,
+        "generation_seconds": 5.688691363204271,
+        "limit_reached": false
+      },
+      "content_raw": null,
+      "content_generation_used": false,
+      "error": null,
+      "error_stage": null,
+      "classification_seconds": 0.10066094482317567,
+      "normalizations": [
+        {
+          "field": "extraction_format",
+          "from": "markdown_code_block",
+          "to": "json"
+        }
+      ],
+      "elapsed_seconds": 6.082143726758659,
+      "final_output": {
+        "status": "clarify",
+        "department": null,
+        "product": "Razer BlackWidow V3",
+        "summary": "商品：Razer BlackWidow V3；問題：空白鍵按下去沒有反應；需求：換一個；訂單編號：20261114",
+        "missing_fields": [
+          "clarification"
+        ],
+        "reply": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。"
+      },
+      "state_after": {
+        "product": "Razer BlackWidow V3",
+        "problem": "空白鍵按下去沒有反應",
+        "requested_action": "換一個",
+        "order_id": "20261114",
+        "clarification_question": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。",
+        "department": "returns",
+        "needs_clarification": true
+      },
+      "pending_after": null,
+      "confirmed": false,
+      "routed": false
+    },
+    {
+      "event": "message",
+      "text": "我改變主意了，不要換貨，我想申請退貨。",
+      "image": null,
+      "timestamp": "2026-11-14T14:04:31.822622+00:00",
+      "state_before": {
+        "product": "Razer BlackWidow V3",
+        "problem": "空白鍵按下去沒有反應",
+        "requested_action": "換一個",
+        "order_id": "20261114",
+        "clarification_question": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。",
+        "department": "returns",
+        "needs_clarification": true
+      },
+      "pending_before": null,
+      "classification": {
+        "selected_label": "A",
+        "candidate_probabilities": {
+          "A": 0.8149988651275635,
+          "B": 0.09582865238189697,
+          "C": 0.043193355202674866,
+          "D": 0.0459790900349617
+        },
+        "note": "候選間相對機率，未校準；不是安全性保證。"
+      },
+      "turn_kind": "case",
+      "extraction_raw": "{\n  \"product\": \"Razer BlackWidow V3\",\n  \"problem\": \"空白鍵按下去沒有反應\",\n  \"requested_action\": \"退貨\",\n  \"order_id\": \"20261114\",\n  \"clarification_question\": \"請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。\",\n  \"department\": \"returns\",\n  \"needs_clarification\": true\n}",
+      "extraction_trace": {
+        "decoding": "prompt",
+        "preprocess_seconds": 0.30909340595826507,
+        "input_tokens": 1124,
+        "output_tokens": 97,
+        "last_token_id": 151645,
+        "generation_seconds": 6.367822661995888,
+        "limit_reached": false
+      },
+      "content_raw": null,
+      "content_generation_used": false,
+      "error": null,
+      "error_stage": null,
+      "classification_seconds": 0.11081027425825596,
+      "normalizations": [],
+      "elapsed_seconds": 6.82594380993396,
+      "final_output": {
+        "status": "clarify",
+        "department": null,
+        "product": "Razer BlackWidow V3",
+        "summary": "商品：Razer BlackWidow V3；問題：空白鍵按下去沒有反應；需求：退貨；訂單編號：20261114",
+        "missing_fields": [
+          "clarification"
+        ],
+        "reply": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。"
+      },
+      "state_after": {
+        "product": "Razer BlackWidow V3",
+        "problem": "空白鍵按下去沒有反應",
+        "requested_action": "退貨",
+        "order_id": "20261114",
+        "clarification_question": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。",
+        "department": "returns",
+        "needs_clarification": true
+      },
+      "pending_after": null,
+      "confirmed": false,
+      "routed": false
+    },
+    {
+      "event": "resolve_clarification",
+      "revision": 4,
+      "question": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。",
+      "resolution_source": "explicit_user_review",
+      "state_before": {
+        "product": "Razer BlackWidow V3",
+        "problem": "空白鍵按下去沒有反應",
+        "requested_action": "退貨",
+        "order_id": "20261114",
+        "clarification_question": "請確認是否檢查了接收器的收納位置，以及是否已經確認包裹到店。",
+        "department": "returns",
+        "needs_clarification": true
+      },
+      "pending_before": null,
+      "timestamp": "2026-11-14T14:05:04.993163+00:00",
+      "inference_used": false,
+      "elapsed_seconds": null,
+      "error": null,
+      "final_output": {
+        "status": "clarify",
+        "department": null,
+        "product": "Razer BlackWidow V3",
+        "summary": "商品：Razer BlackWidow V3；問題：空白鍵按下去沒有反應；需求：退貨；訂單編號：20261114",
+        "missing_fields": [
+          "confirmation"
+        ],
+        "reply": "您已核對目前案件資料。請確認案件摘要：商品：Razer BlackWidow V3；問題：空白鍵按下去沒有反應；需求：退貨；訂單編號：20261114。若正確，請按「確認摘要」；如需修改，請直接告訴我。"
+      },
+      "state_after": {
+        "product": "Razer BlackWidow V3",
+        "problem": "空白鍵按下去沒有反應",
+        "requested_action": "退貨",
+        "order_id": "20261114",
+        "clarification_question": null,
+        "department": "returns",
+        "needs_clarification": false
+      },
+      "pending_after": {
+        "id": "56b09d7f46ed42caa6d50446e578191a",
+        "revision": 5,
+        "summary": "商品：Razer BlackWidow V3；問題：空白鍵按下去沒有反應；需求：退貨；訂單編號：20261114",
+        "facts": {
+          "product": "Razer BlackWidow V3",
+          "problem": "空白鍵按下去沒有反應",
+          "requested_action": "退貨",
+          "order_id": "20261114",
+          "clarification_question": null,
+          "department": "returns",
+          "needs_clarification": false
+        }
+      },
+      "confirmed": false,
+      "routed": false
+    },
+    {
+      "event": "confirm_summary",
+      "summary_id": "56b09d7f46ed42caa6d50446e578191a",
+      "state_before": {
+        "product": "Razer BlackWidow V3",
+        "problem": "空白鍵按下去沒有反應",
+        "requested_action": "退貨",
+        "order_id": "20261114",
+        "clarification_question": null,
+        "department": "returns",
+        "needs_clarification": false
+      },
+      "pending_before": {
+        "id": "56b09d7f46ed42caa6d50446e578191a",
+        "revision": 5,
+        "summary": "商品：Razer BlackWidow V3；問題：空白鍵按下去沒有反應；需求：退貨；訂單編號：20261114",
+        "facts": {
+          "product": "Razer BlackWidow V3",
+          "problem": "空白鍵按下去沒有反應",
+          "requested_action": "退貨",
+          "order_id": "20261114",
+          "clarification_question": null,
+          "department": "returns",
+          "needs_clarification": false
+        }
+      },
+      "timestamp": "2026-11-14T14:05:18.998228+00:00",
+      "inference_used": false,
+      "elapsed_seconds": null,
+      "error": null,
+      "final_output": {
+        "status": "route",
+        "department": "returns",
+        "product": "Razer BlackWidow V3",
+        "summary": "商品：Razer BlackWidow V3；問題：空白鍵按下去沒有反應；需求：退貨；訂單編號：20261114",
+        "missing_fields": [],
+        "reply": "已確認案件摘要，下一步應由退換貨部門協助。此為展示分流，尚未建立實際工單。"
+      },
+      "state_after": {
+        "product": "Razer BlackWidow V3",
+        "problem": "空白鍵按下去沒有反應",
+        "requested_action": "退貨",
+        "order_id": "20261114",
+        "clarification_question": null,
+        "department": "returns",
+        "needs_clarification": false
+      },
+      "pending_after": null,
+      "confirmed": true,
+      "routed": true
+    }
+  ],
+  "architecture": "SFT + candidate scoring + flat extraction + deterministic workflow"
+}

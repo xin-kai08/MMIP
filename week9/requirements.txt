@@ -1,0 +1,32 @@
+# Shared dependencies for Quiz 2 A/B/C/D, Quiz 3, app.py and main.ipynb.
+# Target environment is Linux x86_64 with an NVIDIA GPU and CUDA 11.8 wheels.
+# Core versions follow the project's previously used configuration.
+# Other dependencies use bounded version ranges, so this is not a full lockfile.
+# Install with the project's Python environment from the project root.
+# python -m pip install -r requirements.txt
+
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+# GPU runtime and Qwen image preprocessing
+torch==2.6.0+cu118
+torchvision==0.21.0+cu118
+
+# Qwen inference, Trainer, and LoRA training/loading
+transformers==4.57.1
+accelerate>=0.34.0,<2
+peft==0.17.1
+
+# Quiz 2 C constrained decoding and related regression tests
+lm-format-enforcer==0.11.3
+
+# Benchmark summaries, images, and JSON Schema validation
+pandas>=2.2,<3
+Pillow>=10,<13
+jsonschema>=4.20,<5
+
+# Quiz 3 chat interface
+streamlit>=1.40,<2
+
+# VS Code / Jupyter Notebook kernel and IPython.display
+ipykernel>=6.29,<8
+ipython>=8.18,<10
