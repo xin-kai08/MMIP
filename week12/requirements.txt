@@ -1,0 +1,8 @@
+httpx>=0.28,<1
+python-dotenv>=1,<2
+ipykernel>=6
+nbformat>=5
+nbclient>=0.10
+pypdf>=6
+transformers>=4.51,<5
+requests>=2.32.3,<3
