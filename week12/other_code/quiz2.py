@@ -1,10 +1,12 @@
 """Quiz 2 local image tools and the Qwen2.5-VL agent."""
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import subprocess
 import sys
+import tempfile
 import time
 from contextlib import contextmanager
 from pathlib import Path
@@ -18,6 +20,8 @@ ROOT = Path(__file__).resolve().parents[1]
 MODEL_ID = "Qwen/Qwen2.5-VL-3B-Instruct"
 CACHE_DIR = ROOT / ".cache" / "quiz2" / "huggingface"
 RESULT_DIR = ROOT / "result" / "quiz2"
+STITCH_CACHE_DIR = RESULT_DIR / "cache"
+STITCH_MODE = cv2.Stitcher_PANORAMA
 PHOTO_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tif", ".tiff"}
 
 
@@ -28,7 +32,7 @@ def _inside(path, root=ROOT):
     return resolved
 
 
-def download_model():
+def download_model(*, local_only=False):
     """Download the official snapshot with isolated Hub and temporary paths."""
     cache = _inside(CACHE_DIR)
     folders = {name: _inside(cache / suffix, cache) for name, suffix in {
@@ -44,6 +48,8 @@ def download_model():
             if all(_inside(snapshot / name, cache).is_file() for name in
                    shards | {"config.json", "preprocessor_config.json", "tokenizer.json"}):
                 return snapshot
+    if local_only:
+        raise FileNotFoundError("Quiz 2 專用模型快取不完整，無法離線載入")
     for folder in folders.values():
         folder.mkdir(parents=True, exist_ok=True)
     env = os.environ.copy()
@@ -77,6 +83,38 @@ def _relative(path):
     return path.relative_to(ROOT).as_posix()
 
 
+def _stitch_cache_key(frames):
+    settings = {"version": 1, "opencv": cv2.__version__, "mode": STITCH_MODE,
+                "frame_count": len(frames)}
+    digest = hashlib.sha256(json.dumps(settings, sort_keys=True).encode("utf-8"))
+    for frame in frames:
+        # The shape and dtype delimit the bytes of each ordered BGR frame.
+        digest.update(f"\n{frame.shape}:{frame.dtype.str}\n".encode("ascii"))
+        digest.update(memoryview(frame).cast("B"))
+    return digest.hexdigest()
+
+
+def _read_cached_panorama(path):
+    try:
+        with Image.open(path, formats=["PNG"]) as image:
+            return image.convert("RGB")
+    except (OSError, ValueError, SyntaxError, Image.DecompressionBombError):
+        return None
+
+
+def _write_cached_panorama(path, image):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temp = None
+    try:
+        with tempfile.NamedTemporaryFile(dir=path.parent, suffix=".tmp", delete=False) as stream:
+            temp = Path(stream.name)
+            image.save(stream, format="PNG")
+        temp.replace(path)
+    finally:
+        if temp is not None:
+            temp.unlink(missing_ok=True)
+
+
 def make_test_photos():
     """Write a deterministic, textured scene and two overlapping test crops."""
     folder = _project_path("data/quiz2/_synthetic")
@@ -103,9 +141,16 @@ def make_test_photos():
 class ImageTools:
     """Keep intermediate images in one session and save only on request."""
 
-    def __init__(self):
+    def __init__(self, *, stitch_cache=False, cache_namespace=None):
+        if cache_namespace is not None and (
+            not cache_namespace or Path(cache_namespace).name != cache_namespace
+            or cache_namespace in {".", ".."} or "\\" in cache_namespace
+        ):
+            raise ValueError("快取子目錄須為單一目錄名稱")
         self._files = {}
         self._images = {}
+        self.stitch_cache = stitch_cache
+        self._cache_namespace = cache_namespace
 
     def register_photo(self, path):
         photo = _project_path(path)
@@ -162,24 +207,49 @@ class ImageTools:
 
     def stitch_images(self, image_ids):
         """Find overlapping features and stitch a panorama with OpenCV."""
+        info = {"cache_status": "off", "opencv_executed": False}
+        if self.stitch_cache:
+            info["cache_status"] = "not_checked"
         if not isinstance(image_ids, list) or len(image_ids) < 2 or len(set(image_ids)) != len(image_ids):
-            return {"ok": False, "error": "拼接需要至少兩張不同的照片"}
-        frames = [cv2.cvtColor(np.asarray(self.image(image_id)), cv2.COLOR_RGB2BGR)
-                  for image_id in image_ids]
+            return {**info, "ok": False, "error": "拼接需要至少兩張不同的照片"}
+        frames = [np.ascontiguousarray(np.asarray(self.image(image_id))[:, :, ::-1])
+                  for image_id in image_ids]  # RGB -> OpenCV BGR, also on a hit
+        cache_path = None
+        if self.stitch_cache:
+            directory = _inside(STITCH_CACHE_DIR)
+            if self._cache_namespace is not None:
+                directory = _inside(directory / self._cache_namespace, directory)
+            key = _stitch_cache_key(frames)
+            cache_path = directory / f"{key}.png"
+            if cache_path.is_symlink():
+                raise ValueError("拼接快取檔不得是符號連結")
+            info.update(cache_status="miss", cache_key=key)
+            cached = _read_cached_panorama(cache_path)
+            if cached is not None:
+                info.update(cache_status="hit", cache_path=_relative(cache_path))
+                return {**self._remember("panorama", cached), **info,
+                        "source_ids": image_ids, "opencv_status": int(cv2.Stitcher_OK)}
+        info["opencv_executed"] = True
         try:
-            status, panorama = cv2.Stitcher_create(cv2.Stitcher_PANORAMA).stitch(frames)
+            status, panorama = cv2.Stitcher_create(STITCH_MODE).stitch(frames)
         except cv2.error as exc:
-            return {"ok": False, "error": f"OpenCV 拼接例外：{exc}"}
+            return {**info, "ok": False, "error": f"OpenCV 拼接例外：{exc}"}
         reasons = {
             cv2.Stitcher_ERR_NEED_MORE_IMGS: "可配對的重疊影像不足",
             cv2.Stitcher_ERR_HOMOGRAPHY_EST_FAIL: "無法估算影像對齊所需的單應矩陣",
             cv2.Stitcher_ERR_CAMERA_PARAMS_ADJUST_FAIL: "相機參數調整失敗",
         }
         if status != cv2.Stitcher_OK or panorama is None or not panorama.size:
-            return {"ok": False, "opencv_status": int(status),
+            return {**info, "ok": False, "opencv_status": int(status),
                     "error": reasons.get(status, "OpenCV 未產生全景影像")}
         image = Image.fromarray(cv2.cvtColor(panorama, cv2.COLOR_BGR2RGB))
-        return {**self._remember("panorama", image), "source_ids": image_ids,
+        if cache_path is not None:
+            try:
+                _write_cached_panorama(cache_path, image)
+                info["cache_path"] = _relative(cache_path)
+            except OSError as exc:
+                info["cache_error"] = f"無法寫入拼接快取：{exc}"
+        return {**self._remember("panorama", image), **info, "source_ids": image_ids,
                 "opencv_status": int(status)}
 
     def save_image(self, image_id, filename="panorama.png"):
@@ -229,14 +299,14 @@ def _local_runtime():
 class QwenVision:
     """Local GPU inference using Qwen's image tokens and chat template."""
 
-    def __init__(self):
+    def __init__(self, *, local_only=False):
         with _local_runtime():
             import torch
             from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 
             if not torch.cuda.is_available():
                 raise RuntimeError("現有 Notebook kernel 未能使用 CUDA")
-            snapshot = download_model()
+            snapshot = download_model(local_only=local_only)
             self.processor = AutoProcessor.from_pretrained(
                 snapshot, local_files_only=True, trust_remote_code=False,
                 min_pixels=56 * 56, max_pixels=448 * 448,
@@ -282,11 +352,12 @@ def _tool_request(reply):
 class ImageAgent:
     """Run a bounded observation, tool action, and feedback loop."""
 
-    def __init__(self, vision, with_local_photos=False, allow_travel=False):
+    def __init__(self, vision, with_local_photos=False, allow_travel=False, *,
+                 stitch_cache=False, cache_namespace=None):
         from .quiz1 import TOOLS as TRAVEL_SCHEMAS, TravelTools
 
         self.vision = vision
-        self.images = ImageTools()
+        self.images = ImageTools(stitch_cache=stitch_cache, cache_namespace=cache_namespace)
         self.travel = TravelTools()
         self.allow_travel = allow_travel
         self.travel_names = {schema["function"]["name"] for schema in TRAVEL_SCHEMAS}
@@ -310,11 +381,15 @@ class ImageAgent:
                 raise ValueError("只能讀取使用者指定的資料夾")
         return getattr(self.images, name)(**args)
 
-    def run(self, instruction, photo_paths=(), folder=None, max_rounds=9):
+    def run(self, instruction, photo_paths=(), folder=None, max_rounds=9, *, prepared_photos=()):
+        """Accept file paths or (name, PIL image) pairs prepared before the run."""
         from .quiz1 import ServiceError, redact
 
         folder = _project_path(folder) if folder is not None else None
         photos = [self.images.register_photo(path) for path in photo_paths]
+        for filename, image in prepared_photos:
+            info = self.images._remember("prepared", image.convert("RGB"))
+            photos.append({"image_id": info["image_id"], "filename": filename})
         frames = {photo["image_id"]: self.images.image(photo["image_id"]) for photo in photos}
         system = (
             "你是繁體中文多模態影像助手。每輪依照圖片與上次的實際工具結果選擇下一個動作。"
