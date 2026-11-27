@@ -1,0 +1,35 @@
+from PIL import Image, ImageDraw, ImageFont
+
+# Open the images
+left_image = Image.open("QUIZ3_LEFT_PATH")
+right_image = Image.open("QUIZ3_RIGHT_PATH")
+panorama_image = Image.open("QUIZ3_PANORAMA_PATH")
+
+# Define the scale factor
+scale_factor = 0.5
+
+# Resize the images
+left_resized = left_image.resize((int(left_image.width * scale_factor), int(left_image.height * scale_factor)))
+right_resized = right_image.resize((int(right_image.width * scale_factor), int(right_image.height * scale_factor)))
+panorama_resized = panorama_image.resize((int(panorama_image.width * scale_factor), int(panorama_image.height * scale_factor)))
+
+# Calculate the canvas dimensions
+canvas_width = left_resized.width + right_resized.width + panorama_resized.width
+canvas_height = max(left_resized.height, right_resized.height, panorama_resized.height) + 40
+
+# Create the canvas
+canvas = Image.new('RGB', (canvas_width, canvas_height), 'white')
+
+# Paste the images onto the canvas
+canvas.paste(left_resized, (0, 40))
+canvas.paste(right_resized, (left_resized.width, 40))
+canvas.paste(panorama_resized, (left_resized.width + right_resized.width, 40))
+
+# Draw the captions
+draw = ImageDraw.Draw(canvas)
+draw.text((10, 10), "QUIZ3_LEFT_LABEL", fill="black", font=ImageFont.load_default(size=22))
+draw.text((left_resized.width + 10, 10), "QUIZ3_RIGHT_LABEL", fill="black", font=ImageFont.load_default(size=22))
+draw.text((left_resized.width + right_resized.width + 10, 10), "QUIZ3_PANORAMA_LABEL", fill="black", font=ImageFont.load_default(size=22))
+
+# Save the canvas
+canvas.save("QUIZ3_OUTPUT_PATH")

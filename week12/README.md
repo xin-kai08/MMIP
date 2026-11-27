@@ -155,12 +155,29 @@ TAVILY_API_KEY=你的Tavily金鑰
 
 ## 影像工具
 
-| 工具 | 用途 |
-| --- | --- |
-| `match_exposure` | 以參考照片的平均亮度為基準校正另一張照片，回傳新圖片 ID、尺寸、亮度增益與校正前後的亮度。 |
-| `stitch_images` | 以 OpenCV 對齊並拼接同一場景有重疊的照片。成功時回傳全景圖片 ID 與尺寸，失敗時回傳 OpenCV 狀態與原因。 |
-| `save_image` | 依處理後的圖片 ID 存成 PNG，回傳檔案路徑與尺寸。 |
-| `get_local_photos` | 從指定的本機資料夾取得可讀照片，回傳檔名、相對路徑與圖片 ID。 |
+以下三張截圖來自 `_synthetic` 重跑的直接呼叫。實拍成果另以 `set1` 展示。
+
+### `match_exposure`
+
+![match_exposure 的呼叫與回傳結果](./result/quiz2/match_exposure.png)
+
+以參考圖的平均亮度校正目標圖。截圖中傳入合成左圖與較暗的合成右圖，亮度增益為 1.61，右圖的平均亮度從 97.73 調到 157.18，接近左圖的 157.36。工具回傳校正後的圖片 ID `exposure:9e51921a` 及尺寸 670 × 420。
+
+### `stitch_images`
+
+![stitch_images 的呼叫與回傳結果](./result/quiz2/stitch_images.png)
+
+用 OpenCV 對齊並拼接有重疊的影像。截圖中傳入合成左圖與校正後的右圖。這次關閉快取，OpenCV 回傳狀態 `0`，產出 998 × 420 的全景，圖片 ID 為 `panorama:70be5585`。失敗時工具會回傳狀態和原因。
+
+### `save_image`
+
+![save_image 的呼叫與回傳結果](./result/quiz2/save_image.png)
+
+將處理結果以 PNG 存到 `result/quiz2/`。截圖中傳入全景 ID `panorama:70be5585`，指定檔名 `direct_panorama.png`。工具回傳實際檔案路徑與尺寸 998 × 420。[截圖中的合成全景 PNG](./result/quiz2/direct_panorama_58bf9471.png)
+
+### `get_local_photos`
+
+從指定的專案內資料夾讀取可用照片，回傳檔名、相對路徑與圖片 ID。9 工具版以這些候選作為後續看圖和拼接的輸入。
 
 ### 模型可呼叫的函數與實際執行
 
@@ -185,36 +202,27 @@ Quiz 2 會把註冊工具的名稱和用途寫入 Qwen2.5-VL 的系統提示。�
 
 ### 實拍輸入
 
-| 照片組 | 左圖 | 右圖 |
-| --- | --- | --- |
-| `set1` | <img src="./data/quiz2/set1/left.jpg" alt="set1 左圖" width="220"> | <img src="./data/quiz2/set1/right.jpg" alt="set1 右圖" width="220"> |
-| `set2` | <img src="./data/quiz2/set2/left.jpg" alt="set2 左圖" width="220"> | <img src="./data/quiz2/set2/right.jpg" alt="set2 右圖" width="220"> |
+下方基礎題、直接呼叫快取對照和 Agent 快取驗證都使用 `data/quiz2/set1/` 的兩張實拍照片。
+
+| `left.jpg`（參考圖） | `right.jpg`（待校正圖） |
+| --- | --- |
+| <img src="./data/quiz2/set1/left.jpg" alt="set1 左圖" width="260"> | <img src="./data/quiz2/set1/right.jpg" alt="set1 右圖" width="260"> |
 
 ### `set1` 實拍結果
 
 直接呼叫以左圖為基準（平均亮度 150.15），將右圖的平均亮度由 152.72 調為 149.69，再拼接並存成 PNG。8 工具版直接收到兩張原圖，9 工具版先從資料夾取得兩張照片。兩個 Agent 都成功執行亮度校正、拼接與存檔。
 
-| 展示 | 全景尺寸 | 匯出 |
-| --- | --- | --- |
-| 直接呼叫 | 1771 × 1369 | [全景 PNG](./result/quiz2/direct_panorama_5109cef1.png) |
-| 8 工具版 | 1773 × 1368 | [全景 PNG](./result/quiz2/agent8_panorama_b2ab9c6d.png) |
-| 9 工具版 | 1771 × 1369 | [全景 PNG](./result/quiz2/agent9_panorama_5d484c55.png) |
+| 展示 | 輸入 | 全景尺寸 | 匯出 |
+| --- | --- | --- | --- |
+| 直接呼叫 | 左圖與校正後的右圖 | 1776 × 1369 | [全景 PNG](./result/quiz2/direct_panorama_07f0deb9.png) |
+| 8 工具版 | 指定 `left.jpg`、`right.jpg` | 1776 × 1369 | [全景 PNG](./result/quiz2/agent8_panorama_ffdd1cb0.png) |
+| 9 工具版 | 指定資料夾 `data/quiz2/set1` | 1773 × 1369 | [全景 PNG](./result/quiz2/agent9_panorama_2160510f.png) |
 
-![set1 的 9 工具版全景](./result/quiz2/agent9_panorama_5d484c55.png)
+![set1 的 9 工具版全景](./result/quiz2/agent9_panorama_2160510f.png)
 
-### `set2` 實拍結果
+### `set3` 拼接失敗
 
-直接呼叫以左圖為基準（平均亮度 147.18），將右圖的平均亮度由 145.05 調為 146.77，再拼接並存檔。8 工具版成功依序呼叫 `match_exposure`、`stitch_images`、`save_image`。9 工具版先用 `get_local_photos` 取得兩張照片，再完成同樣的三步。
-
-| 展示 | 全景尺寸 | 匯出 |
-| --- | --- | --- |
-| 直接呼叫 | 1913 × 1068 | [全景 PNG](./result/quiz2/direct_panorama_86a9d001.png) |
-| 8 工具版 | 1910 × 1054 | [全景 PNG](./result/quiz2/agent8_panorama_7f97619b.png) |
-| 9 工具版 | 1929 × 1086 | [全景 PNG](./result/quiz2/agent9_panorama_4155a46b.png) |
-
-![set2 的 9 工具版全景](./result/quiz2/agent9_panorama_4155a46b.png)
-
-合成測試圖重跑成果可另外查看 [直接呼叫](./result/quiz2/direct_panorama_4f41dc3e.png)、[8 工具版](./result/quiz2/agent8_panorama_e6ed11f5.png) 和 [9 工具版](./result/quiz2/agent9_panorama_809c4f7e.png)。三張正式函數截圖待補。
+用 `set3` 的左右兩張照片重現直接拼接。亮度校正成功，右圖增益已達 4.0，平均亮度仍只有 29.46，低於左圖的 85.20。OpenCV 對齊時找不到足夠可配對的重疊特徵，回傳狀態 `1`，工具訊息為「可配對的重疊影像不足」。這次直接呼叫沒有產生全景，也沒有可供存檔或寫入快取的結果。
 
 ## 進階：拼接快取
 
@@ -222,35 +230,32 @@ Quiz 2 會把註冊工具的名稱和用途寫入 Qwen2.5-VL 的系統提示。�
 
 成功拼接的全景會以快取鍵為檔名保存成 PNG，放在 `result/quiz2/cache/`。同樣的輸入與設定且 PNG 可讀時，會直接讀回全景並取得本輪可用的圖片 ID。PNG 損壞時會重新拼接，拼接失敗不會寫入快取。快取是供後續拼接重用的中間結果，正式匯出仍用 `save_image` 把選定的成品另存到 `result/quiz2/`。
 
-兩組實拍照片分別做直接呼叫對照。每組右圖只校正一次，三次都使用相同的圖片、順序和設定。表中只計 `stitch_images`，包含快取查找與 PNG 讀寫。
+`set1` 右圖只校正一次，三次都依相同順序輸入左圖與校正後的右圖。表中耗時只計 `stitch_images`，包含快取查找與 PNG 讀寫。
 
-| 照片組 | 快取狀態 | 耗時（秒） | 實際執行 OpenCV | 全景尺寸 | 與同組 off 的像素一致 |
-| --- | --- | ---: | --- | --- | --- |
-| `set1` | off | 0.671853 | 是 | 1776 × 1369 | 是（基準） |
-| `set1` | miss | 1.074227 | 是 | 1774 × 1368 | 否 |
-| `set1` | hit | 0.107515 | 否 | 1774 × 1368 | 否 |
-| `set2` | off | 0.293030 | 是 | 1832 × 1005 | 是（基準） |
-| `set2` | miss | 0.837731 | 是 | 1920 × 1063 | 否 |
-| `set2` | hit | 0.095071 | 否 | 1920 × 1063 | 否 |
+| 快取狀態 | 耗時（秒） | 實際執行 OpenCV | 全景尺寸 | 與 off 的像素一致 |
+| --- | ---: | --- | --- | --- |
+| off | 0.638126 | 是 | 1773 × 1369 | 是（基準） |
+| miss | 1.029151 | 是 | 1776 × 1369 | 否 |
+| hit | 0.115429 | 否 | 1776 × 1369 | 否 |
 
-兩組的 off 與 miss 都是獨立拼接，量到的尺寸和像素均有差異。各組 hit 讀回的結果與同組 miss 寫入前逐像素一致。[set1 快取 PNG](./result/quiz2/cache/demo_7225034e8269/b9f71d199afee8ee607896b15338a3a32e26abf31f255efd8cb31e4503e32ee0.png) · [set2 快取 PNG](./result/quiz2/cache/demo_d84fde02f06d/1aa81e2fd8d76c012cd971d6fa68110ea914ddc26c4c65ad5e454cf931863a80.png) · [合成測試圖快取 PNG](./result/quiz2/cache/demo_f30b57ee0982/661f4bbb9179c556c7d0b336f2c71978f2b6c61a71bfe13f5a04641034deb19b.png)
+off 與 miss 是兩次獨立拼接，這次的尺寸和像素有差異。hit 讀回的全景與 miss 寫入前逐像素一致。
+
+![set1 直接呼叫拼接快取的全景](./result/quiz2/cache/demo_c836f37825f3/b9f71d199afee8ee607896b15338a3a32e26abf31f255efd8cb31e4503e32ee0.png)
 
 重測時，依序執行 Notebook 末尾「進階：拼接快取」的兩格。準備格每次建立新的測試快取路徑，舊成果會保留。
 
 ### Agent 快取驗證
 
-每組沿用基礎題的照片設定，右圖只校正一次，兩個新 Agent 共用固定的圖片、順序、拼接設定與新建的空快取子目錄，並各自呼叫 `stitch_images` 和 `save_image`。Notebook 準備格仍印著「合成測試圖」，實際讀取的是 `q2_folder`、`q2_names` 指定的實拍照，各組快取鍵與同組直接呼叫對照相同。
+兩個新 Agent 都依序收到 `set1` 的左圖和同一張校正後的右圖，共用新建的快取子目錄，並各自呼叫 `stitch_images`、`save_image`。Notebook 準備格仍印著「合成測試圖」，實際讀取的是 `q2_folder`、`q2_names` 指定的 `set1`，快取鍵與上方直接呼叫對照相同。
 
-| 照片組 | 快取狀態 | 實際執行 OpenCV | 拼接工具耗時（秒） | 正式匯出像素比對 | 匯出成果 |
+| 執行 | 快取狀態 | 實際執行 OpenCV | 拼接工具耗時（秒） | 正式匯出像素比對 | 匯出成果 |
 | --- | --- | --- | ---: | --- | --- |
-| `set1` | miss | 是 | 1.074 | 第一次輸出為基準 | [第一次全景 PNG](./result/quiz2/agent_cache_panorama_7e2c79ab.png) |
-| `set1` | hit | 否 | 0.094 | 與同組第一次逐像素一致 | [第二次全景 PNG](./result/quiz2/agent_cache_panorama_fa3aac6e.png) |
-| `set2` | miss | 是 | 0.864 | 第一次輸出為基準 | [第一次全景 PNG](./result/quiz2/agent_cache_panorama_4bc35bbe.png) |
-| `set2` | hit | 否 | 0.089 | 與同組第一次逐像素一致 | [第二次全景 PNG](./result/quiz2/agent_cache_panorama_9b26e96f.png) |
+| 第一次 | miss | 是 | 1.037 | 第一次輸出為基準 | [第一次全景 PNG](./result/quiz2/agent_cache_panorama_2f104f97.png) |
+| 第二次 | hit | 否 | 0.094 | 與第一次逐像素一致 | [第二次全景 PNG](./result/quiz2/agent_cache_panorama_f529f456.png) |
 
-已核對每組的兩份正式匯出與各自的快取逐像素一致。[set1 Agent 快取 PNG（1773 × 1368）](./result/quiz2/cache/agent_demo_370a02efec09/b9f71d199afee8ee607896b15338a3a32e26abf31f255efd8cb31e4503e32ee0.png) · [set2 Agent 快取 PNG（1929 × 1086）](./result/quiz2/cache/agent_demo_a5f3e972376d/1aa81e2fd8d76c012cd971d6fa68110ea914ddc26c4c65ad5e454cf931863a80.png)
+兩份正式匯出與共用的快取 PNG 都是 1774 × 1368，三者逐像素一致。
 
-合成圖重跑的 [匯出 A](./result/quiz2/agent_cache_panorama_687398c6.png)、[匯出 B](./result/quiz2/agent_cache_panorama_16b535b2.png) 與 [Agent 快取](./result/quiz2/cache/agent_demo_8904ea98ee39/661f4bbb9179c556c7d0b336f2c71978f2b6c61a71bfe13f5a04641034deb19b.png) 都是 998 × 420，像素一致。
+![set1 Agent 共用快取全景](./result/quiz2/cache/agent_demo_643cf566ebef/b9f71d199afee8ee607896b15338a3a32e26abf31f255efd8cb31e4503e32ee0.png)
 
 重測時依序執行 [main.ipynb](./main.ipynb) 的「Agent 快取驗證」準備格、「執行兩次 Agent 對話」和「核對拼接與輸出」。準備格會指定新的空快取路徑，模型沿用 Quiz 2 的本機權重。
 
@@ -261,10 +266,12 @@ Quiz 2 會把註冊工具的名稱和用途寫入 Qwen2.5-VL 的系統提示。�
 | 階段 | 分工 |
 | --- | --- |
 | 語音輸入 | 第 10 個函數 `speech_to_text(audio_path)` 使用 Transformers 和多語版 [OpenAI Whisper Small](https://huggingface.co/openai/whisper-small)，把專案內的中文 WAV 轉成文字。 |
-| 影像處理 | Qwen2.5-VL 接收 Whisper 實際轉錄的文字，依指定資料夾、圖片與工具結果，自行選擇讀圖、校正、拼接或存檔。 |
+| 影像處理 | Qwen2.5-VL 接收 Whisper 實際轉錄的文字。只提供資料夾時，第一輪先呼叫 `get_local_photos`，再根據實際影像和工具回傳選擇校正、拼接與存檔。 |
 | 語音回覆 | 第 11 個函數 `text_to_speech(text)` 使用 [Piper 中文 huayan 聲音](https://huggingface.co/rhasspy/piper-voices/tree/main/zh/zh_CN/huayan/medium) 的 `.onnx` 和 `.onnx.json` 合成 WAV。只有拼接結果經 Agent 存成可讀的 PNG，回覆才會說「全景圖已存檔」。 |
 
 語音權重、下載暫存及 Piper 資源都放在 `.cache/quiz2/audio/`，全景 PNG 和回覆 WAV 存到 `result/quiz2/`。
+
+語音指令可用自己的說法，並在同一句裡指定要做或略過的步驟，例如「保留原本亮度，直接接成全景後存檔」或「先把右圖的亮度調得接近左圖，只存校正後的右圖」。Qwen 依 Whisper 的完整轉錄選工具。回覆會綜合實際工具紀錄，說明完成的步驟、未完成的要求和已知原因。程式另外核對 PNG 是否可讀，再決定如何播報存檔狀態。
 
 ### 執行方式
 
@@ -273,8 +280,85 @@ Quiz 2 會把註冊工具的名稱和用途寫入 Qwen2.5-VL 的系統提示。�
 
 ### 本次實測
 
-現有 MMIP kernel 在 `cuda:0` 成功執行 `speech_to_text`。輸入為 Piper 官方聲音庫的 [huayan 公開合成試聽片段](https://huggingface.co/rhasspy/piper-voices/tree/main/zh/zh_CN/huayan/medium/samples)，已轉為本機 [測試 WAV](./result/quiz2/stt_huayan_sample.wav)。以下保留 Whisper 的原始輸出。
+| 錄音 | Whisper 轉錄 | 結果 | 輸出 |
+| --- | --- | --- | --- |
+| [一般拼接指令](./data/quiz2/voice_command.wav) | 請把這兩張照片拼成全景圖,然後存檔 | 成功讀取 `set1` 兩張原圖，直接拼接並存成 1744 × 1363 的全景。語音回覆確認已存檔。 | [全景 PNG](./result/quiz2/panorama_2a6b50f0.png) · [回覆 WAV](./result/quiz2/voice_15a6fd6fddfe.wav) |
+| [保留亮度指令](./data/quiz2/voice_no_exposure.wav) | 保留原本圖片亮度把照片拼在一起 | 成功讀取 `set2` 的兩張原圖，未做額外亮度校正。OpenCV 拼接失敗，只有語音回覆。 | [失敗回覆 WAV](./result/quiz2/voice_cc9980f45504.wav) |
 
-> 彩虹又称天共天,将降等简称将是七相中的一种光学现象当太阳光,照射到半空中的水滴光线,杯者涉及反射在天空上形成拱形的。气,彩光浦由外圈之内圈,成红橙黄绿蓝垫蓝锦子气,种颜色泥红,则相反。
+一般拼接指令的重跑紀錄保存在 [Notebook](./main.ipynb)，實際順序為 `speech_to_text` → `get_local_photos` → `stitch_images` → `save_image` → `text_to_speech`。Qwen 取得 `set1` 的 `left.jpg` 與 `right.jpg` 後直接拼接，沒有額外亮度校正。這次關閉快取，OpenCV 回傳狀態 `0`。Piper 回覆「已讀取 2 張照片。已拼成全景圖。全景圖已存檔。」，WAV 長度 4.957 秒。
 
-本次實際執行的語音工具只有獨立的 `speech_to_text`。這段試聽不是拼接指令，未送入 Agent。資料夾沒有真人指令錄音，現有 kernel 又缺少 `piper-tts` 和 `onnxruntime`，因此合成指令與回覆尚未執行。這次沒有語音流程產出的全景 PNG 或回覆 WAV。
+保留亮度指令沿用前次存檔核對的紀錄，順序為 `speech_to_text` → `get_local_photos` → `stitch_images` → `text_to_speech`。Qwen 取得 `set2` 的 `left.jpg` 和 `right.jpg` 後直接拼接，OpenCV 回傳狀態 `1`「可配對的重疊影像不足」。這代表該次無法從兩張原圖找到足夠的可配對重疊特徵。拼接未產生全景，因此沒有呼叫 `save_image`。Piper 正常生成回覆，說明已讀取兩張照片、未能完成拼接，且沒有匯出圖片。
+
+# quiz 3
+
+Quiz 3 在現有 MMIP GPU kernel 沿用 Qwen2.5-VL。每輪由模型選擇讀取 Skill、呼叫 Function、盤點 Function、自行撰寫與執行 Python，或結束。執行器會把工具回傳或實際錯誤交回模型。比較圖的配置、縮放方式和視覺樣式由該輪模型寫進腳本。
+
+## 註冊的 Skill 與 Function
+
+| Skill | 用途 |
+| --- | --- |
+| [panorama-workflow](./.agents/skills/panorama-workflow/SKILL.md) | 讀取本機照片、依需求校正或保留亮度、依左到右拼接、存檔並驗證。 |
+| [image-comparison-report](./.agents/skills/image-comparison-report/SKILL.md) | 將左原圖、右原圖及已存檔的全景排成比較圖。每張標註原始像素尺寸，最後回讀並驗證 PNG。 |
+
+| 類別 | 實際註冊的 Function |
+| --- | --- |
+| 旅遊（5） | `search_places`、`filter_by_area`、`filter_by_category`、`build_itinerary`、`export_itinerary` |
+| 影像（4） | `match_exposure`、`stitch_images`、`save_image`、`get_local_photos` |
+| 語音（2） | `speech_to_text(audio_path)`、`text_to_speech(text)` |
+
+語音的兩個 Function 綁定 Quiz 2 的 Whisper 與 Piper，可由 Quiz 3 模型直接選用。本次三圖比較只需影像工具，沒有呼叫語音或旅遊 Function。生成腳本在子程序執行，只能用開放的 Python 語法與 Pillow 操作，讀取本輪指定的三張圖並寫到指定 PNG。
+
+## VS Code Codex 測試
+
+兩項 Skill 測試均已在遠端 VS Code Codex 完成。第二項使用第一項實際產出的全景。以下的截圖、重跑腳本與成果均來自 `result/quiz3/codex/`。[原始測試指令](./result/quiz3/codex/test-plan.md)
+
+### 測試 1：`$panorama-workflow`
+
+Codex 讀取 Skill 後，依左、右順序登錄 `set1` 的兩張原圖，跳過 `match_exposure`，使用 Quiz 2 的 `stitch_images` 和 `save_image`。首次啟動發生 `ModuleNotFoundError: No module named 'other_code'`，將專案根目錄加入 `sys.path` 後重跑成功。OpenCV 回傳狀態 `0`，回讀確認全景為 **1774 × 1368** 的 RGB PNG。
+
+![VS Code Codex 執行 panorama-workflow 的指令與成功回傳](./result/quiz3/codex/panorama-workflow.png)
+
+[全景 PNG](./result/quiz3/codex/panorama_75ee1c23.png) · [執行紀錄](./result/quiz3/codex/panorama-run.md) · [重跑腳本](./result/quiz3/codex/run_panorama.py)
+
+### 測試 2：`$image-comparison-report`
+
+Codex 讀取兩張原圖和第一輪全景，用 Pillow 腳本將左右原圖並排在上、全景置於下。尺寸標籤使用縮放前的原始像素，左右圖各為 **1108 × 1477**，全景為 **1774 × 1368**。已回讀並目視核對 **2000 × 2260** 的比較圖 PNG，三張圖與標籤皆清楚可見。
+
+![VS Code Codex 執行 image-comparison-report 的指令與成功回傳](./result/quiz3/codex/image-comparison-report.png)
+
+[比較圖 PNG](./result/quiz3/codex/comparison.png) · [執行紀錄](./result/quiz3/codex/comparison-run.md) · [生成的 Python 腳本](./result/quiz3/codex/create_comparison.py)
+
+## 特化 Agent 實測｜set1
+
+輸入照片為 [左原圖](./data/quiz2/set1/left.jpg) 與 [右原圖](./data/quiz2/set1/right.jpg)。在 [main.ipynb](./main.ipynb) 末尾依序執行 Quiz 3 的清單、Agent 執行與成果檢視。
+
+> 請把這兩張照片左右拼接，保留原本亮度並存檔。接著把兩張原圖和全景圖排成一張比較圖，標註每張圖的原始像素尺寸，輸出 PNG。
+
+這次執行保留原本亮度，依左、右原圖的順序呼叫 `stitch_images`，OpenCV 回傳狀態 `0`。全景為 **1774 × 1368**，比較圖為 **1995 × 778**。比較圖從左到右標示三個原始尺寸，分別為 **1108 × 1477**、**1108 × 1477**、**1774 × 1368**。
+
+[全景 PNG](./result/quiz3/agent/run_a68e6eec5a/panorama_1579a13f.png) · [比較圖 PNG](./result/quiz3/agent/run_a68e6eec5a/comparison.png) · [模型生成的 Python](./result/quiz3/agent/run_a68e6eec5a/comparison_r07.py) · [完整 ReAct 紀錄](./result/quiz3/agent/run_a68e6eec5a/react.json)
+
+![Quiz 3 比較圖，依序為左原圖、右原圖與全景，每張上方標示原始像素尺寸](./result/quiz3/agent/run_a68e6eec5a/comparison.png)
+
+### 八輪是什麼
+
+這次 set1 任務從開始到結束共執行 **八個 ReAct 回合**。每一輪，模型根據目前的資料選擇一個動作，流程把執行結果交回模型，供它決定下一步。以下八輪都出自同一筆 `run_a68e6eec5a` 紀錄。
+
+| 輪次 | 實際選擇 | 決策依據與參數 | 觀察及對下一輪的影響 |
+| --- | --- | --- | --- |
+| 1 | `read_skill` | 讀取 `panorama-workflow`。 | 取得本機取圖、保留亮度與左右拼接的步驟。 |
+| 2 | `get_local_photos` | 指定 `folder=data/quiz2/set1`。 | 回傳 `left.jpg`、`right.jpg` 與對應 ID，供拼接使用。 |
+| 3 | `stitch_images` | 依左、右順序傳入兩張原圖的 ID。 | OpenCV 狀態 `0`，回傳 `panorama:1a2fa895`，供下一輪存檔。 |
+| 4 | `save_image` | 傳入全景 ID，指定 `filename=panorama.png`。 | 存成 1774 × 1368 PNG，這個路徑和兩張原圖一起成為比較圖輸入。 |
+| 5 | `read_skill` | 讀取 `image-comparison-report`。 | 取得三張圖、原始像素尺寸標籤及 PNG 的驗收條件。 |
+| 6 | `inspect_functions` | 檢查 11 個 Function 是否支援三圖排版和尺寸標籤。 | 回傳 `comparison_layout_available=false`，模型接著選擇自行寫程式。 |
+| **7** | **`write_and_run_python`** | 模型針對本輪的三張輸入生成 [comparison_r07.py](./result/quiz3/agent/run_a68e6eec5a/comparison_r07.py)。 | 腳本退出碼 `0`，回讀並驗證 1995 × 778 的 PNG、三張等比例影像與標籤。 |
+| 8 | `finish` | 全景和比較圖都已通過驗證。 | 回傳兩張 PNG 的實際路徑並結束。 |
+
+### 自行撰寫程式碼在哪裡展示
+
+在 `main.ipynb` 的 Quiz 3「查看成果與 ReAct」輸出中，可看到「自行撰寫程式碼｜第 7 輪」及腳本連結。完整紀錄第 7 輪的 `code_generation_reply` 保存模型回傳的 Python，`observation` 保存執行退出碼、PNG 路徑及三個標籤。 [Notebook](./main.ipynb) · [實際執行的 Python](./result/quiz3/agent/run_a68e6eec5a/comparison_r07.py) · [ReAct 紀錄](./result/quiz3/agent/run_a68e6eec5a/react.json)
+
+`write_and_run_python` 會把先前由模型生成的排版參考帶入本輪的圖片路徑與尺寸，再由模型輸出完整 Python。程式將本輪的模型回覆存成腳本，執行後回讀 PNG 驗收。 [動作實作](./other_code/quiz3.py) · [排版參考](./other_code/quiz3_layout_reference.txt)
+
+先前的驗證曾遇到圖片 ID 錯誤、JSON 截斷、Pillow `ANTIALIAS` 不相容、全景貼圖越界，以及生成腳本沿用上一輪的全景路徑。 [JSON 截斷紀錄](./result/quiz3/agent/run_ac77a7cb6b/react.json) · [Pillow 錯誤紀錄](./result/quiz3/agent/run_85d5fd120a/react.json) · [貼圖越界紀錄](./result/quiz3/agent/run_3af0b037cc/react.json) · [路徑錯誤與修正紀錄](./result/quiz3/agent/run_e577b52b13/react.json)
